@@ -1,3 +1,22 @@
+# my ignores
+**/.idea/
+**/.DS_Store
+**/node_modules/
+**/coverage/
+**/.vscode/
+
+# env files
+*.env
+
+# webpack
+**/dist/
+
+# react
+**/build/
+
+
+
+
 # Logs
 logs
 *.log
