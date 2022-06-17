@@ -1,4 +1,4 @@
-@use "variables" as v;
+@use "./variables" as v;
 
 
 //////////////////////////////////////
@@ -28,12 +28,12 @@
   will-change: transform;
 }
 
-@media screen and (max-width: v.$breakpoint--default) {
-  .loading::before {
-    top: 90%;
-    right: 5%;
-  }
-}
+// @media screen and (max-width: v.$breakpoint--default) {
+//   .loading::before {
+//     top: 90%;
+//     right: 5%;
+//   }
+// }
 
 .hidden {
   display: none;
