@@ -1,5 +1,13 @@
+@use "./partials/variables";
 @use "./partials/reset";
 @use "./partials/base";
+
+// components
+@use "./partials/components/card";
+
+
+// pages
+
 
 //
 @use "./partials/utils";
