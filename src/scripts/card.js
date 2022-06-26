@@ -1,45 +1,95 @@
-export function initCards(cards) {
-  let counter = 0;
-  let heightOffset = 0;
-  let scaleFactor = 1;
-  let staggeringOffset = 200;
 
-  for (const card of cards) {
-    card.style.zIndex = `-${counter}`;
-    card.style.top = `${heightOffset}px`;
-    card.style.transform = `scale(${scaleFactor})`;
-    card.style.transition = `all ${staggeringOffset}ms`;
 
-    if (counter < 3) {
-      scaleFactor-=0.02;
-      heightOffset += 15;
-      staggeringOffset += 150;
+export function layout(elements) {
+  const elems = elements;
+
+  function stacks() {
+    parent = elems[0].parentNode;
+    console.log(parent);
+    parent.style.position = "relative";
+
+    let index = 0;
+
+    for (const elem of elems) {
+      elem.style.position = "absolute";
+      elem.style.zIndex = `-${index}`;
+      index++;
     }
 
-    counter++;
+    return this;
+  }
+
+  function givePerspective(elementsToGlance=3, depth=1) {
+    let index = 0;
+    let heightOffset = 0;
+    let scaleFactor = 1;
+    let scaleStep = depth<=0 ? 0 : (depth)/100;
+    let heightOffsetStep = 15 * depth;
+
+    for (const elem of elems) {
+      elem.style.top = `${heightOffset}px`;
+      elem.style.transform = `scale(${scaleFactor})`;
+
+      if (index < elementsToGlance) {
+        scaleFactor -= scaleStep;
+        heightOffset += heightOffsetStep;
+      }
+
+      index++;
+    }
+    return this;
+
+  }
+
+  return {
+    stacks,
+    givePerspective,
   }
 }
 
-export function showAllCards(cards) {
-  const cardHeight = cards[0].offsetHeight;
-  const verticalOffsetStep = 20;
-  let verticalOffset = 0;
 
-  for (const card of cards) {
-    card.style.transform = `scale(1)`;
-    _moveCardBy(card, verticalOffset);
-    verticalOffset = (verticalOffset + cardHeight + verticalOffsetStep);
+export function animate(elements) {
+  const elems = elements;
+
+  function revealElements(staggerDelay=0, verticalOffsetStep=20) {
+    const cardHeight = elems[0].offsetHeight;
+    let verticalOffset = 0;
+    let delay = 0; // millis
+
+    for (const card of elems) {
+      card.style.transition = `all ${delay}ms`;
+      card.style.transform = `scale(1)`;
+      card.style.top = `${verticalOffset}px`;
+
+      delay += staggerDelay;
+      verticalOffset = (verticalOffset + cardHeight + verticalOffsetStep);
+    }
+
+    return this;
   }
-}
 
-export function hideCards(cards) {
-  for (const card of cards) {
-    card.style.top = `0px`;
+  function concealElements(staggerDelay=0) {
+    let staggeringDelay = 0; // millis
+
+    for (const card of elems) {
+      card.style.transition = `all ${staggeringDelay}ms`;
+      card.style.top = `0px`;
+
+      staggeringDelay += staggerDelay;
+    }
+
+    return this;
   }
 
-  initCards(cards);
-}
+  return {
+    revealElements,
+    concealElements,
+  }
+}//
 
-function _moveCardBy(card, verticalOffset) {
-  card.style.top = `${verticalOffset}px`;
-}
+
+
+
+
+
+

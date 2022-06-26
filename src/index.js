@@ -2,7 +2,7 @@
 // init stuff
 /////////////////////////////
 import './styles/style.scss';
-import { hideCards, initCards, showAllCards } from "./scripts/card";
+import {animate, layout} from "./scripts/card";
 
 
 /////////////////////////////////////////
@@ -19,18 +19,22 @@ import { hideCards, initCards, showAllCards } from "./scripts/card";
 // main()
 /////////////////////////////////////////
 console.log('hello world');
+const cardsToGlance = 3;
+const depth = 1;
 
 const cards = document.querySelectorAll('.card');
 const cardContainer = document.querySelector('.card-container');
-initCards(cards);
+
+layout(cards).stacks().givePerspective(cardsToGlance);
 
 cardContainer.addEventListener('mouseenter', () => {
-  showAllCards(cards);
+  animate(cards).revealElements( 300);
 });
 
 cardContainer.addEventListener('mouseleave', () => {
   console.log('exiting');
-  hideCards(cards);
+  animate(cards).concealElements(100);
+  layout(cards).stacks().givePerspective(cardsToGlance);
 });
 
 //
