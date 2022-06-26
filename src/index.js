@@ -32,7 +32,6 @@ cardContainer.addEventListener('mouseenter', () => {
 });
 
 cardContainer.addEventListener('mouseleave', () => {
-  console.log('exiting');
   animate(cards).concealElements(100);
   layout(cards).stacks().givePerspective(cardsToGlance);
 });
