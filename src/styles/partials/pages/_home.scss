@@ -6,11 +6,30 @@
 }
 
 .home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
   &__typing-container {
     //display: flex;
     //justify-content: center;
     //align-items: center;
   }
+  
+  @media screen and (max-width: 500px) {
+    &__typing-container {
+      font-size: .9rem;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    &__typing-container {
+      font-size: .7rem;
+    }
+  }
+  
   
   &__input-cursor {
     display: inline-block;
@@ -23,12 +42,21 @@
     top: .3rem;
     left: -.2rem;
   
-    //animation: blink .7s linear infinite alternate;
     animation-name: blink;
     animation-duration: .6s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-timing-function: linear;
   }
   
+  
+
 }//
 
+.footer p {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 1em;
+}

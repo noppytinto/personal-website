@@ -21,7 +21,7 @@ import {animate, layout} from "./scripts/card";
 console.log('hello world');
 const row1code = [
     {
-        text: 'const ',
+        text: 'var ',
         style: {
             color: '#F18200',
             fontStyle: 'italic',
@@ -43,6 +43,14 @@ const row2code = [
     {text: 'result', style: {}},
     {text: ')', style: {color: '#FFB800'}},
     {text: ';', style: { }},
+]
+
+const rowLoading = [
+    {text: '...', style: {color: '#e1e1e1', fontWeight: 'bold'}},
+]
+
+const row3code = [
+    {text: 'WEB DEVELOPER :)', style: {color: '#e1e1e1', fontWeight: 'bold'}},
 ]
 
 start();
@@ -71,11 +79,14 @@ start();
 // functions
 /////////////////////////////////////////
 const container = document.querySelector('.home__typing-container')
+const breakElement = document.createElement('br');
+
 async function start() {
     await typeCode(row1code, '#row-1');
     insertAfter(document.createElement('br'), document.querySelector('#row-1'));
     await typeCode(row2code, '#row-2');
-
+    await typeCode(rowLoading, '#row-loading', 500);
+    await typeCode(row3code, '#row-3', 10);
 }
 
 function insertAfter(newNode, existingNode) {
@@ -83,14 +94,14 @@ function insertAfter(newNode, existingNode) {
 }
 
 
-async function typeCode(code, elementRef) {
+async function typeCode(code, elementRef, delay = 50) {
     for (const word of code) {
         const span = document.createElement('span');
         document.querySelector(elementRef).append(span);
 
         applyStyle(word.style, span);
 
-        await typeSentence(word.text, span)
+        await typeSentence(word.text, span, delay)
     }
 }
 
@@ -104,8 +115,8 @@ function applyStyle(styleProperties, elementNode) {
 async function typeSentence(text, elementNode, delay = 50) {
     const letters = text.split("");
     for (const letter of letters) {
-        await waitForMs(delay);
         elementNode.append(letter);
+        await waitForMs(delay);
     }
 }
 
