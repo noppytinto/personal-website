@@ -4,32 +4,6 @@
 import './styles/style.scss';
 let secondRun = false;
 
-const target = document.querySelector('.home__typing-container');
-const header = document.querySelector('.header');
-const viewport = document.querySelector('.home__typing-container');
-
-const options = {
-    root: null,
-    // rootMargin: '-300px',
-    threshold: 0
-}
-
-const callback = (entries, observer) => {
-    const [entry] = entries;
-
-    if (entry.isIntersecting) {
-        if(secondRun) header.classList.add('header--conceal');
-        header.classList.remove('header--reveal');
-        secondRun = true;
-    }
-    else {
-        header.classList.remove('header--conceal');
-        header.classList.add('header--reveal');
-    }
-};
-
-const observer = new IntersectionObserver(callback, options);
-observer.observe(target);
 
 
 /////////////////////////////////////////
@@ -40,33 +14,11 @@ main();
 
 /////////////////////////////////////////
 // FUNCTIONS
-
-
 /////////////////////////////////////////
-
-
 async function main() {
-    console.log('hello world');
-
-
-
     revealHeaderAsScroll();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // const container = document.querySelector('.home__typing-container')
     const breakElement = document.createElement('br');
 
     const stringColor = '#00BC4B';
@@ -121,7 +73,32 @@ async function main() {
 }
 
 function revealHeaderAsScroll() {
+    const target = document.querySelector('.home__typing-container');
+    const header = document.querySelector('.header');
+    // const viewport = document.querySelector('.home__typing-container');
 
+    const options = {
+        root: null,
+        // rootMargin: '-300px',
+        threshold: 0
+    }
+
+    const callback = (entries, observer) => {
+        const [entry] = entries;
+
+        if (entry.isIntersecting) {
+            if(secondRun) header.classList.add('header--conceal');
+            header.classList.remove('header--reveal');
+            secondRun = true;
+        }
+        else {
+            header.classList.remove('header--conceal');
+            header.classList.add('header--reveal');
+        }
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(target);
 }
 
 function insertAfter(newNode, existingNode) {
