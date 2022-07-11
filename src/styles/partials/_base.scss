@@ -1,9 +1,8 @@
 @use 'variables' as var;
 
 body {
-  padding: 1em;
-  font-family: var.$font-family--base;
-  background-color: #1A2F3E;
+  font-family: var.$font-family--condensed;
+  background-color: var.$color--blue-night;
   color: #DDF1FF;
 }
 

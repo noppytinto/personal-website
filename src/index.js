@@ -2,19 +2,69 @@
 // WEBPACK IMPORTS
 /////////////////////////////////////////
 import './styles/style.scss';
+let secondRun = false;
+
+const target = document.querySelector('.home__typing-container');
+const header = document.querySelector('.header');
+const viewport = document.querySelector('.home__typing-container');
+
+const options = {
+    root: null,
+    // rootMargin: '-300px',
+    threshold: 0
+}
+
+const callback = (entries, observer) => {
+    const [entry] = entries;
+
+    if (entry.isIntersecting) {
+        if(secondRun) header.classList.add('header--conceal');
+        header.classList.remove('header--reveal');
+        secondRun = true;
+    }
+    else {
+        header.classList.remove('header--conceal');
+        header.classList.add('header--reveal');
+    }
+};
+
+const observer = new IntersectionObserver(callback, options);
+observer.observe(target);
 
 
 /////////////////////////////////////////
-// main()
+// MAIN
 /////////////////////////////////////////
 main();
 
 
 /////////////////////////////////////////
 // FUNCTIONS
+
+
 /////////////////////////////////////////
+
+
 async function main() {
     console.log('hello world');
+
+
+
+    revealHeaderAsScroll();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // const container = document.querySelector('.home__typing-container')
     const breakElement = document.createElement('br');
@@ -56,7 +106,7 @@ async function main() {
     ]
 
     const row3_text = [
-        {text: 'WEB DEVELOPER :)', style: {color: terminalTextColor, fontWeight: 'bold'}},
+        {text: 'WEB DEVELOPER :)', style: {color: terminalTextColor, fontWeight: 'bold', fontSize: '1.5rem'}},
     ]
 
 
@@ -68,6 +118,10 @@ async function main() {
     await typeCode(row2_text, '#row-2');
     await typeCode(rowLoading, '#row-loading', 300);
     await typeCode(row3_text, '#row-3', 5);
+}
+
+function revealHeaderAsScroll() {
+
 }
 
 function insertAfter(newNode, existingNode) {
@@ -89,7 +143,7 @@ async function typeCode(code, elementRef, delay = 50) {
 function applyStyle(styleProperties, elementNode) {
     for (const [key, value] of Object.entries(styleProperties)) {
         elementNode.style[`${key}`] = value;
-        console.log(key);
+        // console.log(key);
     }
 }
 

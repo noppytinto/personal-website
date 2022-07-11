@@ -1,3 +1,47 @@
+@use "../mixin" as mix;
+@use "../variables" as var;
+
+
+
+@keyframes reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes conceal {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.header {
+  padding: 1.5em 2.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var.$color--blue-night;
+  opacity: 0;
+  animation-duration: .5s;
+  
+  &__logo {
+    font-family: var.$font-family--mono;
+    color: var.$color--green;
+    font-size: 1.1rem;
+  }
+  
+  &--reveal {
+    animation-name: reveal;
+    animation-fill-mode: forwards;
+  }
+  
+  &--conceal {
+    animation-name: conceal;
+    animation-fill-mode: forwards;
+  }
+}
+
+
+
 @keyframes blink {
   0% {opacity: 1;}
   40% {opacity: 1;}
@@ -6,11 +50,6 @@
 }
 
 .home {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
   
   &__typing-container {
     //display: flex;
@@ -49,14 +88,35 @@
     animation-timing-function: linear;
   }
   
+  &__section {
+    height: 100vh;
+    @include mix.center-vertically-horizontally;
   
+  }
+  
+  &__section p {
+    font-family: var.$font-family--condensed;
+    font-size: 3rem;
+  }
+  
+  &__about {
+    background-color: var.$color--blue-night--50;
+    color: var.$color--blue-night;
+  }
+  
+  &__contacts {
+    background-color: var.$color--blue-night--50;
+    color: var.$color--blue-night;
+  }
 
 }//
 
 .footer p {
+
   position: fixed;
   bottom: 0;
   text-align: center;
   width: 100%;
   padding: 1em;
+  color: var.$color--blue-night--400;
 }
