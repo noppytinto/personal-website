@@ -2,13 +2,14 @@
 // WEBPACK IMPORTS
 /////////////////////////////////////////
 import './styles/style.scss';
-let secondRun = false;
 
 
 
 /////////////////////////////////////////
 // MAIN
 /////////////////////////////////////////
+let secondRun = false;
+
 main();
 
 
@@ -16,60 +17,12 @@ main();
 // FUNCTIONS
 /////////////////////////////////////////
 async function main() {
+    //
     revealHeaderAsScroll();
 
+    //
+    startCodeTypingAnimation();
 
-    const breakElement = document.createElement('br');
-
-    const stringColor = '#00BC4B';
-    const keywordColor = '#F18200';
-    const symbolColor = '#FFB800';
-    const functionColor = '#BE6CFF';
-    const terminalTextColor = '#e1e1e1';
-
-    const row1_text = [
-        {
-            text: 'var ',
-            style: {
-                color: keywordColor,
-                fontStyle: 'italic',
-            }
-        },
-        {text: 'result ', style: {}},
-        {text: '= ', style: {}},
-        {text: 'whoIs', style: {color: functionColor}},
-        {text: '(', style: {color: symbolColor}},
-        {text: '\'Francesco Scutellaro\'', style: {color: stringColor}},
-        {text: ')', style: {color: symbolColor}},
-        {text: ';', style: {}},
-    ]
-
-    const row2_text = [
-        {text: 'console.', style: {}},
-        {text: 'log', style: {color: functionColor}},
-        {text: '(', style: {color: symbolColor}},
-        {text: 'result', style: {}},
-        {text: ')', style: {color: symbolColor}},
-        {text: ';', style: { }},
-    ]
-
-    const rowLoading = [
-        {text: '...', style: {color: terminalTextColor, fontWeight: 'bold'}},
-    ]
-
-    const row3_text = [
-        {text: 'WEB DEVELOPER :)', style: {color: terminalTextColor, fontWeight: 'bold', fontSize: '1.5rem'}},
-    ]
-
-
-    ///////////////////////
-    // logic
-    ///////////////////////
-    await typeCode(row1_text, '#row-1');
-    insertAfter(breakElement, document.querySelector('#row-1'));
-    await typeCode(row2_text, '#row-2');
-    await typeCode(rowLoading, '#row-loading', 300);
-    await typeCode(row3_text, '#row-3', 5);
 }
 
 function revealHeaderAsScroll() {
@@ -101,15 +54,67 @@ function revealHeaderAsScroll() {
     observer.observe(target);
 }
 
+async function startCodeTypingAnimation() {
+    //
+    const breakElement = document.createElement('br');
+    const stringColor = '#00BC4B';
+    const keywordColor = '#F18200';
+    const symbolColor = '#FFB800';
+    const functionColor = '#BE6CFF';
+    const terminalTextColor = '#e1e1e1';
+    const keywordStyle = { color: keywordColor, fontStyle: 'italic', };
+    const symbolStyle = {color: symbolColor};
+    const functionStyle = {color: functionColor};
+    const stringStyle = {color: stringColor};
+    const terminalStyle = {color: terminalTextColor, fontWeight: 'bold'};
+
+    const row1_text = [
+        {text: 'var ', style: keywordStyle },
+        {text: 'result '},
+        {text: '= '},
+        {text: 'whoIs', style: functionStyle},
+        {text: '(', style: symbolStyle},
+        {text: '\'Francesco Scutellaro\'', style: stringStyle},
+        {text: ')', style: symbolStyle},
+        {text: ';'},
+    ]
+
+    const row2_text = [
+        {text: 'console.'},
+        {text: 'log', style: functionStyle},
+        {text: '(', style: symbolStyle},
+        {text: 'result'},
+        {text: ')', style: symbolStyle},
+        {text: ';'},
+    ]
+
+    const rowLoading = [
+        {text: '...', style: terminalStyle},
+    ]
+
+    const row3_text = [
+        {text: 'WEB DEVELOPER :)', style: {...terminalStyle, fontSize: '1.5rem'}},
+    ]
+
+
+    ///////////////////////
+    // logic
+    ///////////////////////
+    await typeCode(row1_text, '#row-1');
+    insertAfter(breakElement, document.querySelector('#row-1'));
+    await typeCode(row2_text, '#row-2');
+    await typeCode(rowLoading, '#row-loading', 300);
+    await typeCode(row3_text, '#row-3', 5);
+}
+
 function insertAfter(newNode, existingNode) {
     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
 }
 
-
-async function typeCode(code, elementRef, delay = 50) {
+async function typeCode(code, targetElementRef, delay = 50) {
     for (const word of code) {
         const span = document.createElement('span');
-        document.querySelector(elementRef).append(span);
+        document.querySelector(targetElementRef).append(span);
 
         applyStyle(word.style, span);
 
@@ -117,10 +122,9 @@ async function typeCode(code, elementRef, delay = 50) {
     }
 }
 
-function applyStyle(styleProperties, elementNode) {
+function applyStyle(styleProperties = {}, elementNode) {
     for (const [key, value] of Object.entries(styleProperties)) {
         elementNode.style[`${key}`] = value;
-        // console.log(key);
     }
 }
 
