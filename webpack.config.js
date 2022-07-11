@@ -8,7 +8,7 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
   entry: {
-    index: "./src/index.js"
+    index: './src/index.js'
   },
   devtool: 'inline-source-map',
   output: {

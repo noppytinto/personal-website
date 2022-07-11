@@ -2,12 +2,13 @@
 @use "./partials/reset";
 @use "./partials/base";
 
-// components
-@use "./partials/components/card";
-
 
 // pages
+@use "./partials/pages/home";
 
+
+// components
+@use "./partials/components/card";
 
 //
 @use "./partials/utils";

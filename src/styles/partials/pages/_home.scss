@@ -1,0 +1,30 @@
+@keyframes blink {
+  0% {opacity: 1;}
+  40% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+.home {
+  &__typing-container {
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+  }
+  
+  &__input-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.3rem;
+    background-color: white;
+    margin-left: -5px;
+  
+    //animation: blink .7s linear infinite alternate;
+    animation-name: blink;
+    animation-duration: .6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+}//
+

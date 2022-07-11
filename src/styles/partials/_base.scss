@@ -2,7 +2,14 @@
 
 body {
   padding: 1em;
-  font-family: var.$my-font-family;
+  font-family: var.$font-family--base;
+  background-color: #1A2F3E;
+  color: #DDF1FF;
+}
+
+.monospace {
+  font-family: var.$font-family--mono;
+  
 }
 
 textarea { resize: none; }
