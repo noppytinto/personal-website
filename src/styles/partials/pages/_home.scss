@@ -17,7 +17,11 @@
     width: 3px;
     height: 1.3rem;
     background-color: white;
-    margin-left: -5px;
+    //margin-left: -5px;
+    //margin-top: .1rem;
+    position: relative;
+    top: .3rem;
+    left: -.2rem;
   
     //animation: blink .7s linear infinite alternate;
     animation-name: blink;

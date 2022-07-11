@@ -40,7 +40,7 @@ const row2code = [
     {text: 'console.', style: {}},
     {text: 'log', style: {color: '#BE6CFF'}},
     {text: '(', style: {color: '#FFB800'}},
-    {text: 'result ', style: {}},
+    {text: 'result', style: {}},
     {text: ')', style: {color: '#FFB800'}},
     {text: ';', style: { }},
 ]
