@@ -65,3 +65,78 @@
 }
 
 
+
+
+////////////////////////////////////
+// glitch
+////////////////////////////////////
+.container {
+  color: #FAFAFA;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  text-align: right;
+  width: 100%;
+}
+
+.stack {
+  color: var.$color--green;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 1.1rem;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 200ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 1.5s ease infinite 1.5s alternate-reverse;
+}
+
+.stack span:nth-child(odd) { --glitch-translate: 8px; }
+.stack span:nth-child(even) { --glitch-translate: -8px; }
+
+$color--scan-line-1: red;
+$color--scan-line-2: blue;
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 $color--scan-line-1, 2px -3px 0 $color--scan-line-2;
+  }
+60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 $color--scan-line-1, -2px 3px 0 $color--scan-line-2;
+  }
+100% {
+     text-shadow: none;
+   }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 $color--scan-line-1, 2px -3px 0 $color--scan-line-2;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 $color--scan-line-1, -2px 3px 0 $color--scan-line-2;
+  }
+  4%, 100% {  text-shadow: none; transform: none; }
+}
+
+
+
+
