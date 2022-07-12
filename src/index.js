@@ -20,44 +20,50 @@ main();
 async function main() {
     //
     handleNavMenuPositionOnViewportChange();
+    //
     revealHeaderOnScrolling();
-
     //
     startTypingAnimation();
-}
+
+}// main()
 
 
 function handleNavMenuPositionOnViewportChange() {
-    const handleViewportChange = (e) => {
+    const handleOnViewportChange = (mediaQuery) => {
         const header = document.querySelector('.header');
-        const headerNavMenu = document.querySelector('.nav');
+        const navigation = document.querySelector('.nav');
         const footer = document.querySelector('.footer');
 
-        if (e.matches) {
-            console.log('media query matches');
-            header.removeChild(headerNavMenu);
-            footer.append(headerNavMenu);
-            footer.style.position = 'fixed';
-            footer.style.bottom = '0';
+        if (mediaQuery.matches) {
+            // _removeElementFrom(header, navigation);
 
+            // footer.append(navigation);
+            navigation.classList.add('nav--stick-to-bottom');
         }
         else {
-            if (footer.contains(headerNavMenu))
-                footer.removeChild(headerNavMenu);
+            // _removeElementFrom(footer, navigation);
+            //
+            // if (header.contains(navigation)) return;
+            //
+            // header.append(navigation);
 
-            if (header.contains(headerNavMenu)) return;
-
-            header.append(headerNavMenu);
-            console.log('media not matching');
-
-            footer.style.position = 'revert';
-            footer.style.bottom = 'revert';
+            navigation.classList.remove('nav--stick-to-bottom');
         }
     }
 
     let mediaQuery = matchMedia("(max-width: 550px)")
-    mediaQuery.addListener(handleViewportChange)
-    handleViewportChange(mediaQuery)
+    mediaQuery.addEventListener('change', handleOnViewportChange)
+    handleOnViewportChange(mediaQuery)
+}
+
+function _removeElementFrom(from, target) {
+    if (from.contains(target))
+        from.removeChild(target);
+}
+
+function _appendElementInto(into, target) {
+    if (!into.contains(target))
+        into.removeChild(target);
 }
 
 function revealHeaderOnScrolling() {
