@@ -2,6 +2,16 @@
 @use "../variables" as var;
 
 
+.divider {
+  --border-width: 1px;
+  
+  width: 100%;
+  height: calc(var(--border-width) + 2);
+  border-bottom-style: solid;
+  border-bottom-color: var.$color--blue-night--800;
+  border-bottom-width: var(--border-width);
+}
+
 @keyframes reveal {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -97,7 +107,7 @@
   &__section {
     height: 100vh;
     @include mix.center-vertically-horizontally;
-  
+    background-color: var.$color--blue-night;
   }
   
   &__section p {
@@ -105,9 +115,21 @@
     font-size: 3rem;
   }
   
+  
+  &__about, &__projects,  &__contacts {
+    $border-radius: 1.5em;
+    @include mix.round-top-corners($border-radius);
+    @include mix.move-to-top-by($border-radius);
+  }
+  
   &__about {
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
+    @include mix.move-to-top-by(0);
+  }
+  
+  &__projects {
+
   }
   
   &__contacts {
@@ -117,12 +139,20 @@
 
 }//
 
-.footer p {
+.footer {
+  @include mix.center-vertically-horizontally;
+}
 
+.footer p {
+  border-radius: 1em;
+  background-color: rgba(var.$color--blue-night--50, .05);
+  border-style: solid;
+  border-color: rgba(var.$color--blue-night--50, .1);
+  border-width: 1px;
+  backdrop-filter: blur(7px);
   position: fixed;
-  bottom: 0;
+  bottom: 1em;
   text-align: center;
-  width: 100%;
-  padding: 1em;
+  padding: 1em 3em;
   color: var.$color--blue-night--400;
 }

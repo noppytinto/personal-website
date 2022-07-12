@@ -14,3 +14,12 @@
   display: flex;
   align-items: center;
 }
+
+@mixin round-top-corners($radius) {
+  border-radius: $radius $radius 0 0;
+}
+
+@mixin move-to-top-by($amount) {
+  margin-top: -$amount;
+}
+
