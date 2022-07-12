@@ -51,11 +51,15 @@
   }
   
 }//
-
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 1em 1em;
+  }
+}
 
 @media screen and (max-width: 550px) {
   .header {
-    padding: 1.2em;
+    padding: 1em;
     @include mix.center-vertically-horizontally;
   }
 }
