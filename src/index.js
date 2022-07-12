@@ -19,60 +19,48 @@ main();
 /////////////////////////////////////////
 async function main() {
     //
-    // revealHeaderOnHover();
-    revealHeaderAsScrolling();
+    handleNavMenuPositionOnViewportChange();
+    revealHeaderOnScrolling();
 
     //
     startTypingAnimation();
 }
 
 
+function handleNavMenuPositionOnViewportChange() {
+    const handleViewportChange = (e) => {
+        const header = document.querySelector('.header');
+        const headerNavMenu = document.querySelector('.nav');
+        const footer = document.querySelector('.footer');
 
+        if (e.matches) {
+            console.log('media query matches');
+            header.removeChild(headerNavMenu);
+            footer.append(headerNavMenu);
+            footer.style.position = 'fixed';
+            footer.style.bottom = '0';
 
+        }
+        else {
+            if (footer.contains(headerNavMenu))
+                footer.removeChild(headerNavMenu);
 
+            if (header.contains(headerNavMenu)) return;
 
+            header.append(headerNavMenu);
+            console.log('media not matching');
 
-
-
-
-function handleViewportChange(e) {
-    const header = document.querySelector('.header');
-    const headerNavMenu = document.querySelector('.nav');
-    const footer = document.querySelector('.footer');
-
-    if (e.matches) {
-        console.log('media query matches');
-        header.removeChild(headerNavMenu);
-        footer.append(headerNavMenu);
-        footer.style.position = 'fixed';
-        footer.style.bottom = '0';
-
+            footer.style.position = 'revert';
+            footer.style.bottom = 'revert';
+        }
     }
-    else {
-        if (footer.contains(headerNavMenu))
-            footer.removeChild(headerNavMenu);
 
-        if (header.contains(headerNavMenu)) return;
-
-        header.append(headerNavMenu);
-        console.log('media not matching');
-
-        footer.style.position = 'revert';
-        footer.style.bottom = 'revert';
-    }
+    let mediaQuery = matchMedia("(max-width: 550px)")
+    mediaQuery.addListener(handleViewportChange)
+    handleViewportChange(mediaQuery)
 }
 
-let mediaQuery = matchMedia("(max-width: 550px)")
-mediaQuery.addListener(handleViewportChange)
-handleViewportChange(mediaQuery)
-
-
-
-
-
-
-
-function revealHeaderAsScrolling() {
+function revealHeaderOnScrolling() {
     const target = document.querySelector('.home__typing-container');
     const header = document.querySelector('.header');
 
