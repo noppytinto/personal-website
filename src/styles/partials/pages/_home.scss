@@ -108,6 +108,12 @@
   border-top-color: var.$color--divider;
   border-top-style: solid;
   border-top-width: 1px;
+  
+  transition: all .2s;
+}
+
+.nav--move-slightly-top {
+  position: absolute;
 }
 
 @media screen and (max-width: 390px) {
@@ -215,22 +221,34 @@
   width: 100%;
   padding: 1.5em 0;
   @include mix.center-vertically-horizontally;
-  
   background-color: var.$color--blue-night;
+  
+  
+  &__rights-reserved {
+  
+  }
 }
+
+
 
 .wip-badge {
   position: fixed;
   bottom: 5em;
-  padding: .5em 1.5em;
+  width: 100%;
+  @include mix.center-vertically-horizontally;
   
-  text-align: center;
-  color: var.$color--blue-night--600;
+  p {
+    display: inline-block;
+    padding: .5em 1.5em;
   
-  background-color: rgba(var.$color--blue-night--50, .05);
-  border-radius: .5em;
-  border-style: solid;
-  border-color: rgba(var.$color--blue-night--50, .1);
-  border-width: 1px;
-  backdrop-filter: blur(10px);
+    text-align: center;
+    color: var.$color--blue-night--600;
+  
+    background-color: rgba(var.$color--blue-night--50, .05);
+    border-radius: .5em;
+    border-style: solid;
+    border-color: rgba(var.$color--blue-night--50, .1);
+    border-width: 1px;
+    backdrop-filter: blur(10px);
+  }
 }

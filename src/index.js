@@ -75,6 +75,31 @@ function revealHeaderOnScrolling() {
     observer.observe(target);
 }
 
+// function revealRightsOnScrolling() {
+//     const target = document.querySelector('.footer');
+//     const navigation = document.querySelector('.nav');
+//
+//     const options = {
+//         root: null,
+//         threshold: 0.1
+//     }
+//
+//     const callback = (entries) => {
+//         const [entry] = entries;
+//
+//         if (entry.isIntersecting) {
+//             navigation.classList.remove('header--reveal');
+//         }
+//         else {
+//
+//         }
+//     };
+//
+//     const observer = new IntersectionObserver(callback, options);
+//     observer.observe(target);
+// }
+
+
 function revealHeaderOnHover() {
     const header = document.querySelector('.header');
 
