@@ -51,6 +51,7 @@
   }
   
 }//
+
 @media screen and (max-width: 600px) {
   .header {
     padding: 1em 1em;
@@ -144,6 +145,10 @@
 }
 
 .home {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  //scroll-padding-bottom: 100px;
   
   &__typing-container {
     //display: flex;
@@ -186,6 +191,8 @@
     height: 100vh;
     @include mix.center-vertically-horizontally;
     background-color: var.$color--blue-night;
+  
+    scroll-snap-align: start;
   }
   
   &__section p {
@@ -231,14 +238,15 @@
   background-color: var.$color--blue-night;
   color: var.$color--blue-night--300;
   
-  
   &__rights-reserved {
   
   }
 }
 
 
-
+/////////////////////////////////////////
+// MISC
+/////////////////////////////////////////
 .wip-badge {
   position: fixed;
   bottom: 5em;
