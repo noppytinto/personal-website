@@ -145,10 +145,9 @@
 }
 
 .home {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  //scroll-padding-bottom: 100px;
+  //height: 100vh;
+  //overflow-y: scroll;
+  //scroll-snap-type: y mandatory;
   
   &__typing-container {
     //display: flex;
@@ -192,7 +191,7 @@
     @include mix.center-vertically-horizontally;
     background-color: var.$color--blue-night;
   
-    scroll-snap-align: start;
+    //scroll-snap-align: start;
   }
   
   &__section p {
