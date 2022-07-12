@@ -19,12 +19,32 @@
 </head>
 <body>
 <header class="header">
+
   <span class="header__logo"> Francesco Scutellaro </span>
-  <nav class="header__nav"></nav>
+
+  <nav class="header__nav">
+    <ul class="header__nav-container">
+      <li class="header__nav-item">
+        <a href="#home" class="header__nav-link">home()</a>
+      </li>
+      <li class="header__nav-item">
+        <a href="#about" class="header__nav-link">about()</a>
+      </li>
+      <li class="header__nav-item">
+        <a href="#projects" class="header__nav-link">projects()</a>
+      </li>
+      <li class="header__nav-item">
+        <a href="#contact" class="header__nav-link">contact()</a>
+      </li>
+    </ul>
+  </nav>
+
 </header>
+
+
 <main class="home">
 
-  <section class="home__section home__welcome">
+  <section class="home__section home__welcome" id="home">
     <div class="home__typing-container monospace">
       <span id="row-1" class="home__row"></span>
       <span id="row-2" class="home__row"></span>
@@ -38,16 +58,16 @@
     </div>
   </section>
 
-  <section class="home__section home__about">
+  <section class="home__section home__about" id="about">
     <p>About</p>
   </section>
 
-  <section class="home__section home__projects">
+  <section class="home__section home__projects" id="projects">
     <p>Projects</p>
   </section>
 
-  <section class="home__section home__contacts">
-    <p>Contacts</p>
+  <section class="home__section home__contact" id="contact">
+    <p>Contact</p>
   </section>
 
 
@@ -72,15 +92,11 @@
 <!--    <div class="card" data-index="5">card 5</div>-->
 <!--  </section>-->
 
-
-
-
-
 </main>
+
 <footer class="footer">
   <p>(work in progress)</p>
 </footer>
-
 
 </body>
 </html>

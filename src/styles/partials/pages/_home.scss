@@ -23,6 +23,10 @@
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
   padding: 1.5em 2.5em;
   position: fixed;
   top: 0;
@@ -31,9 +35,11 @@
   background-color: var.$color--blue-night;
   opacity: 0;
   animation-duration: .5s;
+  font-family: var.$font-family--mono;
+  
+  transition: all .2s;
   
   &__logo {
-    font-family: var.$font-family--mono;
     color: var.$color--green;
     font-size: 1.1rem;
   }
@@ -47,7 +53,37 @@
     animation-name: conceal;
     animation-fill-mode: forwards;
   }
+  
+  &__nav {
+  }
+  
+  &__nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    list-style: none;
+  }
+  
+  &__nav-link:visited {
+    color: inherit;
+  }
+  
+  &__nav-link:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: var.$color--orange;
+    text-decoration-line: underline;
+  }
+  
+
+}//
+
+.header:hover {
+  opacity: 1 !important;
 }
+
+
 
 @media screen and (max-width: 550px) {
   .header {
@@ -116,7 +152,7 @@
   }
   
   
-  &__about, &__projects,  &__contacts {
+  &__about, &__projects,  &__contact {
     $border-radius: 1.5em;
     @include mix.round-top-corners($border-radius);
     @include mix.move-to-top-by($border-radius);
@@ -132,7 +168,7 @@
 
   }
   
-  &__contacts {
+  &__contact {
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
   }

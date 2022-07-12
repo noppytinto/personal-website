@@ -9,6 +9,7 @@ import './styles/style.scss';
 // MAIN
 /////////////////////////////////////////
 let secondRun = false;
+let alreadyRevealed = false;
 
 main();
 
@@ -18,29 +19,29 @@ main();
 /////////////////////////////////////////
 async function main() {
     //
-    revealHeaderAsScroll();
+    // revealHeaderOnHover();
+    revealHeaderAsScrolling();
 
     //
-    startCodeTypingAnimation();
-
+    startTypingAnimation();
 }
 
-function revealHeaderAsScroll() {
+function revealHeaderAsScrolling() {
     const target = document.querySelector('.home__typing-container');
     const header = document.querySelector('.header');
-    // const viewport = document.querySelector('.home__typing-container');
 
     const options = {
         root: null,
-        // rootMargin: '-300px',
         threshold: 0
     }
 
-    const callback = (entries, observer) => {
+    const callback = (entries) => {
         const [entry] = entries;
 
         if (entry.isIntersecting) {
-            if(secondRun) header.classList.add('header--conceal');
+            if(secondRun) {
+                header.classList.add('header--conceal');
+            }
             header.classList.remove('header--reveal');
             secondRun = true;
         }
@@ -54,7 +55,26 @@ function revealHeaderAsScroll() {
     observer.observe(target);
 }
 
-async function startCodeTypingAnimation() {
+function revealHeaderOnHover() {
+    const header = document.querySelector('.header');
+
+    header.addEventListener('mouseenter', (ev) => {
+        if (alreadyRevealed) return;
+
+        header.classList.add('header--reveal');
+        header.classList.remove('header--conceal');
+    })
+
+    header.addEventListener('mouseleave', (ev) => {
+        if (alreadyRevealed) return;
+
+        header.classList.remove('header--reveal');
+        header.classList.add('header--conceal');
+    })
+
+}
+
+async function startTypingAnimation() {
     //
     const breakElement = document.createElement('br');
     const stringColor = '#00BC4B';
@@ -116,13 +136,13 @@ async function typeCode(code, targetElementRef, delay = 50) {
         const span = document.createElement('span');
         document.querySelector(targetElementRef).append(span);
 
-        applyStyle(word.style, span);
+        applyStyle(span, word.style);
 
         await typeText(word.text, span, delay)
     }
 }
 
-function applyStyle(styleProperties = {}, elementNode) {
+function applyStyle(elementNode, styleProperties = {}) {
     for (const [key, value] of Object.entries(styleProperties)) {
         elementNode.style[`${key}`] = value;
     }
