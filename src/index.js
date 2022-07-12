@@ -30,23 +30,12 @@ async function main() {
 
 function handleNavMenuPositionOnViewportChange() {
     const handleOnViewportChange = (mediaQuery) => {
-        const header = document.querySelector('.header');
         const navigation = document.querySelector('.nav');
-        const footer = document.querySelector('.footer');
 
         if (mediaQuery.matches) {
-            // _removeElementFrom(header, navigation);
-
-            // footer.append(navigation);
             navigation.classList.add('nav--stick-to-bottom');
         }
         else {
-            // _removeElementFrom(footer, navigation);
-            //
-            // if (header.contains(navigation)) return;
-            //
-            // header.append(navigation);
-
             navigation.classList.remove('nav--stick-to-bottom');
         }
     }
@@ -56,15 +45,6 @@ function handleNavMenuPositionOnViewportChange() {
     handleOnViewportChange(mediaQuery)
 }
 
-function _removeElementFrom(from, target) {
-    if (from.contains(target))
-        from.removeChild(target);
-}
-
-function _appendElementInto(into, target) {
-    if (!into.contains(target))
-        into.removeChild(target);
-}
 
 function revealHeaderOnScrolling() {
     const target = document.querySelector('.home__typing-container');
@@ -195,6 +175,20 @@ async function typeText(text, elementNode, delay = 50) {
         elementNode.append(letter);
         await waitForMs(delay);
     }
+}
+
+
+/////////////////////////////////////////
+// FUNCTIONS - utils
+/////////////////////////////////////////
+function _removeElementFrom(from, target) {
+    if (from.contains(target))
+        from.removeChild(target);
+}
+
+function _appendElementInto(into, target) {
+    if (!into.contains(target))
+        into.removeChild(target);
 }
 
 function waitForMs(ms) {

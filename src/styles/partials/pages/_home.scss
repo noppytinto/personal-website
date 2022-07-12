@@ -19,17 +19,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   padding: 1.5em 2.5em;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  
+  font-family: var.$font-family--mono;
+  
+  border-bottom-color: var.$color--divider;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
   background-color: var.$color--blue-night;
   opacity: 0;
   animation-duration: .5s;
-  font-family: var.$font-family--mono;
-  
   transition: all .2s;
   
   &__logo {
@@ -101,6 +104,10 @@
   right: 0;
   padding: 1.5em;
   background-color: var.$color--blue-night;
+  
+  border-top-color: var.$color--divider;
+  border-top-style: solid;
+  border-top-width: 1px;
 }
 
 @media screen and (max-width: 390px) {
