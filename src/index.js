@@ -49,6 +49,7 @@ function handleNavMenuPositionOnViewportChange() {
 function revealHeaderOnScrolling() {
     const target = document.querySelector('.home__typing-container');
     const header = document.querySelector('.header');
+    const aboutSection = document.querySelector('.home__about');
 
     const options = {
         root: null,
