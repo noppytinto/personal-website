@@ -23,3 +23,12 @@
   margin-top: -$amount;
 }
 
+@mixin show {
+  //transition: all .2s;
+  opacity: 1;
+}
+
+@mixin hide {
+  //transition: all .2s;
+  opacity: 0;
+}
