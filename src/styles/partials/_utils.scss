@@ -6,10 +6,11 @@
 // WIP badge
 //////////////////////////////////////
 .wip-badge {
+  @include mix.center-vertically-horizontally;
   position: fixed;
   bottom: 5em;
   width: 100%;
-  @include mix.center-vertically-horizontally;
+  z-index: 99; // for stay above crt begin() scanlines
   
   p {
     display: inline-block;
@@ -176,17 +177,9 @@
 
 
 
-
-
-
-
-
-
-
 ////////////////////////////////////
 // scan lines effect
 ////////////////////////////////////
-
 .scanlines {
   /* LIST OF FURTHER IMPROVEMENTS */
   
@@ -316,8 +309,6 @@
     }
   }
 }
-
-
 
 
 ////////////////////////////////////
