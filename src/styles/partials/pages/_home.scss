@@ -167,12 +167,6 @@
   //scroll-snap-type: y mandatory;
   
   &__typing-container {
-    //padding: 1em 3em 2em;
-    //border-style: solid;
-    //border-color: var.$color--blue-night--700;
-    //border-radius: 1em;
-    //border-width: 1px;
-    
     font-size: 1.2rem;
     font-weight: bold;
   }
@@ -182,11 +176,11 @@
   }
   
   @media screen and (max-width: 450px) {
-    &__typing-container {font-size: .9rem;}
+    &__typing-container {font-size: .95rem;}
   }
   
   @media screen and (max-width: 400px) {
-    &__typing-container {font-size: .85rem;}
+    &__typing-container {font-size: .8rem;}
   }
   
   
@@ -216,9 +210,7 @@
   
   &__section {
     @include mix.center-vertically-horizontally;
-    padding: 2em;
     height: 100vh;
-    
     background-color: var.$color--blue-night;
   
     //scroll-snap-align: start;
@@ -230,6 +222,8 @@
   
   
   &__about, &__projects,  &__contact {
+    padding: 2em;
+  
     $border-radius: 1em;
     $offset: $border-radius;
     
