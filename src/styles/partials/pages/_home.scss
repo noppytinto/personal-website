@@ -27,7 +27,14 @@
   
   &__logo {
     color: var.$color--green;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 550px) {
+    .header {
+      font-size: 1.1rem;
+    }
   }
   
   &--reveal {
