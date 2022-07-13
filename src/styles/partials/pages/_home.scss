@@ -103,8 +103,14 @@
     }
   }
   
+  &__link:link {
+
+  }
+  
   &__link:visited {
     color: inherit;
+    //text-decoration-line: underline;
+    //text-decoration-color: var.$color--blue-night--400;
   }
   
   &__link:hover {
@@ -113,6 +119,8 @@
     color: var.$color--orange;
     text-decoration-line: underline;
   }
+  
+
 }//
 
 .nav--stick-to-bottom {
@@ -128,6 +136,12 @@
   border-top-width: 1px;
   
   transition: all .2s;
+  
+  .nav__function-name {
+    text-decoration-line: underline;
+    text-decoration-color: var.$color--blue-night--500;
+    text-decoration-thickness: 1px;
+  }
 }
 
 .nav--move-slightly-top {

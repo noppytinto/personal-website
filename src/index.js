@@ -136,7 +136,7 @@ async function startTypingAnimation() {
 
     const row1_text = [
         {text: 'var ', style: keywordStyle },
-        {text: 'result '},
+        {text: 'answ '},
         {text: '= '},
         {text: 'whoIs', style: functionStyle},
         {text: '(', style: symbolStyle},
@@ -149,7 +149,7 @@ async function startTypingAnimation() {
         {text: 'console.'},
         {text: 'log', style: functionStyle},
         {text: '(', style: symbolStyle},
-        {text: 'result'},
+        {text: 'answ'},
         {text: ')', style: symbolStyle},
         {text: ';'},
     ]
