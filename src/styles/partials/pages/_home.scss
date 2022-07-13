@@ -26,14 +26,18 @@
   transition: all .2s;
   
   &__logo {
+    position: relative;
     color: var.$color--green;
     font-size: 1.3rem;
     font-weight: bold;
+    border-radius: 1em;
+    padding: .5em;
   }
   
   @media screen and (max-width: 550px) {
-    .header {
+    &__logo {
       font-size: 1.1rem;
+      font-weight: normal;
     }
   }
   
@@ -156,18 +160,20 @@
     //border-color: var.$color--blue-night--700;
     //border-radius: 1em;
     //border-width: 1px;
+    
+    font-size: 1.2rem;
   }
   
   @media screen and (max-width: 500px) {
-    &__typing-container {font-size: .95rem;}
+    &__typing-container {font-size: 1rem;}
   }
   
   @media screen and (max-width: 450px) {
-    &__typing-container {font-size: .85rem;}
+    &__typing-container {font-size: .9rem;}
   }
   
   @media screen and (max-width: 400px) {
-    &__typing-container {font-size: .75rem;}
+    &__typing-container {font-size: .85rem;}
   }
   
   
