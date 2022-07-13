@@ -209,17 +209,16 @@
   }
   
   &__section {
-    @include mix.center-vertically-horizontally;
     height: 100vh;
     background-color: var.$color--blue-night;
   
     //scroll-snap-align: start;
   }
   
-  &__section p {
-
-  }
+  &__begin {
+    @include mix.center-vertically-horizontally;
   
+  }
   
   &__about, &__projects,  &__contact {
     padding: 2em;
