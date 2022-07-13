@@ -167,6 +167,7 @@
   //scroll-snap-type: y mandatory;
   
   &__typing-container {
+    position: relative;
     font-size: 1.2rem;
     font-weight: bold;
   }
