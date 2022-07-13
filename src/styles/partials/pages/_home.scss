@@ -211,17 +211,24 @@
     animation-timing-function: linear;
   }
   
+  &__title {
+    font-family: var.$font-family--condensed;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  
   &__section {
-    height: 100vh;
     @include mix.center-vertically-horizontally;
+    padding: 2em;
+    height: 100vh;
+    
     background-color: var.$color--blue-night;
   
     //scroll-snap-align: start;
   }
   
   &__section p {
-    font-family: var.$font-family--condensed;
-    font-size: 3rem;
+
   }
   
   
@@ -231,12 +238,14 @@
     
     @include mix.round-top-corners($border-radius);
     @include mix.move-to-top-by($offset);
+    @include mix.center-horizontally;
   }
   
   &__about {
+    @include mix.move-to-top-by(0);
+    
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
-    @include mix.move-to-top-by(0);
     transition: all .2s;
   }
   

@@ -7,12 +7,14 @@
 
 @mixin center-vertically {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: revert;
 }
 
 @mixin center-horizontally {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: revert;
 }
 
 @mixin round-top-corners($radius) {
@@ -31,4 +33,8 @@
 @mixin hide {
   //transition: all .2s;
   opacity: 0;
+}
+
+@mixin glow($color) {
+  text-shadow: 0 0 6px $color;
 }

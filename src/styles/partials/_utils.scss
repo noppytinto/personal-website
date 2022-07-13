@@ -1,6 +1,9 @@
 @use "./variables" as var;
 @use "./mixin" as mix;
 
+.glow {
+  @include mix.glow(var.$color--green);
+}
 
 //////////////////////////////////////
 // WIP badge
@@ -485,3 +488,4 @@
     }
   }
 }//
+
