@@ -27,12 +27,9 @@
   transition: all .2s;
   
   &__logo {
-    position: relative;
     color: #fff;
     font-size: 1.3rem;
     font-weight: bold;
-    border-radius: 1em;
-    padding: .5em;
   }
   
   @media screen and (max-width: 550px) {
