@@ -36,5 +36,10 @@
 }
 
 @mixin glow($color) {
-  text-shadow: 0 0 6px $color;
+  text-shadow:
+          0 0 4px #fff,
+          //0 0 8px #fff,
+          0 0 8px $color,
+          0 0 16px $color,
+          0 0 32px $color;
 }
