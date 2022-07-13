@@ -179,7 +179,6 @@
 }//
 
 
-
 ////////////////////////////////////
 // scan lines effect
 ////////////////////////////////////
@@ -329,12 +328,12 @@
     bottom: 0;
     right: 0;
     //background: rgba(18, 16, 16, 0.1);
-    //background: rgba(var.$color--blue-night, 0.1);
     opacity: 0;
     z-index: 2;
     pointer-events: none;
     animation: flicker 0.15s infinite;
   }
+  
   &::before {
     content: " ";
     display: block;
@@ -348,12 +347,6 @@
     z-index: 2;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
-  }
-  
-  @media screen and (max-width: 550px) {
-    &::before {
-      background-size: 100% 1px, 2px 100%;
-    }
   }
   
   @keyframes flicker {
@@ -488,4 +481,11 @@
     }
   }
 }//
+
+
+@media screen and (max-width: 550px) {
+  .crt::before {
+    background-size: 100% 1px, 2px 100%;
+  }
+}
 
