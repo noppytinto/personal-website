@@ -5,16 +5,6 @@
 /////////////////////////////////////////
 // HEADER
 /////////////////////////////////////////
-@keyframes reveal {
-  from { @include mix.hide; }
-  to { @include mix.show; }
-}
-
-@keyframes conceal {
-  from { @include mix.show; }
-  to { @include mix.hide; }
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -68,6 +58,17 @@
 .header:hover {
   opacity: 1 !important;
 }
+
+@keyframes reveal {
+  from { @include mix.hide; }
+  to { @include mix.show; }
+}
+
+@keyframes conceal {
+  from { @include mix.show; }
+  to { @include mix.hide; }
+}
+
 
 
 /////////////////////////////////////////
@@ -137,13 +138,6 @@
 /////////////////////////////////////////
 // HOME
 /////////////////////////////////////////
-@keyframes blink {
-  0% {opacity: 1;}
-  40% {opacity: 1;}
-  60% {opacity: 0;}
-  100% {opacity: 0;}
-}
-
 .home {
   //height: 100vh;
   //overflow-y: scroll;
@@ -201,7 +195,7 @@
   
   
   &__about, &__projects,  &__contact {
-    $border-radius: 1.5em;
+    $border-radius: 1em;
     @include mix.round-top-corners($border-radius);
     @include mix.move-to-top-by($border-radius);
   }
@@ -224,6 +218,13 @@
   }
 
 }//
+
+@keyframes blink {
+  0% {opacity: 1;}
+  40% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;}
+}
 
 
 /////////////////////////////////////////
