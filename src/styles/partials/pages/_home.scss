@@ -144,9 +144,11 @@
   //scroll-snap-type: y mandatory;
   
   &__typing-container {
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
+    //padding: 1em 3em 2em;
+    //border-style: solid;
+    //border-color: var.$color--blue-night--700;
+    //border-radius: 1em;
+    //border-width: 1px;
   }
   
   @media screen and (max-width: 500px) {
