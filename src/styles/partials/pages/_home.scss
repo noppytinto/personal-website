@@ -27,7 +27,7 @@
   transition: all .2s;
   
   &__logo {
-    color: #fff;
+    color: var.$color--green;
     font-size: 1.3rem;
     font-weight: bold;
   }
