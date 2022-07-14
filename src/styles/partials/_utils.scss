@@ -317,17 +317,56 @@
 ////////////////////////////////////
 // PARALLAX effect
 ////////////////////////////////////
-.parallax::after {
-  content: ' ';
+$perspective: 1px;
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-layer {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  transform: translateZ(-1px) scale(1.5);
-  background-size: 100%;
-  z-index: -1;
 }
+
+// from the farthest
+//
+// scale factor:
+// 1 + (translateZ * -1) / perspective
+.parallax-layer--1 {
+  transform: translateZ(-1px) scale(calc((1 + 1) / 1));
+}
+
+.parallax-layer--2 {
+  margin-top: calc(100vh * 1);
+  transform: translateZ(0);
+}
+
+.parallax-layer--3 {
+  margin-top: calc(100vh * 2);
+  transform: translateZ(0);
+}
+
+.parallax-layer--4 {
+  margin-top: calc(100vh * 3);
+  transform: translateZ(0);
+}
+
+//.parallax::after {
+//  content: ' ';
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  bottom: 0;
+//  left: 0;
+//  transform: translateZ(-1px) scale(1.5);
+//  background-size: 100%;
+//  z-index: -1;
+//}
 
 
 
@@ -677,3 +716,25 @@
 //  }
 //}
 
+
+
+/////////////////////////////////////////
+// MISC
+/////////////////////////////////////////
+
+.test--layer-1 {
+  background-color: #9bdea7;
+  
+  text-align: center;
+  background: url("https://images.unsplash.com/photo-1657653463810-fa2f223fbb82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80");
+  
+  
+}
+
+
+.test--layer-2 {
+  
+  background-color: #6e8ca4;
+  text-align: center;
+  background: url("https://images.unsplash.com/photo-1657722227063-f17fa81aeae3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+}

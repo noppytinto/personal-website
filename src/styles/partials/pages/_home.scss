@@ -26,7 +26,6 @@
   animation-duration: .5s;
   transition: all .2s;
   
-  //@include mix.blur(var.$color--blue-night, 5px);
   
   &__logo {
     color: var.$color--green;
@@ -164,11 +163,6 @@
 // HOME
 /////////////////////////////////////////
 .home {
-  //height: 100vh;
-  //overflow-y: scroll;
-  //scroll-snap-type: y mandatory;
-  overflow-y: auto;
-  perspective: 2px; /* <-- This line */
   
   &__typing-container {
     position: relative;
@@ -236,9 +230,6 @@
     @include mix.center-horizontally;
   
     box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
-    
-    
-  
   }
   
   &__about {
@@ -246,7 +237,7 @@
     
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
-    transition: all .2s;
+    //transition: all .2s;
   }
   
   &__projects { }
@@ -270,6 +261,9 @@
 // FOOTER
 /////////////////////////////////////////
 .footer {
+  //position: absolute;
+  //bottom: 0;
+  //
   width: 100%;
   padding: .5em 0;
   font-size: .9rem;
@@ -286,3 +280,4 @@
 /////////////////////////////////////////
 // MISC
 /////////////////////////////////////////
+
