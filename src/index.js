@@ -181,7 +181,7 @@ async function startTypingAnimation() {
     ]
 
     const row3_text = [
-        {text: 'WEB DEVELOPER :)', style: {...terminalStyle, fontSize: '1.5rem'}},
+        {text: '> WEB DEVELOPER :)', style: {...terminalStyle, fontSize: '1.5rem'}},
     ]
 
 

@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5em 2.5em;
+  padding: 1.5em 2em;
   position: fixed;
   top: 0;
   left: 0;
@@ -167,9 +167,13 @@
   scroll-behavior: smooth;
   
   &__typing-container {
+    $font-size: 1.2rem;
+    
     position: relative;
-    font-size: 1.2rem;
+    font-size: $font-size;
     font-weight: bold;
+  
+
   }
   
   @media screen and (max-width: 500px) {
@@ -186,28 +190,11 @@
   
   
   &__input-cursor {
-    display: inline-block;
-    width: 3px;
-    height: 1.3rem;
-    background-color: white;
-    //margin-left: -5px;
-    //margin-top: .1rem;
-    position: relative;
-    top: .3rem;
-    left: -.2rem;
-  
-    animation-name: blink;
-    animation-duration: .6s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
+    @include mix.input-cursor($width: .7em);
   }
   
-  &__title {
-    font-family: var.$font-family--condensed;
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
+
+  
   
   &__section {
     height: 100vh;
@@ -216,25 +203,30 @@
     //scroll-snap-align: start;
   }
   
+  &__section-title {
+    $fonts-size: 2rem;
+    font-family: var.$font-family--mono;
+    font-size: $fonts-size;
+    font-weight: normal;
+    text-align: start;
+    
+    &::before {
+      content: "> ";
+    }
+
+  }
+  
   &__begin {
     @include mix.center-vertically-horizontally;
-  
-    //overflow: hidden;
-    //transform-style: preserve-3d;
   }
   
   &__about, &__projects,  &__contact {
-    padding: 2em;
+    padding: 3.5em 2em;
     $border-radius: 1em;
     $offset: $border-radius;
-    @include mix.round-top-corners($border-radius);
-    //@include mix.move-to-top-by($offset);
-    @include mix.center-horizontally;
-  
     box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
-    //box-shadow: rgba(50, 50, 93, 0.25) 0px -13px 27px -5px, rgba(0, 0, 0, 0.3) 0px -8px 16px -8px;
-    
-    
+    @include mix.round-top-corners($border-radius);
+
   }
   
   &__about {

@@ -5,6 +5,9 @@
   @include mix.glow(var.$color--green);
 }
 
+
+
+
 //////////////////////////////////////
 // WIP badge
 //////////////////////////////////////
@@ -724,6 +727,21 @@ $perspective: 1px;
 
 
 /////////////////////////////////////////
+// EXPANDABLE CIRCLE
+/////////////////////////////////////////
+.expandable-circle {
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10%);
+  z-index: 0;
+}
+
+
+
+/////////////////////////////////////////
 // MISC
 /////////////////////////////////////////
 
@@ -743,3 +761,7 @@ $perspective: 1px;
   text-align: center;
   background: url("https://images.unsplash.com/photo-1657722227063-f17fa81aeae3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
 }
+
+
+
+
