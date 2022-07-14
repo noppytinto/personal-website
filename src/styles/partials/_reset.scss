@@ -1,12 +1,17 @@
 :root {
   box-sizing: border-box;
   font-size: 100%;
+  
 }
 
 *, ::after, ::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   
 }
+
+
+// for scrollTo method
+//html { height: 100%; overflow:auto; }
+//body { height: 100%; }

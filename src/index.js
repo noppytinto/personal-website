@@ -18,6 +18,10 @@ main();
 // FUNCTIONS
 /////////////////////////////////////////
 async function main() {
+
+    //
+    fixScrollToTop()
+
     //
     handleNavMenuPositionOnViewportChange();
     //
@@ -27,6 +31,23 @@ async function main() {
 
 }// main()
 
+function fixScrollToTop() {
+    const beginButton = document.querySelectorAll('.nav__link')[0];
+    
+    // console.log(beginButton);
+
+    beginButton.addEventListener('click', (ev) => {
+        // window.scrollTo({
+        //     top: 0,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+
+        document.getElementById('begin').scrollIntoView({behavior: 'smooth'});
+
+    });
+
+}
 
 function handleNavMenuPositionOnViewportChange() {
     const handleOnViewportChange = (mediaQuery) => {

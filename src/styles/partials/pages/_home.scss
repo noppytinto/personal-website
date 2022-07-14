@@ -163,6 +163,8 @@
 // HOME
 /////////////////////////////////////////
 .home {
+  scroll-padding: 4.2rem;
+  scroll-behavior: smooth;
   
   &__typing-container {
     position: relative;

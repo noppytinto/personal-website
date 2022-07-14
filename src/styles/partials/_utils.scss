@@ -322,6 +322,9 @@ $perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+  
+  // webkit bug
+  perspective-origin-x: 100%;
 }
 
 .parallax-layer {
@@ -330,6 +333,9 @@ $perspective: 1px;
   right: 0;
   bottom: 0;
   left: 0;
+  
+  // webkit bug
+  transform-origin-x: 100%;
 }
 
 // from the farthest
