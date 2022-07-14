@@ -313,10 +313,31 @@
 }
 
 
+
+////////////////////////////////////
+// PARALLAX effect
+////////////////////////////////////
+.parallax::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+
+
+
+
+
+
 ////////////////////////////////////
 // crt effect
 ////////////////////////////////////
-
 @keyframes flicker {
   0% {
     opacity: 0.27861;
@@ -382,6 +403,7 @@
     opacity: 0.24387;
   }
 }
+
 @keyframes textShadow {
   0% {
     text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
@@ -447,6 +469,7 @@
     text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
 }
+
 .crt::after {
   content: " ";
   display: block;
@@ -461,6 +484,7 @@
   pointer-events: none;
   animation: flicker 0.15s infinite;
 }
+
 .crt::before {
   content: " ";
   display: block;
@@ -474,6 +498,7 @@
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
+
 .crt {
   animation: textShadow 1.6s infinite;
 }

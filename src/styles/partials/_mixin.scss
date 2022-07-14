@@ -44,3 +44,9 @@
           0 0 16px $color,
           0 0 32px $color;
 }
+
+@mixin blur($color, $blurAmount) {
+  background-color: $color;
+  backdrop-filter: blur($blurAmount);
+}
+

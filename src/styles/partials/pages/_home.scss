@@ -26,6 +26,8 @@
   animation-duration: .5s;
   transition: all .2s;
   
+  //@include mix.blur(var.$color--blue-night, 5px);
+  
   &__logo {
     color: var.$color--green;
     font-size: 1.3rem;
@@ -165,6 +167,8 @@
   //height: 100vh;
   //overflow-y: scroll;
   //scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  perspective: 2px; /* <-- This line */
   
   &__typing-container {
     position: relative;
@@ -219,17 +223,22 @@
   &__begin {
     @include mix.center-vertically-horizontally;
   
+    //overflow: hidden;
+    //transform-style: preserve-3d;
   }
   
   &__about, &__projects,  &__contact {
     padding: 2em;
-  
     $border-radius: 1em;
     $offset: $border-radius;
-    
     @include mix.round-top-corners($border-radius);
     @include mix.move-to-top-by($offset);
     @include mix.center-horizontally;
+  
+    box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
+    
+    
+  
   }
   
   &__about {
