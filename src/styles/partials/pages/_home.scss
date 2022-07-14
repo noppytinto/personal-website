@@ -226,7 +226,7 @@
     $border-radius: 1em;
     $offset: $border-radius;
     @include mix.round-top-corners($border-radius);
-    @include mix.move-to-top-by($offset);
+    //@include mix.move-to-top-by($offset);
     @include mix.center-horizontally;
   
     box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);

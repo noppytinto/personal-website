@@ -348,12 +348,12 @@ $perspective: 1px;
 
 .parallax-layer--3 {
   margin-top: calc(100vh * 2);
-  transform: translateZ(0);
+  transform: translateZ(0) translateY(-1em);
 }
 
 .parallax-layer--4 {
   margin-top: calc(100vh * 3);
-  transform: translateZ(0);
+  transform: translateZ(0) translateY(-2em);
 }
 
 //.parallax::after {
