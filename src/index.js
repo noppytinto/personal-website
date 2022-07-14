@@ -20,7 +20,7 @@ main();
 async function main() {
 
     //
-    fixScrollToTop()
+    // fixScrollToTop()
 
     //
     handleNavMenuPositionOnViewportChange();
@@ -43,7 +43,7 @@ function fixScrollToTop() {
         //     behavior: 'smooth'
         // });
 
-        document.getElementById('begin').scrollIntoView({behavior: 'smooth'});
+        document.getElementById('top').scrollIntoView({behavior: 'smooth'});
 
     });
 
@@ -74,6 +74,7 @@ function revealHeaderOnScrolling() {
 
     const options = {
         root: null,
+        rootMargin: '-30%',
         threshold: 0
     }
 
