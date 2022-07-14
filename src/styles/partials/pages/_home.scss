@@ -243,9 +243,12 @@
     //transition: all .2s;
   }
   
-  &__projects { }
+  &__projects {
+    margin-top: -1em;
+  }
   
   &__contact {
+    margin-top: -1em;
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
   }
@@ -264,17 +267,14 @@
 // FOOTER
 /////////////////////////////////////////
 .footer {
-  //position: absolute;
-  //bottom: 0;
-  //
   width: 100%;
   padding: .5em 0;
-  font-size: .9rem;
   @include mix.center-vertically-horizontally;
   background-color: var.$color--blue-night;
-  color: var.$color--blue-night--300;
+  color: var.$color--blue-night--50;
   
   &__rights-reserved {
+    font-size: .9rem;
   
   }
 }//

@@ -108,12 +108,11 @@
 ////////////////////////////////////
 .glitch {
   color: #FAFAFA;
-  font-size: 1.1rem;
   display: flex;
   flex-direction: column;
   
   &__stack {
-    color: var.$color--green;
+    color: var.$color--blue-night--400;
     display: grid;
     grid-template-columns: 1fr;
   }
