@@ -29,13 +29,25 @@
   
   &__logo {
     color: var.$color--green;
-    font-size: 1.3rem;
+    //font-size: clamp(1rem, 1.3rem - 1vw, 1.3rem);
     font-weight: bold;
+  }
+  
+  @media screen and (max-width: 750px) {
+    &__logo {
+      font-size: 1.15rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    &__logo {
+      font-size: 1.1rem;
+    }
   }
   
   @media screen and (max-width: 550px) {
     &__logo {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: normal;
     }
   }
@@ -204,15 +216,16 @@
   }
   
   &__section-title {
-    $fonts-size: 2rem;
-    font-family: var.$font-family--mono;
+    $fonts-size: 4rem;
+    font-family: var.$font-family--condensed;
     font-size: $fonts-size;
     font-weight: normal;
     text-align: start;
+    margin-bottom: 2em;
     
-    &::before {
-      content: "> ";
-    }
+    //&::before {
+    //  content: "> ";
+    //}
 
   }
   
@@ -221,6 +234,7 @@
   }
   
   &__about, &__projects,  &__contact {
+    font-family: var.$font-family--condensed;
     padding: 3.5em 2em;
     $border-radius: 1em;
     $offset: $border-radius;
@@ -235,6 +249,28 @@
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
     //transition: all .2s;
+  }
+  
+  &__about-content {
+    height: 100%;
+  
+    display: flex;
+    justify-content: space-between;
+    gap: 5em;
+  }
+  
+  &__about-description {
+    line-height: 1.5;
+    font-size: 1.2rem;
+    flex-basis: 10%;
+    flex-grow: 1;
+  }
+  
+  &__about-media {
+    height: 70%;
+    flex-grow: 3;
+    //background-color: #9bdea7;
+    //background-image: url("./iceland-ocean.jpg");
   }
   
   &__projects {
