@@ -15,8 +15,9 @@ const config = {
     path: path.resolve(__dirname, "dist"),
     filename: '[name].[contenthash].js',
     clean: true,
-    assetModuleFilename: 'static/[name].[contenthash].[ext][query]',
+    assetModuleFilename: './assets/[name]-[contenthash][ext][query]',
     // publicPath: "/dist/",
+    // publicPath: '.',
   },
   devServer: {
     open: false,
@@ -33,7 +34,8 @@ const config = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: true,
-      filename: '[name].html'
+      filename: '[name].html',
+      // publicPath: './assets'
     }),
 
     new MiniCssExtractPlugin({
@@ -61,7 +63,7 @@ const config = {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: 'images/[name].[ext][query]'
+          filename: './assets/images/[name][ext][query]'
         }
       },
 

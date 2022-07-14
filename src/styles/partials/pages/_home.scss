@@ -223,6 +223,11 @@
     //scroll-snap-align: start;
   }
   
+  &__parallax-layer {
+    transform-style: preserve-3d;
+  }
+  
+  
   &__section-title {
     $fonts-size: 3.5rem;
     font-family: var.$font-family--condensed;
@@ -257,6 +262,16 @@
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
     //transition: all .2s;
+  
+    // parallax
+    //position: relative;
+    //perspective: 1px;
+    //overflow-x: hidden;
+    //overflow-y: auto;
+    //// webkit bug
+    //perspective-origin-x: 100%;
+    //position: relative;
+  
   }
   
   &__about-content {
@@ -265,6 +280,16 @@
     display: flex;
     justify-content: space-between;
     gap: 5em;
+    
+    // parallax-closest
+    //position: absolute;
+    //top: 0;
+    //right: 0;
+    //bottom: 0;
+    //left: 0;
+    //margin-top: calc(100vh * 1);
+    //transform: translateZ(0);
+    //z-index: 2;
   }
   
   &__about-description {
@@ -277,10 +302,54 @@
   &__about-media {
     height: 70%;
     flex-grow: 3;
-    //background-color: #9bdea7;
-    //background-image: url("./iceland-ocean.jpg");
+  
+    // path must be relative to index.scss
+    background-image: url('../assets/images/iceland-ocean.jpg');
+    background-position: center center;
+    background-size: 200%;
+    background-repeat: no-repeat;
   }
   
+  
+  &__about-media-farthest {
+    @include mix.center-vertically-horizontally;
+
+    // path must be relative to index.scss
+    //background-image: url('../assets/images/iceland-ocean.jpg');
+    //background-position: center center;
+    //background-size: 200%;
+    //background-repeat: no-repeat;
+    
+    // parallax-farthest
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // webkit bug
+    transform-origin-x: 100%;
+    //
+    transform: translateZ(-3px) scale(calc((1 + 3) / 1));
+    z-index: 1;
+  }
+  
+  &__about-media-closest {
+    @include mix.center-vertically-horizontally;
+  
+  
+    // parallax-farthest
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // webkit bug
+    transform-origin-x: 100%;
+    //
+    transform: translateZ(0);
+  }
+  
+
   &__projects {
     margin-top: -1em;
   }
@@ -292,6 +361,7 @@
   }
 
 }//
+
 
 @keyframes blink {
   0% {opacity: 1;}

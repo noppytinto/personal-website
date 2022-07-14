@@ -1,7 +1,15 @@
 /////////////////////////////////////////
 // WEBPACK IMPORTS
 /////////////////////////////////////////
+// import './assets';
 import './styles/style.scss';
+import ImageIcelandOcean2 from './assets/images/iceland-ocean.jpg';
+import ImageIcelandOcean from './styles/partials/pages/iceland-ocean.jpg';
+
+
+console.log(ImageIcelandOcean);
+
+
 
 
 
