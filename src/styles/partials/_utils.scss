@@ -184,7 +184,29 @@
 ////////////////////////////////////
 // scan lines effect
 ////////////////////////////////////
-.scanlines {
+.scanlines--static {
+  position: relative;
+  
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+                    to bottom,
+                    rgba(var.$color--blue-night, 0) 50%,
+                    rgba(var.$color--blue-night, 0.5) 50%
+    );
+    background-size: 100% 2px;
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+.scanlines--animated {
   /* LIST OF FURTHER IMPROVEMENTS */
   
   // 1. settings: direction of moving scanlines (currently: only bottom to top)

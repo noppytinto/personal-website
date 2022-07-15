@@ -214,7 +214,7 @@
   }
   
   
-  &__section-title {
+  &__title {
     $fonts-size: 3.5rem;
     font-family: var.$font-family--condensed;
     font-size: $fonts-size;
@@ -291,8 +291,8 @@
   
     // path must be relative to index.scss
     background-image: url('../assets/images/iceland-ocean.jpg');
-    background-position: center center;
-    background-size: 200%;
+    background-position: center 70%;
+    background-size: 200vw;
     background-repeat: no-repeat;
   }
   
