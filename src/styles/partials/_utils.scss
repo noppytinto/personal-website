@@ -591,6 +591,12 @@ $perspective: 1px;
 
 .crt {
   animation: textShadow 1.6s infinite;
+  
+  // add crt radial gradient effect
+  background-image: radial-gradient(
+                  ellipse,
+                  rgba(#000, .15) 0%,
+                  rgba(var.$color--blue-night, 1) 50%);
 }
 
 
