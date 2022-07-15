@@ -274,7 +274,7 @@
     @media screen and (max-width: 650px) {
       & {
         flex-direction: column;
-        //gap: 1.5em;
+        gap: 2em;
         justify-content: flex-start;
       }
     }
@@ -316,9 +316,9 @@
   
   &__about-overlay {
     --top: 0;
-    --right: 1%;
+    --right: 2%;
     --bottom: 20%;
-    --left: 1%;
+    --left: 2%;
     $bg-clor: var.$color--blue-night--50;
     
     position: absolute;
@@ -349,7 +349,7 @@
     background-color: transparent;
     
   
-    box-shadow: 0 0 0 2em var.$color--blue-night--50, inset 0 0 1em 0 rgba(#000, .2);
+    box-shadow: 0 0 0 .5em var.$color--blue-night--50, inset 0 0 1em 0 rgba(#000, .2);
   }
   
   &__about-background {
