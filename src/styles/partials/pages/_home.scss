@@ -226,7 +226,7 @@
   
   &__about, &__projects,  &__contact {
     font-family: var.$font-family--condensed;
-    padding: 3.5em 2em;
+    padding: 3.5em 3em;
     $border-radius: 1em;
     $offset: $border-radius;
     box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
@@ -235,14 +235,15 @@
   }
   
   &__about {
+    overflow: hidden;
     @include mix.move-to-top-by(0);
     
     display: flex;
-    gap: 3em;
+    justify-content: space-between;
+    //gap: 3em;
     
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
-    //transition: all .2s;
   
     // parallax
     //position: relative;
@@ -256,16 +257,14 @@
   }
   
   &__about-text-content {
-    flex-basis: 30%;
+    flex-basis: 50%;
+    flex-grow: 1;
     
     
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 2.5em;
-    
-    
-    
     
     // parallax-closest
     //position: absolute;
@@ -285,48 +284,74 @@
     flex-grow: 1;
   }
   
+
   &__about-media {
     flex-grow: 3;
-  }
-  
-  &__about-media {
+    
     width: 100%;
     height: 100%;
-
+    position: relative;
+  
+    display: flex;
+    justify-content: flex-end;
   }
   
-  
-  &__about-overlay {
-    width: 100%;
-    height: 100%;
-    background-color: var.$color--blue-night--50;
+  &__about-container {
+    flex-basis: 90%;
+    flex-grow: 0;
+    flex-shrink: 1;
     
     position: relative;
   }
   
-  &__about-clip {
-    position: absolute;
+  &__about-overlay {
+    --width: 1%;
+    --height: 10%;
+    $bg-clor: var.$color--blue-night--50;
     
-    height: 50%;
-    width: 90%;
-    
-    border-radius: 1em;
-    background-color: transparent;
-    border-width: 3px;
-    border-style: solid;
-  }
-  
-  &__about-background {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    
+    background:
+            linear-gradient(180deg, rgba($bg-clor,1) var(--height), transparent var(--height), transparent),
+            linear-gradient(-90deg, rgba($bg-clor,1) var(--width), transparent var(--width), transparent),
+            linear-gradient(0deg,   rgba($bg-clor,1) var(--height), transparent var(--height), transparent),
+            linear-gradient(90deg,  rgba($bg-clor,1) var(--width), transparent var(--width), transparent)
+  ;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
+  &__about-clip {
+    height: 80%;
+    width: 95%;
+    border-radius: .5em;
+    border-width: 1px;
+    border-style: solid;
+    background-color: transparent;
+  
+    box-shadow: 0 0 0 2em var.$color--blue-night--50;
+  }
+  
+  &__about-background {
+    //position: absolute;
+    //top: 0;
+    //bottom: 0;
+    //left: 0;
+    //right: 0;
+    width: 100%;
+    height: 100%;
+    
+
     // path must be relative to index.scss
     background-image: url('../assets/images/iceland-ocean.jpg');
     background-position: center center;
-    background-size: 200vw;
+    background-size: cover;
     background-repeat: no-repeat;
   
   }
