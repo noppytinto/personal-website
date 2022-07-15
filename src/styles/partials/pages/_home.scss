@@ -172,36 +172,36 @@
   scroll-padding: 4.2rem;
   scroll-behavior: smooth;
   
+  
+  
+  
+  
   &__typing-container {
     $font-size: 1.2rem;
     
     position: relative;
     font-size: $font-size;
     font-weight: bold;
-  
-
-
+    width: max-content;
+    
+    @media screen and (max-width: 500px) {
+      & {font-size: 1rem;}
+    }
+    
+    @media screen and (max-width: 450px) {
+      & {font-size: .95rem;}
+    }
+    
+    @media screen and (max-width: 400px) {
+      & {font-size: .8rem;}
+    }
   }
   
-  @media screen and (max-width: 500px) {
-    &__typing-container {font-size: 1rem;}
-  }
-  
-  @media screen and (max-width: 450px) {
-    &__typing-container {font-size: .95rem;}
-  }
-  
-  @media screen and (max-width: 400px) {
-    &__typing-container {font-size: .8rem;}
-  }
   
   
   &__input-cursor {
     @include mix.input-cursor($width: .7em);
   }
-  
-
-  
   
   &__section {
     height: 100vh;
@@ -209,11 +209,6 @@
   
     //scroll-snap-align: start;
   }
-  
-  &__parallax-layer {
-    transform-style: preserve-3d;
-  }
-  
   
   &__title {
     $fonts-size: 3.5rem;
@@ -231,7 +226,10 @@
   
   &__begin {
     @include mix.center-vertically-horizontally;
+  
+
   }
+  
   
   &__about, &__projects,  &__contact {
     font-family: var.$font-family--condensed;

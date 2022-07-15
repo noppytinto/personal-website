@@ -365,16 +365,21 @@
 ////////////////////////////////////
 $perspective: 1px;
 .parallax-container {
+  -webkit-overflow-scrolling: touch;
+  
   perspective: 1px;
   height: 100vh;
+  //width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   
   // webkit bug
-  perspective-origin-x: 100%;
+  //perspective-origin-x: 100%;
+  //perspective-origin: 50% 0;
 }
 
 .parallax-layer {
+  position: -webkit-sticky;
   position: absolute;
   top: 0;
   right: 0;
@@ -420,7 +425,10 @@ $perspective: 1px;
 //}
 
 
-
+.parallax-group {
+  transform-style: preserve-3d;
+  
+}
 
 
 
