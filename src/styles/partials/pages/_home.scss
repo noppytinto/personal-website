@@ -205,16 +205,21 @@
   }
   
   &__title {
-    $fonts-size: 3.5rem;
+    width: 100%;
+    $fonts-size: 1.2rem;
     font-family: var.$font-family--condensed;
     font-size: $fonts-size;
     font-weight: normal;
     text-align: start;
-    margin-bottom: 1em;
+    padding-bottom: .5em;
     
-    //&::before {
-    //  content: "> ";
-    //}
+    border-bottom-color: var.$color--blue-night--200;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    
+    &::before {
+      content: "> ";
+    }
 
   }
   
@@ -239,8 +244,9 @@
     @include mix.move-to-top-by(0);
     
     display: flex;
-    justify-content: space-between;
-    //gap: 3em;
+    flex-direction: column;
+    //justify-content: stretch;
+    gap: 3em;
     
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
@@ -254,34 +260,31 @@
     //perspective-origin-x: 100%;
     //position: relative;
   
+    .home__title {
+      position: relative;
+      z-index: 2;
+    }
   }
   
-  &__about-text-content {
-    flex-basis: 50%;
-    flex-grow: 1;
-    
-    
+  &__about-content {
+    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    gap: 2.5em;
     
-    // parallax-closest
-    //position: absolute;
-    //top: 0;
-    //right: 0;
-    //bottom: 0;
-    //left: 0;
-    //margin-top: calc(100vh * 1);
-    //transform: translateZ(0);
-    //z-index: 2;
+    @media screen and (max-width: 650px) {
+      & {
+        flex-direction: column;
+        //gap: 1.5em;
+        justify-content: flex-start;
+      }
+    }
   }
   
   &__about-description {
+    flex-basis: 50%;
+    flex-grow: 1;
     line-height: 1.5;
     font-size: 1.2rem;
-    flex-basis: 10%;
-    flex-grow: 1;
   }
   
 
@@ -294,9 +297,16 @@
   
     display: flex;
     justify-content: flex-end;
+    
+    @media screen and (max-width: 650px){
+      & {
+        justify-content: center;
+      }
+      
+    }
   }
   
-  &__about-container {
+  &__about-media-container {
     flex-basis: 90%;
     flex-grow: 0;
     flex-shrink: 1;
@@ -305,8 +315,10 @@
   }
   
   &__about-overlay {
-    --width: 1%;
-    --height: 10%;
+    --top: 0;
+    --right: 1%;
+    --bottom: 20%;
+    --left: 1%;
     $bg-clor: var.$color--blue-night--50;
     
     position: absolute;
@@ -316,26 +328,28 @@
     right: 0;
     
     background:
-            linear-gradient(180deg, rgba($bg-clor,1) var(--height), transparent var(--height), transparent),
-            linear-gradient(-90deg, rgba($bg-clor,1) var(--width), transparent var(--width), transparent),
-            linear-gradient(0deg,   rgba($bg-clor,1) var(--height), transparent var(--height), transparent),
-            linear-gradient(90deg,  rgba($bg-clor,1) var(--width), transparent var(--width), transparent)
+            linear-gradient(180deg, rgba($bg-clor,1) var(--top), transparent var(--top), transparent),
+            linear-gradient(-90deg, rgba($bg-clor,1) var(--right), transparent var(--right), transparent),
+            linear-gradient(0deg,   rgba($bg-clor,1) var(--bottom), transparent var(--bottom), transparent),
+            linear-gradient(90deg,  rgba($bg-clor,1) var(--left), transparent var(--left), transparent)
   ;
     
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   
   &__about-clip {
     height: 80%;
     width: 95%;
-    border-radius: .5em;
+    border-radius: .4em;
     border-width: 1px;
     border-style: solid;
+    border-color: var.$color--blue-night--300;
     background-color: transparent;
+    
   
-    box-shadow: 0 0 0 2em var.$color--blue-night--50;
+    box-shadow: 0 0 0 2em var.$color--blue-night--50, inset 0 0 1em 0 rgba(#000, .2);
   }
   
   &__about-background {
