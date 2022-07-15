@@ -15,7 +15,7 @@ const config = {
     path: path.resolve(__dirname, "dist"),
     filename: '[name].[contenthash].js',
     clean: true,
-    assetModuleFilename: './assets/[name]-[contenthash][ext][query]',
+    assetModuleFilename: './assets/[name].[contenthash][ext][query]',
     // publicPath: "/dist/",
     // publicPath: '.',
   },

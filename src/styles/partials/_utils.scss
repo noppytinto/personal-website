@@ -218,10 +218,10 @@
   /* REGULAR SCANLINES SETTINGS */
   
   // width of 1 scanline (min.: 1px)
-  $scan-width: 2px;
+  $scan-width: 1px;
   
   // emulates a damage-your-eyes bad pre-2000 CRT screen ♥ (true, false)
-  $scan-crt: true;
+  $scan-crt: false;
   
   // frames-per-second (should be > 1), only applies if $scan-crt: true;
   $scan-fps: 60;
@@ -236,7 +236,7 @@
   /* MOVING SCANLINE SETTINGS */
   
   // moving scanline (true, false)
-  $scan-moving-line: true;
+  $scan-moving-line: false;
   
   // opacity of the moving scanline
   $scan-opacity: .75;
