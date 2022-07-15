@@ -1,6 +1,28 @@
 @use "./variables" as var;
 @use "./mixin" as mix;
 
+
+
+
+.input-cursor::after {
+  content: "■";
+  animation: cursor 1s infinite;
+  animation-timing-function: step-end;
+  margin-left: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .glow {
   @include mix.glow(var.$color--green);
 }
