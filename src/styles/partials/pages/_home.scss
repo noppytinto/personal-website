@@ -172,10 +172,6 @@
   scroll-padding: 4.2rem;
   scroll-behavior: smooth;
   
-  
-  
-  
-  
   &__typing-container {
     $font-size: 1.2rem;
     
@@ -196,8 +192,6 @@
       & {font-size: .8rem;}
     }
   }
-  
-  
   
   &__input-cursor {
     @include mix.input-cursor($width: .7em);
@@ -230,7 +224,6 @@
 
   }
   
-  
   &__about, &__projects,  &__contact {
     font-family: var.$font-family--condensed;
     padding: 3.5em 2em;
@@ -243,6 +236,9 @@
   
   &__about {
     @include mix.move-to-top-by(0);
+    
+    display: flex;
+    gap: 3em;
     
     background-color: var.$color--blue-night--50;
     color: var.$color--blue-night;
@@ -259,12 +255,17 @@
   
   }
   
-  &__about-content {
-    height: 100%;
-  
+  &__about-text-content {
+    flex-basis: 30%;
+    
+    
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 5em;
+    gap: 2.5em;
+    
+    
+    
     
     // parallax-closest
     //position: absolute;
@@ -285,16 +286,50 @@
   }
   
   &__about-media {
-    height: 70%;
     flex-grow: 3;
+  }
+  
+  &__about-media {
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  
+  &__about-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: var.$color--blue-night--50;
+    
+    position: relative;
+  }
+  
+  &__about-clip {
+    position: absolute;
+    
+    height: 50%;
+    width: 90%;
+    
+    border-radius: 1em;
+    background-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+  }
+  
+  &__about-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   
     // path must be relative to index.scss
     background-image: url('../assets/images/iceland-ocean.jpg');
-    background-position: center 70%;
+    background-position: center center;
     background-size: 200vw;
     background-repeat: no-repeat;
-  }
   
+  }
   
   &__about-media-farthest {
     @include mix.center-vertically-horizontally;
@@ -334,7 +369,6 @@
     transform: translateZ(0);
   }
   
-
   &__projects {
     margin-top: -1em;
   }
