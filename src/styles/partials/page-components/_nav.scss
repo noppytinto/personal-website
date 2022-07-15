@@ -1,0 +1,77 @@
+@use "../utils/mixin" as mix;
+@use "../utils/variables" as var;
+
+// media queries:
+// - 360
+// - 390
+// - 680
+
+
+.nav {
+  font-family: var.$font-family--mono;
+  
+  &--stick-to-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    padding: 1.5em;
+    
+    background-color: var.$color--blue-night;
+    border-top-color: var.$color--divider;
+    border-top-style: solid;
+    border-top-width: 1px;
+    
+    transition: all .2s;
+  }
+  
+  &--move-slightly-top {
+    position: absolute;
+  }
+  
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    list-style: none;
+  
+    @media screen and (max-width: 680px) {
+      & { gap: 1em; }
+    }
+  }
+  
+  &__link {
+    &:link::after {
+      content: "()";
+    }
+  
+    &:visited {
+      color: inherit;
+    }
+  
+    &:hover {
+      cursor: pointer;
+      font-weight: bold;
+      color: var.$color--orange;
+      text-decoration-line: underline;
+    }
+  }
+  
+  
+  ////////////////////////////////////////////
+  // media queries
+  ////////////////////////////////////////////
+  @media screen and (max-width: 390px) {
+    & { font-size: .9rem; }
+  }
+  
+  @media screen and (max-width: 360px) {
+    & { font-size: .8rem; }
+  }
+  
+}// .nav
+
+

@@ -1,0 +1,57 @@
+@use "../utils/mixin" as mix;
+@use "../utils/variables" as var;
+
+@mixin input-cursor($height: .2em, $width: 1em, $color: #fff) {
+  content: "";
+  
+  height: $height;
+  width: $width;
+  background-color: $color;
+  
+  display: inline-block;
+  position: relative;
+  top: .2em;
+  left: -0.2em;
+  
+  animation-name: blink;
+  animation-duration: .6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  40% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+
+.terminal {
+  position: relative;
+  width: max-content;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: var.$font-family--mono;
+  
+  
+  ////////////////////////////////////////////
+  // media queries
+  ////////////////////////////////////////////
+  @media screen and (max-width: 500px) {
+    font-size: 1rem;
+  }
+  
+  @media screen and (max-width: 450px) {
+    font-size: .95rem;
+  }
+  
+  @media screen and (max-width: 400px) {
+    font-size: .8rem;
+  }
+}// .terminal
+
+.input-cursor {
+  @include input-cursor($width: .7em);
+}//

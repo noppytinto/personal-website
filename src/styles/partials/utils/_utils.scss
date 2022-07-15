@@ -1,23 +1,28 @@
-@use "./variables" as var;
-@use "./mixin" as mix;
+@use "variables" as var;
+@use "mixin" as mix;
 
 
 
 
-.input-cursor::after {
-  content: "■";
-  animation: cursor 1s infinite;
-  animation-timing-function: step-end;
-  margin-left: 1px;
+//.input-cursor::after {
+//  content: "■";
+//  animation: cursor 1s infinite;
+//  animation-timing-function: step-end;
+//  margin-left: 1px;
+//}
+
+
+
+
+
+.monospace {
+  font-family: var.$font-family--mono;
 }
 
 
-
-
-
-
-
-
+.underline {
+  text-decoration: underline;
+}
 
 
 
@@ -29,32 +34,6 @@
 
 
 
-
-//////////////////////////////////////
-// WIP badge
-//////////////////////////////////////
-.wip-badge {
-  @include mix.center-vertically-horizontally;
-  position: fixed;
-  bottom: 5em;
-  width: 100%;
-  z-index: 99; // for stay above crt begin() scanlines
-  
-  p {
-    display: inline-block;
-    padding: .5em 1.5em;
-    
-    text-align: center;
-    color: var.$color--blue-night--600;
-    
-    background-color: rgba(var.$color--blue-night--50, .05);
-    border-radius: .5em;
-    border-style: solid;
-    border-color: rgba(var.$color--blue-night--50, .1);
-    border-width: 1px;
-    backdrop-filter: blur(10px);
-  }
-}//
 
 
 //////////////////////////////////////

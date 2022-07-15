@@ -1,0 +1,192 @@
+@use "../utils/mixin" as mix;
+@use "../utils/variables" as var;
+
+
+/////////////////////////////////////////
+// MAIN
+/////////////////////////////////////////
+.main {
+  scroll-padding: 4.2rem;
+  scroll-behavior: smooth;
+  
+  
+  &__section {
+    height: 100vh;
+    background-color: var.$color--blue-night;
+  }
+  
+  &__title {
+    width: 100%;
+    $fonts-size: 1.2rem;
+    font-family: var.$font-family--mono;
+    font-size: $fonts-size;
+    font-weight: normal;
+    text-align: start;
+    padding-bottom: .5em;
+    
+    border-bottom-color: var.$color--blue-night--200;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    
+    &::before {
+      content: "> ";
+    }
+  }
+  
+}// .main
+
+/////////////////////////////////////////
+// BEGIN SECTION
+/////////////////////////////////////////
+.begin {
+  @include mix.center-vertically-horizontally;
+}
+
+
+
+
+.about, .projects, .contact {
+  padding: 3.5em 3em;
+  font-family: var.$font-family--condensed;
+  $border-radius: 1em;
+  $offset: $border-radius;
+  box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
+  @include mix.round-top-corners($border-radius);
+  
+  
+  @media screen and (max-width: 500px) {
+    padding: 3em 2em;
+  }
+}
+
+/////////////////////////////////////////
+// ABOUT SECTION
+/////////////////////////////////////////
+.about {
+  @include mix.move-to-top-by(0);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  
+  color: var.$color--blue-night;
+  
+  background-color: var.$color--blue-night--50;
+  
+  
+  &__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      gap: 2em;
+      justify-content: flex-start;
+    }
+  }
+  
+  &__description {
+    flex-basis: 50%;
+    flex-grow: 1;
+    line-height: 1.5;
+    font-size: 1.2rem;
+  }
+  
+  &__media {
+    flex-grow: 3;
+    
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    display: flex;
+    justify-content: flex-end;
+    
+    @media screen and (max-width: 650px){
+      justify-content: center;
+    }
+  }
+  
+  &__media-container {
+    flex-basis: 90%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    
+    position: relative;
+  }
+  
+  &__overlay {
+    --top: 0;
+    --right: 2%;
+    --bottom: 20%;
+    --left: 2%;
+    $bg-clor: var.$color--blue-night--50;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    background:
+            linear-gradient(180deg, rgba($bg-clor,1) var(--top), transparent var(--top), transparent),
+            linear-gradient(-90deg, rgba($bg-clor,1) var(--right), transparent var(--right), transparent),
+            linear-gradient(0deg,   rgba($bg-clor,1) var(--bottom), transparent var(--bottom), transparent),
+            linear-gradient(90deg,  rgba($bg-clor,1) var(--left), transparent var(--left), transparent);
+    
+
+  }
+  
+  &__clip {
+    height: 70%;
+    width: 95%;
+    border-radius: .4em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var.$color--blue-night--300;
+    background-color: transparent;
+    
+    box-shadow: 0 0 0 .5em var.$color--blue-night--50, inset 0 0 1em 0 rgba(#000, .2);
+  }
+  
+  &__background {
+    width: 100%;
+    height: 70%;
+    
+    // path must be relative to index.scss
+    background-image: url('../assets/images/iceland-ocean.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+}// .about
+
+
+/////////////////////////////////////////
+// PROJECTS SECTION
+/////////////////////////////////////////
+.projects {
+  margin-top: -1em;
+}
+
+
+/////////////////////////////////////////
+// CONTACT SECTION
+/////////////////////////////////////////
+.contact {
+  margin-top: -1em;
+  background-color: var.$color--blue-night--50;
+  color: var.$color--blue-night;
+}
+
+
+/////////////////////////////////////////
+// MISC
+/////////////////////////////////////////
+

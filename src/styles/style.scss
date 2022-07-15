@@ -1,14 +1,19 @@
-@use "./partials/variables";
-@use "./partials/reset";
+@use "./partials/utils/variables";
+@use "partials/utils/reset";
 @use "./partials/base";
 
 
-// pages
-@use "./partials/pages/home";
+// page-components
+@use "partials/page-components/header";
+@use "partials/page-components/nav";
+@use "partials/page-components/main";
+@use "partials/page-components/footer";
 
 
 // components
 @use "./partials/components/card";
+@use "./partials/components/terminal";
+@use "./partials/components/translucent-badge";
 
 //
-@use "./partials/utils";
+@use "partials/utils/utils";

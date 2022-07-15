@@ -1,4 +1,4 @@
-@use 'variables' as var;
+@use 'utils/variables' as var;
 
 body {
   font-family: var.$font-family--condensed;
@@ -6,15 +6,12 @@ body {
   color: #DDF1FF;
 }
 
-.monospace {
-  font-family: var.$font-family--mono;
-  
-}
-
 textarea { resize: none; }
+
 a:link {
   color: inherit;
   text-decoration-line: none;
 }
+
 a:link:visited { color: #DDF1FF; }
 

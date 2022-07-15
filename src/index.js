@@ -3,11 +3,9 @@
 /////////////////////////////////////////
 // import './assets';
 import './styles/style.scss';
-import ImageIcelandOcean2 from './assets/images/iceland-ocean.jpg';
-import ImageIcelandOcean from './styles/partials/pages/iceland-ocean.jpg';
-
-
-console.log(ImageIcelandOcean);
+// import ImageIcelandOcean2 from './assets/images/iceland-ocean.jpg';
+// import ImageIcelandOcean from './styles/partials/page-components/iceland-ocean.jpg';
+// console.log(ImageIcelandOcean);
 
 
 
@@ -76,9 +74,8 @@ function handleNavMenuPositionOnViewportChange() {
 
 
 function revealHeaderOnScrolling() {
-    const target = document.querySelector('.home__typing-container');
+    const target = document.querySelector('.terminal');
     const header = document.querySelector('.header');
-    const aboutSection = document.querySelector('.home__about');
 
     const options = {
         root: null,
@@ -196,11 +193,11 @@ async function startTypingAnimation() {
     ///////////////////////
     // logic
     ///////////////////////
-    await typeCode(row1_text, '#row-1');
-    insertAfter(breakElement, document.querySelector('#row-1'));
-    await typeCode(row2_text, '#row-2');
-    await typeCode(rowLoading, '#row-loading', 300);
-    await typeCode(row3_text, '#row-3', 5);
+    await typeCode(row1_text, '#terminal__row--1');
+    insertAfter(breakElement, document.querySelector('#terminal__row--1'));
+    await typeCode(row2_text, '#terminal__row--2');
+    await typeCode(rowLoading, '#terminal__row--loading', 300);
+    await typeCode(row3_text, '#terminal__row--3', 5);
 }
 
 function insertAfter(newNode, existingNode) {

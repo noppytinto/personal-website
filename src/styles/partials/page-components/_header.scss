@@ -1,0 +1,83 @@
+@use "../utils/mixin" as mix;
+@use "../utils/variables" as var;
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99; // for stay above crt begin() scanlines
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  
+  font-family: var.$font-family--mono;
+  
+  border-bottom-color: var.$color--divider;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  background-color: var.$color--blue-night;
+  opacity: 0;
+  animation-duration: .5s;
+  transition: all .2s;
+  
+  &:hover {
+    opacity: 1 !important;
+  }
+  
+  &--reveal {
+    animation-name: reveal;
+    animation-fill-mode: forwards;
+  }
+  
+  &--conceal {
+    animation-name: conceal;
+    animation-fill-mode: forwards;
+  }
+  
+  &__logo {
+    color: var.$color--green;
+    font-size: 1rem;
+    font-weight: bold;
+    
+    @media screen and (max-width: 550px) {
+      & {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  
+  ////////////////////////////////////////////
+  // media queries
+  ////////////////////////////////////////////
+  @media screen and (max-width: 600px) {
+    & { padding: 1em 1em; }
+  }
+  
+  @media screen and (max-width: 550px) {
+    & {
+      padding: .7em 1em;
+      @include mix.center-vertically-horizontally;
+    }
+  }
+  
+}// .header
+
+
+////////////////////////////////////////////
+// animations
+////////////////////////////////////////////
+@keyframes reveal {
+  from { @include mix.hide; }
+  to { @include mix.show; }
+}
+
+@keyframes conceal {
+  from { @include mix.show; }
+  to { @include mix.hide; }
+}
+

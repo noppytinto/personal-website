@@ -1,0 +1,17 @@
+@use "../utils/mixin" as mix;
+@use "../utils/variables" as var;
+
+
+.footer {
+  width: 100%;
+  padding: .5em 0;
+  @include mix.center-vertically-horizontally;
+  color: var.$color--blue-night--50;
+  background-color: var.$color--blue-night;
+  
+  &__rights-reserved {
+    font-size: .9rem;
+    
+  }
+  
+}// .footer
