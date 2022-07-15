@@ -221,6 +221,7 @@
       content: "> ";
     }
 
+    
   }
   
   &__begin {
@@ -237,6 +238,14 @@
     box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
     @include mix.round-top-corners($border-radius);
 
+    
+    @media screen and (max-width: 500px) {
+      & {
+        padding: 3em 2em;
+  
+      }
+      
+    }
   }
   
   &__about {
@@ -264,6 +273,8 @@
       position: relative;
       z-index: 2;
     }
+    
+    
   }
   
   &__about-content {
