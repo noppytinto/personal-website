@@ -73,6 +73,10 @@
   
   background-color: var.$color--blue-night--50;
   
+  &__greetings {
+    font-size: 2rem;
+    font-weight: bold;
+  }
   
   &__content {
     height: 100%;
