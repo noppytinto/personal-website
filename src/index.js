@@ -31,7 +31,9 @@ async function main() {
     //
     handleNavMenuPositionOnViewportChange();
     //
-    revealHeaderOnScrolling();
+    revealHeaderOnScroll();
+    //
+    revealMediaOnScroll();
     //
     startTypingAnimation();
 
@@ -73,7 +75,7 @@ function handleNavMenuPositionOnViewportChange() {
 }
 
 
-function revealHeaderOnScrolling() {
+function revealHeaderOnScroll() {
     const target = document.querySelector('.terminal');
     const header = document.querySelector('.header');
 
@@ -96,6 +98,28 @@ function revealHeaderOnScrolling() {
         else {
             header.classList.remove('header--conceal');
             header.classList.add('header--reveal');
+        }
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(target);
+}
+
+
+function revealMediaOnScroll() {
+    const target = document.querySelector('.about__media');
+
+    const options = {
+        root: null,
+        threshold: 0.5
+    }
+
+    const callback = (entries, observer) => {
+        const [entry] = entries;
+
+        if (entry.isIntersecting) {
+            target.classList.add('about__media--reveal');
+            observer.unobserve(target);
         }
     };
 

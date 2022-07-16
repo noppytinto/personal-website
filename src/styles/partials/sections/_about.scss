@@ -69,10 +69,19 @@
     display: flex;
     justify-content: flex-end;
     background-color: transparent;
+    transition: all .7s;
+    opacity: 0;
+    margin-top: 2em;
     
     @media screen and (max-width: 650px){
       justify-content: center;
     }
+    
+    &--reveal {
+      opacity: 1;
+      margin-top: 0;
+    }
+    
   }
   
   &__background {
