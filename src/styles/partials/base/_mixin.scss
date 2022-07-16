@@ -50,3 +50,11 @@
   backdrop-filter: blur($blurAmount);
 }
 
+@mixin crt-gradient($color: var.$color--blue-night) {
+  background-image: radial-gradient(
+                      ellipse,
+                      rgba(#000, .15) 0%,
+                      rgba($color, 1) 50%
+                    );
+}
+
