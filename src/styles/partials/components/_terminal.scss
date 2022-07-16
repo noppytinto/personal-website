@@ -31,24 +31,49 @@
 .terminal {
   position: relative;
   width: max-content;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
-  font-family: var.$font-family--mono;
+  font-family: var.$font-family--vt;
+  
+  #terminal__row--3 {
+    font-size: 2.5rem;
+  
+  }
   
   
   ////////////////////////////////////////////
   // media queries
   ////////////////////////////////////////////
-  @media screen and (max-width: 500px) {
-    font-size: 1rem;
+  @media screen and (max-width: 535px) {
+    font-size: 1.7rem;
+  
+    #terminal__row--3 {
+      font-size: 2.3rem;
+    }
+  }
+  
+  @media screen and (max-width: 510px) {
+    font-size: 1.5rem;
+  
+    #terminal__row--3 {
+      font-size: 2.1rem;
+    }
   }
   
   @media screen and (max-width: 450px) {
-    font-size: .95rem;
+    font-size: 1.3rem;
+  
+    #terminal__row--3 {
+      font-size: 1.9rem;
+    }
   }
   
   @media screen and (max-width: 400px) {
-    font-size: .8rem;
+    font-size: 1.1rem;
+  
+    #terminal__row--3 {
+      font-size: 1.7rem;
+    }
   }
 }// .terminal
 

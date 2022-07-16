@@ -159,7 +159,7 @@ async function startTypingAnimation() {
     const symbolStyle = {color: symbolColor};
     const functionStyle = {color: functionColor};
     const stringStyle = {color: stringColor};
-    const terminalStyle = {color: terminalTextColor, fontWeight: 'bold'};
+    const terminalStyle = {color: terminalTextColor};
 
     const row1_text = [
         {text: 'var ', style: keywordStyle },
@@ -186,7 +186,7 @@ async function startTypingAnimation() {
     ]
 
     const row3_text = [
-        {text: '> WEB DEVELOPER :)', style: {...terminalStyle, fontSize: '1.5rem'}},
+        {text: '> WEB DEVELOPER :)', style: {...terminalStyle}},
     ]
 
 
