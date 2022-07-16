@@ -94,6 +94,9 @@
     background-color: transparent;
     
     box-shadow: 0 0 0 .5em var.$color--blue-night--50, inset 0 0 1em 0 rgba(#000, .2);
+    
+    //transform: translateZ(0px);
+  
   }
   
   &__background {
@@ -105,6 +108,11 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+  
+  
+    //transform: translateZ(5px) scale(calc((1 + 5) / 1));
+  
+  
   }
   
 }// .about

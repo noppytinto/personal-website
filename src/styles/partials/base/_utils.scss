@@ -330,7 +330,7 @@ $perspective: $perspective-value + 0px;
 // crt effect
 ////////////////////////////////////
 .crt {
-  animation: textShadow 1.6s infinite;
+  animation: textShadow 1.6s 7;
   // add crt radial gradient effect
   @include mix.crt-gradient();
   
@@ -346,7 +346,7 @@ $perspective: $perspective-value + 0px;
     opacity: 0;
     z-index: 2;
     pointer-events: none;
-    animation: flicker 0.15s infinite;
+    animation: flicker 0.15s 100;
   }
   
   &::before {

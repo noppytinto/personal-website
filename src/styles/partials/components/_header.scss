@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99; // for stay above crt begin() scanlines
+  z-index: 99; // for stay above crt begin() scanlines (z-index: 2)
   
   display: flex;
   justify-content: space-between;
@@ -23,6 +23,7 @@
   opacity: 0;
   animation-duration: .5s;
   transition: all .2s;
+  
   
   &:hover {
     opacity: 1 !important;

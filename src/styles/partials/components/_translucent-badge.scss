@@ -6,6 +6,7 @@
   @include mix.center-vertically-horizontally;
   position: fixed;
   width: 100%;
+  pointer-events: none;
   
   &__text {
     display: inline-block;
