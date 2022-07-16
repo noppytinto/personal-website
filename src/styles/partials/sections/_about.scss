@@ -16,6 +16,10 @@
     gap: .5em;
   }
   
+  &__title {
+    z-index: 1;
+  }
+  
   &__greetings {
     font-size: 2rem;
     font-weight: bold;
