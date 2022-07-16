@@ -12,9 +12,17 @@
   color: var.$color--blue-night;
   background-color: var.$color--blue-night--50;
   
+  @media screen and (max-height: 480px) {
+    gap: .5em;
+  }
+  
   &__greetings {
     font-size: 2rem;
     font-weight: bold;
+  
+    @media screen and (max-height: 480px) {
+      font-size: 1.5rem;
+    }
   }
   
   &__content {
@@ -107,5 +115,7 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+  
+  
   
 }// .about
