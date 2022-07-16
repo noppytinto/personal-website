@@ -1,0 +1,16 @@
+@use "../base/mixin" as mix;
+@use "../abstracts/variables" as var;
+
+.about, .projects, .contact {
+  padding: 3.5em 3em;
+  font-family: var.$font-family--condensed;
+  $border-radius: 1em;
+  $offset: $border-radius;
+  box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
+  @include mix.round-top-corners($border-radius);
+  
+  
+  @media screen and (max-width: 500px) {
+    padding: 3em 2em;
+  }
+}

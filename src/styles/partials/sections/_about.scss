@@ -1,67 +1,7 @@
-@use "../utils/mixin" as mix;
-@use "../utils/variables" as var;
+@use "../base/mixin" as mix;
+@use "../abstracts/variables" as var;
 
 
-/////////////////////////////////////////
-// MAIN
-/////////////////////////////////////////
-.main {
-  scroll-padding: 4.2rem;
-  scroll-behavior: smooth;
-  
-  
-  &__section {
-    height: 100vh;
-    background-color: var.$color--blue-night;
-  }
-  
-  &__title {
-    width: 100%;
-    $fonts-size: 1.2rem;
-    font-family: var.$font-family--mono;
-    font-size: $fonts-size;
-    font-weight: normal;
-    text-align: start;
-    padding-bottom: .5em;
-    
-    border-bottom-color: var.$color--blue-night--200;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    
-    &::before {
-      content: "> ";
-    }
-  }
-  
-}// .main
-
-/////////////////////////////////////////
-// BEGIN SECTION
-/////////////////////////////////////////
-.begin {
-  @include mix.center-vertically-horizontally;
-}
-
-
-
-
-.about, .projects, .contact {
-  padding: 3.5em 3em;
-  font-family: var.$font-family--condensed;
-  $border-radius: 1em;
-  $offset: $border-radius;
-  box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
-  @include mix.round-top-corners($border-radius);
-  
-  
-  @media screen and (max-width: 500px) {
-    padding: 3em 2em;
-  }
-}
-
-/////////////////////////////////////////
-// ABOUT SECTION
-/////////////////////////////////////////
 .about {
   @include mix.move-to-top-by(0);
   overflow: hidden;
@@ -132,7 +72,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-  
+    
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -143,7 +83,7 @@
             linear-gradient(0deg,   rgba($bg-clor,1) var(--bottom), transparent var(--bottom), transparent),
             linear-gradient(90deg,  rgba($bg-clor,1) var(--left), transparent var(--left), transparent);
     
-
+    
   }
   
   &__clip {
@@ -162,7 +102,7 @@
     width: 100%;
     height: 70%;
     
-    // path must be relative to index.scss
+    // path must be relative to _index.scss
     background-image: url('../assets/images/iceland-ocean.jpg');
     background-position: center center;
     background-size: cover;
@@ -170,27 +110,3 @@
   }
   
 }// .about
-
-
-/////////////////////////////////////////
-// PROJECTS SECTION
-/////////////////////////////////////////
-.projects {
-  margin-top: -1em;
-}
-
-
-/////////////////////////////////////////
-// CONTACT SECTION
-/////////////////////////////////////////
-.contact {
-  margin-top: -1em;
-  background-color: var.$color--blue-night--50;
-  color: var.$color--blue-night;
-}
-
-
-/////////////////////////////////////////
-// MISC
-/////////////////////////////////////////
-

@@ -1,19 +1,17 @@
-@use "./partials/utils/variables";
-@use "partials/utils/reset";
-@use "./partials/base";
+// abstracts
+@use "partials/abstracts/variables";
 
+// base
+@use "partials/base/reset";
+@use "partials/base/base";
 
-// page-components
-@use "partials/page-components/header";
-@use "partials/page-components/nav";
-@use "partials/page-components/main";
-@use "partials/page-components/footer";
+// layouts
+@use "partials/layouts";
 
+// sections
+@use "partials/sections/index";
 
 // components
-@use "./partials/components/card";
-@use "./partials/components/terminal";
-@use "./partials/components/translucent-badge";
-
-//
-@use "partials/utils/utils";
+@use "./partials/components";
+// utils
+@use "partials/base/utils";

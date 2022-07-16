@@ -22,7 +22,7 @@ const config = {
   devServer: {
     open: false,
     host: "localhost",
-    port: 3001,
+    port: 3000,
     compress: true,
     historyApiFallback: true,
     watchFiles: ['./src/**/*'],

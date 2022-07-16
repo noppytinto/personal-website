@@ -1,0 +1,7 @@
+@use "../base/mixin" as mix;
+@use "../abstracts/variables" as var;
+
+.begin {
+  @include mix.center-vertically-horizontally;
+  
+}//

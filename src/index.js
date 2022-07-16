@@ -232,7 +232,7 @@ async function typeText(text, elementNode, delay = 50) {
 
 
 /////////////////////////////////////////
-// FUNCTIONS - utils
+// FUNCTIONS - abstracts
 /////////////////////////////////////////
 function _removeElementFrom(from, target) {
     if (from.contains(target))

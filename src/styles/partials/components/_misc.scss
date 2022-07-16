@@ -1,0 +1,89 @@
+@use "src/styles/partials/abstracts/variables" as var;
+@use "../base/mixin" as mix;
+
+
+
+
+
+.square {
+  z-index: 10;
+  top: 0;
+  position: sticky;
+  width: 200px;
+  height: 200px;
+  border-color: #00BC4B;
+}
+
+
+.divider {
+  --border-width: 1px;
+  
+  width: 100%;
+  height: calc(var(--border-width) + 2);
+  border-bottom-style: solid;
+  border-bottom-color: var.$color--blue-night--700;
+  border-bottom-width: var(--border-width);
+}
+
+
+
+//////////////////////////////////////
+// loading spinner
+//////////////////////////////////////
+.loading::before {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color: #1c87c9;
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 40px;
+  will-change: transform;
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+// @media screen and (max-width: v.$breakpoint--default) {
+//   .loading::before {
+//     top: 90%;
+//     right: 5%;
+//   }
+// }
+
+
+
+
+/////////////////////////////////////////
+// EXPANDABLE CIRCLE
+/////////////////////////////////////////
+.expandable-circle {
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10%);
+  z-index: 0;
+}
+
+
+
+
+//.input-cursor::after {
+//  content: "■";
+//  animation: cursor 1s infinite;
+//  animation-timing-function: step-end;
+//  margin-left: 1px;
+//}

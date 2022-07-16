@@ -1,0 +1,10 @@
+@use "../base/mixin" as mix;
+@use "../abstracts/variables" as var;
+
+
+.contact {
+  margin-top: -1em;
+  background-color: var.$color--blue-night--50;
+  color: var.$color--blue-night;
+  
+}//

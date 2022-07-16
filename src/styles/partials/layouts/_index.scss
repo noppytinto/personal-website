@@ -1,0 +1,41 @@
+@use "../base/mixin" as mix;
+@use "../abstracts/variables" as var;
+
+
+/////////////////////////////////////////
+// index.html
+/////////////////////////////////////////
+.main {
+  scroll-padding: 4.2rem;
+  scroll-behavior: smooth;
+  
+  
+  &__section {
+    height: 100vh;
+    background-color: var.$color--blue-night;
+  }
+  
+  &__title {
+    width: 100%;
+    $fonts-size: 1.2rem;
+    font-family: var.$font-family--mono;
+    font-size: $fonts-size;
+    font-weight: normal;
+    text-align: start;
+    padding-bottom: .5em;
+    
+    border-bottom-color: var.$color--blue-night--200;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    
+    &::before {
+      content: "> ";
+    }
+  }
+  
+}// .main
+
+/////////////////////////////////////////
+// MISC
+/////////////////////////////////////////
+
