@@ -59,7 +59,8 @@
   
   &__media {
     flex-grow: 3;
-    
+    overflow: hidden;
+  
     width: 100%;
     height: 100%;
     
@@ -74,6 +75,7 @@
   &__background {
     width: 100%;
     //height: 70%;
+    overflow: hidden;
     
     border-radius: .2em;
     box-shadow: 0 .2em .7em 0em rgba(var.$color--blue-night, .5);
@@ -83,6 +85,18 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  &__caption {
+    text-align: center;
+    padding: 1em;
+    color: var.$color--blue-night--900;
+    
+    background-color: rgba(var.$color--blue-night--50, .5);
+    backdrop-filter: blur(15px);
   }
   
   

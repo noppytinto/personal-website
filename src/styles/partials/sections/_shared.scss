@@ -4,7 +4,7 @@
 .about, .projects, .contact {
   padding: 3.5em 3em;
   font-family: var.$font-family--condensed;
-  $border-radius: 1em;
+  $border-radius: .5em;
   $offset: $border-radius;
   box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
   @include mix.round-top-corners($border-radius);
