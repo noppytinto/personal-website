@@ -4,8 +4,13 @@
 
 .contact {
   margin-top: -1em;
-  background-color: var.$color--blue-night--50;
-  color: var.$color--blue-night;
+  background-color: var.$color--blue-night--700;
+  color: var.$color--blue-night--50;
   position: relative;
+  
+  &__title {
+    z-index: 1;
+    border-bottom-color: var.$color--blue-night--500;
+  }
   
 }//

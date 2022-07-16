@@ -9,8 +9,8 @@
   display: flex;
   flex-direction: column;
   gap: 3em;
-  color: var.$color--blue-night;
-  background-color: var.$color--blue-night--50;
+  color: var.$color--blue-night--50;
+  background-color: var.$color--blue-night--700;
   
   @media screen and (max-height: 480px) {
     gap: .5em;
@@ -18,6 +18,7 @@
   
   &__title {
     z-index: 1;
+    border-bottom-color: var.$color--blue-night--500;
   }
   
   &__greetings {
@@ -78,7 +79,7 @@
     --right: 2%;
     --bottom: 20%;
     --left: 2%;
-    $bg-clor: var.$color--blue-night--50;
+    $bg-clor: var.$color--blue-night--700;
     
     position: absolute;
     top: 0;
@@ -103,10 +104,10 @@
     border-radius: .4em;
     border-width: 1px;
     border-style: solid;
-    border-color: var.$color--blue-night--300;
+    border-color: var.$color--blue-night--500;
     background-color: transparent;
     
-    box-shadow: 0 0 0 5em var.$color--blue-night--50, inset 0 0 1em 0 rgba(#000, .2);
+    box-shadow: 0 0 0 5em var.$color--blue-night--700, inset 0 0 1em 0 rgba(#000, .2);
     
   
   }
