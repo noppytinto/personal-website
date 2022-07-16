@@ -32,14 +32,15 @@
 // glitch
 ////////////////////////////////////
 .glitch {
-  color: #FAFAFA;
   display: flex;
   flex-direction: column;
+  color: #FAFAFA;
   
   &__stack {
-    color: var.$color--blue-night--400;
+    color: var.$color--blue-night--50;
     display: grid;
     grid-template-columns: 1fr;
+    
   }
   
   &__span {
@@ -50,9 +51,12 @@
     
     grid-row-start: 1;
     grid-column-start: 1;
-    font-size: 1.1rem;
+  
+    font-size: 2.5rem;
+  
     clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-    animation: stack 200ms cubic-bezier(.46, .29, 0, 1.24) 1 backwards calc(var(--index) * 120ms), glitch 1.5s ease infinite 1.5s alternate-reverse;
+    $repetitions: 20;
+    animation: stack 200ms cubic-bezier(.46, .29, 0, 1.24) 1 backwards calc(var(--index) * 120ms), glitch 1.5s ease $repetitions 1.5s alternate-reverse;
   }
   
   &__span:nth-child(odd) {
@@ -100,7 +104,7 @@
     }
   }
   
-}//
+}// .glitch
 
 
 ////////////////////////////////////
