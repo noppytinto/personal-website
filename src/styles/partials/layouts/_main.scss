@@ -8,27 +8,34 @@
 .main {
   scroll-padding: 4.2rem;
   scroll-behavior: smooth;
+  //background: radial-gradient(farthest-side at 100% 100%, var.$color--blue-night--800 1%, var.$color--blue-night--900 100%);
   
   
   &__section {
+    margin-left: auto;
+    margin-right: auto;
     height: 100vh;
     background-color: var.$color--blue-night;
-    
     padding-bottom: 2em;
   }
   
   &__title {
-    width: 100%;
+    align-self: flex-end;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 900px;
+    padding-bottom: .5em;
+  
+    color: var.$color--green--800;
     $fonts-size: 1.2rem;
     font-family: var.$font-family--vt;
     font-size: $fonts-size;
     font-weight: normal;
     text-align: start;
-    padding-bottom: .5em;
     
-    border-bottom-color: var.$color--blue-night--200;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+    //border-bottom-color: var.$color--blue-night--200;
+    //border-bottom-style: solid;
+    //border-bottom-width: 1px;
     
     &::before {
       content: "> ";

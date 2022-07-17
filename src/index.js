@@ -16,6 +16,7 @@ import './styles/style.scss';
 /////////////////////////////////////////
 let secondRun = false;
 let alreadyRevealed = false;
+let mobileNavActivated = false;
 
 main();
 
@@ -62,9 +63,11 @@ function handleNavMenuPositionOnViewportChange() {
         const navigation = document.querySelector('.nav');
 
         if (mediaQuery.matches) {
+            mobileNavActivated = true;
             navigation.classList.add('nav--stick-to-bottom');
         }
         else {
+            mobileNavActivated = false;
             navigation.classList.remove('nav--stick-to-bottom');
         }
     }
@@ -139,12 +142,11 @@ function revealGoToTopButtonOnScroll() {
     const callback = (entries, observer) => {
         const [entry] = entries;
 
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !mobileNavActivated)
             button.classList.add('go-to-top-button--reveal');
-        }
-        else {
+        else
             button.classList.remove('go-to-top-button--reveal');
-        }
+
     };
 
     const observer = new IntersectionObserver(callback, options);

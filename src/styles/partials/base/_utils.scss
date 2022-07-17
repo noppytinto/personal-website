@@ -298,26 +298,27 @@ $perspective: $perspective-value + 0px;
   //
   // scale factor formula:
   // 1 + (translateZ * -1) / perspective
-  $depth-value: 1 ;
-  $depth: -$depth-value + 0px ;
-  
   &--1 {
+    $depth-value: 1.5 ;
+    $depth: -$depth-value + 0px ;
     transform: translateZ($depth) scale(calc((1 + $depth-value) / 1));
   }
   
   &--2 {
-    margin-top: calc(100vh * 1);
+    margin-top: 100vh;
     transform: translateZ(0);
   }
   
   &--3 {
-    margin-top: calc(100vh * 2);
-    transform: translateZ(0) translateY(-1em);
+    margin-top: 500vh;
+    $depth-value: 1 ;
+    $depth: -$depth-value + 0px ;
+    transform: translateZ($depth) scale(calc((1 + $depth-value) / 1));
   }
   
   &--4 {
-    margin-top: calc(100vh * 3);
-    transform: translateZ(0) translateY(-2em);
+    margin-top: 600vh;
+    transform: translateZ(0);
   }
 }
 
