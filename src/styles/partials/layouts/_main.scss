@@ -12,18 +12,19 @@
   
   
   &__section {
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     height: 110vh;
-    background-color: var.$color--blue-night;
+    background-color: #000;
     padding-bottom: 2em;
+    //border-top-width: 1px;
+    //border-top-style: solid;
+    //border-top-color: #2a2a2a;
   }
   
   &__title {
-    align-self: flex-end;
-    flex-grow: 1;
-    flex-shrink: 0;
-    max-width: 900px;
+    width: 100%;
     padding-bottom: .5em;
     color: var.$color--green--800;
     $fonts-size: 1.2rem;
@@ -31,11 +32,12 @@
     font-family: var.$font-family--vt;
     font-size: $fonts-size;
     font-weight: normal;
-    text-align: start;
+    text-align: end;
+    margin-bottom: 3em;
     
-    //border-bottom-color: var.$color--blue-night--200;
-    //border-bottom-style: solid;
-    //border-bottom-width: 1px;
+    border-bottom-color: #4d4d4d;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
     
     &::before {
       content: "> ";

@@ -4,13 +4,10 @@
 
 .contact {
   margin-top: -1em;
-  background: radial-gradient(farthest-side at 0px 0px, #496a82 1%, #304759 100%);
   color: var.$color--blue-night--50;
   position: relative;
   
   &__title {
-    z-index: 1;
-    border-bottom-color: var.$color--blue-night--500;
   }
   
 }//

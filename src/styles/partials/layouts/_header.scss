@@ -4,26 +4,40 @@
 
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  //top: 1em;
+  right: 50%;
   z-index: 99; // for stay above crt begin() scanlines (z-index: 2)
+  
   display: flex;
+  padding: 1em 2em;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
   font-family: var.$font-family--mono;
+  color: #000;
   border-bottom-color: var.$color--divider;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  background-color: var.$color--blue-night;
+  background-color: #fff;
+  box-shadow: 0 .5em 1em -.5em rgba(#000, .5);
+  border-radius: .5em;
   opacity: 0;
   animation-duration: .5s;
+  transform: translateX(50%);
   transition: all .2s;
   
   &:hover {
     opacity: 1 !important;
   }
+  
+  &--stick-to-bottom {
+    background-color: #fff;
+    bottom: 1em;
+    top: revert;
+    padding: 1em 1.5em;
+    border-radius: .5em;
+    transition: all .2s;
+  }
+  
   
   @media screen and (max-width: 600px) {
     padding: 1em 1em;

@@ -60,15 +60,15 @@ function fixScrollToTop() {
 
 function handleNavMenuPositionOnViewportChange() {
     const handleOnViewportChange = (mediaQuery) => {
-        const navigation = document.querySelector('.nav');
+        const target = document.querySelector('.header');
 
         if (mediaQuery.matches) {
             mobileNavActivated = true;
-            navigation.classList.add('nav--stick-to-bottom');
+            target.classList.add('header--stick-to-bottom');
         }
         else {
             mobileNavActivated = false;
-            navigation.classList.remove('nav--stick-to-bottom');
+            target.classList.remove('header--stick-to-bottom');
         }
     }
 

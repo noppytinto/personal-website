@@ -13,12 +13,12 @@
     padding: .5em 1.5em;
     
     text-align: center;
-    color: var.$color--blue-night--600;
+    text-shadow: 1px 1px 5px rgba(#000, .5);
     
-    background-color: rgba(var.$color--blue-night--50, .05);
+    background-color: rgba(#fff, .1);
     border-radius: .5em;
     border-style: solid;
-    border-color: rgba(var.$color--blue-night--50, .1);
+    border-color: rgba(#fff, .2);
     border-width: 1px;
     backdrop-filter: blur(10px);
   }
