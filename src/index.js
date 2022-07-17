@@ -32,7 +32,7 @@ async function main() {
     handleNavMenuPositionOnViewportChange();
     //
     revealHeaderOnScroll();
-    //
+    revealGoToTopButtonOnScroll();
     revealMediaOnScroll();
     //
     startTypingAnimation();
@@ -120,6 +120,30 @@ function revealMediaOnScroll() {
         if (entry.isIntersecting) {
             target.classList.add('about__media--reveal');
             observer.unobserve(target);
+        }
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(target);
+}
+
+function revealGoToTopButtonOnScroll() {
+    const target = document.querySelector('.contact');
+    const button = document.querySelector('.go-to-top-button');
+
+    const options = {
+        root: null,
+        threshold: 0.5
+    }
+
+    const callback = (entries, observer) => {
+        const [entry] = entries;
+
+        if (entry.isIntersecting) {
+            button.classList.add('go-to-top-button--reveal');
+        }
+        else {
+            button.classList.remove('go-to-top-button--reveal');
         }
     };
 
