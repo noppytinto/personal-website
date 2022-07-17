@@ -49,12 +49,8 @@
   &__logo {
     color: var.$color--green;
     font-size: 1.4rem;
-    //font-weight: bold;
     font-family: var.$font-family--vt;
-  
-    //@media screen and (max-width: 550px) {
-    //  font-size: 0.9rem;
-    //}
+    text-shadow: 1px 1px 5px rgba(#000, .3);
   }
   
 }// .header

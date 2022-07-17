@@ -25,9 +25,9 @@
     flex-shrink: 0;
     max-width: 900px;
     padding-bottom: .5em;
-  
     color: var.$color--green--800;
     $fonts-size: 1.2rem;
+    text-shadow: 1px 1px 5px rgba(#000, .3);
     font-family: var.$font-family--vt;
     font-size: $fonts-size;
     font-weight: normal;
