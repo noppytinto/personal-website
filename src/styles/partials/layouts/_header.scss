@@ -8,14 +8,11 @@
   left: 0;
   right: 0;
   z-index: 99; // for stay above crt begin() scanlines (z-index: 2)
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
-  
   font-family: var.$font-family--mono;
-  
   border-bottom-color: var.$color--divider;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -24,11 +21,21 @@
   animation-duration: .5s;
   transition: all .2s;
   
-  
   &:hover {
     opacity: 1 !important;
   }
   
+  @media screen and (max-width: 600px) {
+    padding: 1em 1em;
+  }
+  
+  @media screen and (max-width: 550px) {
+    padding: .7em 1em;
+    @include mix.center-vertically-horizontally;
+  }
+  
+  //////////////////////////////////////////
+  //////////////////////////////////////////
   &--reveal {
     animation-name: reveal;
     animation-fill-mode: forwards;
@@ -45,24 +52,7 @@
     font-weight: bold;
     
     @media screen and (max-width: 550px) {
-      & {
-        font-size: 0.9rem;
-      }
-    }
-  }
-  
-  
-  ////////////////////////////////////////////
-  // media queries
-  ////////////////////////////////////////////
-  @media screen and (max-width: 600px) {
-    & { padding: 1em 1em; }
-  }
-  
-  @media screen and (max-width: 550px) {
-    & {
-      padding: .7em 1em;
-      @include mix.center-vertically-horizontally;
+      font-size: 0.9rem;
     }
   }
   
