@@ -5,7 +5,7 @@
   padding: 3.5em 3em;
   $border-radius: .7em;
   $offset: $border-radius;
-  //box-shadow: 0 -.5em 1.5em -.5em rgba(#000, .5);
+  box-shadow: 0 -.5em .5em -.5em rgba(#000, .3);
   @include mix.round-top-corners($border-radius);
   
   
