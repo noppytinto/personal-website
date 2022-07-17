@@ -3,7 +3,7 @@
 
 .about, .projects, .contact {
   padding: 3.5em 3em;
-  $border-radius: .7em;
+  $border-radius: .9em;
   $offset: $border-radius;
   box-shadow: 0 -.5em .5em -.5em rgba(#000, .3);
   @include mix.round-top-corners($border-radius);
