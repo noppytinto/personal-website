@@ -37,18 +37,22 @@
   &__text-content {
     flex-basis: 50%;
     flex-grow: 1;
-    line-height: 1.6;
-    font-size: 1.2rem;
     z-index: 1;
     //letter-spacing: -1px;
     font-family: var.$font-family--tech;
   }
   
+  &__bio {
+    flex-basis: 50%;
+    flex-grow: 1;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    letter-spacing: -.7px;
+  }
+  
   &__greetings {
     font-size: 2rem;
     font-weight: bold;
-    //font-family: var.$font-family--vt;
-    font-family: var.$font-family--tech;
     margin-bottom: .3em;
     
     @media screen and (max-height: 480px) {
