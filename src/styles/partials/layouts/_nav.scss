@@ -9,6 +9,15 @@
 .nav {
   font-family: var.$font-family--mono;
   
+  @media screen and (max-width: 390px) {
+    font-size: .9rem;
+  }
+  
+  @media screen and (max-width: 360px) {
+    font-size: .8rem;
+  }
+  
+  
   &--stick-to-bottom {
     position: fixed;
     bottom: 0;
@@ -54,18 +63,6 @@
       color: var.$color--orange;
       text-decoration-line: underline;
     }
-  }
-  
-  
-  ////////////////////////////////////////////
-  // media queries
-  ////////////////////////////////////////////
-  @media screen and (max-width: 390px) {
-    font-size: .9rem;
-  }
-  
-  @media screen and (max-width: 360px) {
-    font-size: .8rem;
   }
   
 }// .nav
