@@ -48,12 +48,13 @@
   
   &__logo {
     color: var.$color--green;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    
-    @media screen and (max-width: 550px) {
-      font-size: 0.9rem;
-    }
+    font-family: var.$font-family--tech;
+  
+    //@media screen and (max-width: 550px) {
+    //  font-size: 0.9rem;
+    //}
   }
   
 }// .header

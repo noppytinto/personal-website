@@ -11,10 +11,10 @@
   color: var.$color--blue-night--50;
   background: radial-gradient(farthest-side at 0px 0px, #496a82 1%, #304759 100%);
   
-  
   @media screen and (max-height: 480px) {
     gap: .5em;
   }
+  
   
   &__title {
     z-index: 1;
@@ -38,16 +38,18 @@
     flex-basis: 50%;
     flex-grow: 1;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: 1.2rem;
     z-index: 1;
-    letter-spacing: -1px;
-    font-family: var.$font-family--mono;
+    //letter-spacing: -1px;
+    font-family: var.$font-family--tech;
   }
   
   &__greetings {
     font-size: 2rem;
     font-weight: bold;
-    font-family: var.$font-family--vt;
+    //font-family: var.$font-family--vt;
+    font-family: var.$font-family--tech;
+    margin-bottom: .3em;
     
     @media screen and (max-height: 480px) {
       font-size: 1.5rem;
@@ -83,14 +85,12 @@
     border-width: 1px;
     border-style: solid;
     border-color: var.$color--blue-night--600;
-    
     // path must be relative to _main.scss
     background-color: transparent;
     background-image: url('../assets/images/me-on-trekking.jpeg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    
     display: flex;
     flex-direction: column-reverse;
   }
@@ -99,7 +99,7 @@
     text-align: center;
     padding: .7em;
     color: var.$color--blue-night--900;
-    font-size: .7rem;
+    font-size: .9rem;
     letter-spacing: -1px;
     background-color: rgba(var.$color--blue-night--50, .9);
     backdrop-filter: blur(5px);

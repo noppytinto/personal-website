@@ -6,8 +6,9 @@
   width: 100%;
   padding: .5em 0;
   @include mix.center-vertically-horizontally;
-  color: var.$color--blue-night--50;
   background-color: var.$color--blue-night;
+  color: var.$color--blue-night--50;
+  font-family: var.$font-family--tech;
   
   &__rights-reserved {
     font-size: .9rem;

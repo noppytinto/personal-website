@@ -3,28 +3,25 @@
 
 @mixin input-cursor($height: .2em, $width: 1em, $color: #fff) {
   content: "";
-  
   height: $height;
   width: $width;
-  background-color: $color;
-  
   display: inline-block;
   position: relative;
   top: .2em;
   left: -0.2em;
-  
+  background-color: $color;
   animation-name: blink;
   animation-duration: .6s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
-}
-
-@keyframes blink {
-  0% {opacity: 1;}
-  40% {opacity: 1;}
-  60% {opacity: 0;}
-  100% {opacity: 0;}
+  
+  @keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
 }
 
 
@@ -32,61 +29,31 @@
   position: relative;
   width: max-content;
   font-size: 1.2rem;
-  //font-size: 2rem;
   font-weight: bold;
   font-family: var.$font-family--mono;
-  //font-family: var.$font-family--vt;
+  
   
   #terminal__row--3 {
-    font-size: 1.5rem;
-  
+    font-size: 2rem;
+    font-family: var.$font-family--vt;
   }
   
   
   ////////////////////////////////////////////
   // media queries
   ////////////////////////////////////////////
-  //@media screen and (max-width: 535px) {
-  //  font-size: 1.7rem;
-  //
-  //  #terminal__row--3 {
-  //    font-size: 2.3rem;
-  //  }
-  //}
-  //
-  //@media screen and (max-width: 510px) {
-  //  font-size: 1.5rem;
-  //
-  //  #terminal__row--3 {
-  //    font-size: 2.1rem;
-  //  }
-  //}
-  
   @media screen and (max-width: 500px) {
     font-size: 1rem;
-    
-    //#terminal__row--3 {
-    //  font-size: 2.1rem;
-    //}
   }
   
   @media screen and (max-width: 450px) {
     font-size: .95rem;
-    //font-size: 1.3rem;
-  
-    //#terminal__row--3 {
-    //  font-size: 1.9rem;
-    //}
   }
   
   @media screen and (max-width: 400px) {
     font-size: .8rem;
-    //font-size: 1.1rem;
-  
-    //#terminal__row--3 {
-    //  font-size: 1.7rem;
-    //}
   }
+  
 }// .terminal
 
 .input-cursor {
