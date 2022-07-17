@@ -7,7 +7,7 @@
   @include mix.move-to-top-by(0);
   color: var.$color--blue-night--50;
   //background: radial-gradient(farthest-side at 0px 0px, #496a82 1%, #304759 100%);
-  box-shadow: 0 -7em 10em 0 rgba(#000, 1);
+  box-shadow: 0 -7em 10em 0 rgba(#0c0c0c, 1);
   
   @media screen and (max-height: 480px) {
     gap: .5em;
