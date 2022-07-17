@@ -2,9 +2,6 @@
 @use "../base/mixin" as mix;
 
 
-
-
-
 .square {
   z-index: 10;
   top: 0;
@@ -13,7 +10,6 @@
   height: 200px;
   border-color: #00BC4B;
 }
-
 
 .divider {
   --border-width: 1px;
@@ -25,7 +21,15 @@
   border-bottom-width: var(--border-width);
 }
 
-
+.expandable-circle {
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10%);
+  z-index: 0;
+}
 
 //////////////////////////////////////
 // loading spinner
@@ -55,32 +59,10 @@
   }
 }
 
-// @media screen and (max-width: v.$breakpoint--default) {
-//   .loading::before {
-//     top: 90%;
-//     right: 5%;
-//   }
-// }
 
-
-
-
-/////////////////////////////////////////
-// EXPANDABLE CIRCLE
-/////////////////////////////////////////
-.expandable-circle {
-  padding: 0;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(-10%);
-  z-index: 0;
-}
-
-
-
-
+//////////////////////////////////////
+// MISC
+//////////////////////////////////////
 //.input-cursor::after {
 //  content: "■";
 //  animation: cursor 1s infinite;

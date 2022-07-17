@@ -65,11 +65,11 @@
   // media queries
   ////////////////////////////////////////////
   @media screen and (max-width: 390px) {
-    & { font-size: .9rem; }
+    font-size: .9rem;
   }
   
   @media screen and (max-width: 360px) {
-    & { font-size: .8rem; }
+    font-size: .8rem;
   }
   
 }// .nav
