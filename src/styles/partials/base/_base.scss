@@ -9,10 +9,28 @@ body {
 
 textarea { resize: none; }
 
+a {
+  $line-color: var.$color--orange;
+  color: $line-color;
+  text-decoration: none;
+  background-image: linear-gradient($line-color, $line-color);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+a:hover,
+a:focus,
+a:active {
+  background-size: 100% 0.1em;
+}
+
 a:link {
   color: inherit;
   text-decoration-line: none;
 }
+
 
 a:link:visited { color: var.$color--font-base; }
 
