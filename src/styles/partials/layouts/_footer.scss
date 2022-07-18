@@ -3,12 +3,12 @@
 
 
 .footer {
-  bottom: 0;
   width: 100%;
-  padding: .3em 0;
+  padding: 1em;
   @include mix.center-vertically-horizontally;
-  background-color: transparent;
+  //background-color: #fff;
   font-size: .8rem;
+  //color: var.$color--base;
   
   &__rights-reserved {
     font-size: .7rem;

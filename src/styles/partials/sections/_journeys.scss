@@ -1,7 +1,7 @@
 @use "../base/mixin" as mix;
 @use "../abstracts/variables" as var;
 
-.projects {
+.journeys {
   padding: 2em;
   
   &__content {
@@ -10,4 +10,4 @@
     margin-right: auto;
   }
   
-}// .projects
+}// .journeys

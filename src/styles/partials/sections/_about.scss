@@ -4,25 +4,15 @@
 
 .about {
   height: min(100vh, 900px);
-  box-shadow: 0 -7em 10em 0 rgba(var.$color--base, 1);
   padding: 5em 0;
-  
-  @media screen and (max-height: 480px) {
-    //gap: .5em;
-  }
   
   &__content {
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 3em;
+    max-width: var(--breakpoint--max-width);
+    margin-left: auto;
+    margin-right: auto;
+
     position: relative;
-  
-    @media screen and (max-width: 650px) {
-      //flex-direction: column;
-      //justify-content: flex-start;
-      //gap: 2em;
-    }
   }
   
   &__motto {
@@ -30,20 +20,22 @@
     top: 0;
     right: 0;
     z-index: 2;
-    font-size: clamp(10px, 10.1vw, 91px);
+    font-size: clamp(10px, 10.7vw, 91.1px);
     text-shadow: 1px 1px 5px rgba(#000, .5);
     transform: translateY(-60%);
   }
+  &__ideas {color: var.$color--orange;}
+  &__life {font-style: italic;}
   
-  &__ideas {
-    color: var.$color--orange;
-  }
-  
-  &__life {
-    font-style: italic;
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
   }
   
   &__text-content {
+    flex-grow: 2;
+    flex-basis: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -57,33 +49,25 @@
     font-size: 2rem;
     margin-bottom: .5em;
     padding-left: .25em;
+    color: var.$color--divider;
   }
   
   &__bio {
     padding-left: .5em;
     line-height: 1.7;
+    font-size: 1.3rem;
   }
   
   &__media {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    flex-basis: 10px;
     flex-grow: 3;
-  
-    @media screen and (max-width: 650px){
-      //justify-content: center;
-    }
   }
   
-
-  
   &__background {
-    width: 100%;
     height: 100%;
+    width: 100%;
     border-radius: .5em;
-    //border-width: 1px;
-    //border-style: solid;
-    //border-color: var.$color--blue-night--600;
+    
     // path must be relative to _main.scss
     background-image: url('../assets/images/about-img.jpg');
     background-position: center center;
