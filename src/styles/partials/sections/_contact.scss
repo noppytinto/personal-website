@@ -7,7 +7,7 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 33%);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: 200px 100px 200px;
     gap: 2em;
     grid-template-areas:
       "email   email    github"
