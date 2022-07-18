@@ -30,7 +30,7 @@
     top: 0;
     right: 0;
     z-index: 2;
-    font-size: clamp(10px, 10.1vw, 88px);
+    font-size: clamp(10px, 10.1vw, 91px);
     text-shadow: 1px 1px 5px rgba(#000, .5);
     transform: translateY(-60%);
   }
@@ -57,11 +57,11 @@
     font-size: 2rem;
     margin-bottom: .5em;
     font-weight: 500;
-    padding-left: .5em;
+    padding-left: .25em;
   }
   
   &__bio {
-    padding-left: 1em;
+    padding-left: .5em;
   }
   
   &__media {

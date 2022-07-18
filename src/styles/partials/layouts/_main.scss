@@ -10,13 +10,11 @@
   
   
   &__section {
-    max-width: 900px;
+    max-width: var(--breakpoint--max-width);
     margin-left: auto;
     margin-right: auto;
     height: 110vh;
     background-color: var.$color--base;
-    padding-bottom: 2em;
-
   }
   
   &__title {

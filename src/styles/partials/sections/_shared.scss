@@ -2,23 +2,12 @@
 @use "../abstracts/variables" as var;
 
 .about, .projects, .contact {
-  padding: 3.5em 3em;
-  //box-shadow: 0 -.5em .5em -.5em rgba(#000, .3);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 2em;
-  
-  //@media screen and (max-width: 900px) {
-  //  @include mix.round-top-corners(1em);
-  //}
-  
+
   @media screen and (max-width: 500px) {
-    padding: 3em 2em;
+    //padding: 3em 2em;
   }
   
   @media screen and (max-width: 400px) {
-    padding: 2em 1.5em;
+    //padding: 2em 1.5em;
   }
 }
