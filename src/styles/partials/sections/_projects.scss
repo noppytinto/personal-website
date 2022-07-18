@@ -3,6 +3,7 @@
 
 .projects {
   padding: 2em;
+  min-height: 100vh;
   
   &__content {
     max-width: var(--breakpoint--max-width);
