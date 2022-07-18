@@ -3,7 +3,7 @@
 
 
 .about {
-  height: 100vh;
+  height: min(100vh, 900px);
   box-shadow: 0 -7em 10em 0 rgba(var.$color--base, 1);
   padding: 5em 0;
   
