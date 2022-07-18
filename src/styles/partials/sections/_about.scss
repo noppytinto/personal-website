@@ -4,7 +4,6 @@
 
 .about {
   height: min(100vh, 900px);
-  padding: 5em 0;
   
   &__content {
     height: 100%;
@@ -36,6 +35,7 @@
   &__text-content {
     flex-grow: 2;
     flex-basis: 10px;
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -55,7 +55,7 @@
   &__bio {
     padding-left: .5em;
     line-height: 1.7;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 300;
   }
   

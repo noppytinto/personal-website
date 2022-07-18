@@ -10,4 +10,13 @@
     margin-right: auto;
   }
   
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+  
+  &__our {
+    color: var.$color--green;
+  }
+  
 }// .journeys

@@ -52,6 +52,8 @@
   
   &:hover {
     cursor: pointer;
+    background-color: var.$color--green;
+    color: var.$color--green--1000;
   }
   
   &--reveal {

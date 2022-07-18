@@ -4,7 +4,7 @@
 .skills {
   height: revert;
   background-color: #000;
-  padding: 8em 2em 5em 2em;
+  padding: 3em 2em 2em 2em;
   
   &__content {
     max-width: var(--breakpoint--max-width);
@@ -18,7 +18,7 @@
   
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px 100px 100px;
+    grid-template-rows: auto 100px 100px;
     grid-template-areas:
         "title  subtitle1  subtitle2"
         "text1    text2        text3"
