@@ -55,6 +55,9 @@
   &__grid--1-3 {
     grid-area: github;
   
+    &:link {color: inherit;}
+    &:visited {color: inherit;}
+  
     &:hover {
       background-color: #fff;
       color: var.$color--base;
@@ -97,6 +100,9 @@
     grid-area: linkedin;
     border-color: var.$color--blue;
     color: var.$color--blue;
+  
+    &:link {color: var.$color--blue;}
+    &:visited {color: var.$color--blue;}
   
     &:hover {
       background-color: var.$color--blue;

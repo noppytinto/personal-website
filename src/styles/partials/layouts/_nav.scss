@@ -8,6 +8,23 @@
 
 .nav {
   
+  a {
+    $line-color: #fff;
+    color: $line-color;
+    text-decoration: none;
+    background-image: linear-gradient($line-color, $line-color);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+  }
+  a:hover,
+  a:focus,
+  a:active {
+    background-size: 100% 0.1em;
+  }
+  
 
   @media screen and (max-width: 390px) {
     //font-size: .9rem;
@@ -38,8 +55,7 @@
     color: var.$color--font-base;
     transition: all .2s;
   
-    &:link {
-    }
+
     
     &:visited {
       color: var.$color--font-base;
