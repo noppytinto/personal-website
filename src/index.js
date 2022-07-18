@@ -18,27 +18,53 @@ let secondRun = false;
 let alreadyRevealed = false;
 let mobileNavActivated = false;
 
-// main();
+main();
 
 
 /////////////////////////////////////////
 // FUNCTIONS
 /////////////////////////////////////////
 async function main() {
-
+    revealHoverMenuOnScroll();
     //
     // fixScrollToTop()
 
     //
-    handleNavMenuPositionOnViewportChange();
-    //
-    revealHeaderOnScroll();
-    revealGoToTopButtonOnScroll();
-    revealMediaOnScroll();
-    //
-    startTypingAnimation();
+    // handleNavMenuPositionOnViewportChange();
+    // revealHeaderOnScroll();
+    // revealGoToTopButtonOnScroll();
+    // revealMediaOnScroll();
+    // startTypingAnimation();
 
 }// main()
+
+
+function revealHoverMenuOnScroll() {
+    const target = document.querySelector('.header');
+    const hoverMenuButton = document.querySelector('.hover-menu-btn');
+
+    const options = {
+        root: null,
+        threshold: 1
+    }
+
+    const callback = (entries) => {
+        const [entry] = entries;
+
+        if (entry.isIntersecting) {
+            if (hoverMenuButton.classList.contains('hover-menu-btn--reveal'))
+                hoverMenuButton.classList.remove('hover-menu-btn--reveal');
+        }
+        else {
+            if ( ! hoverMenuButton.classList.contains('hover-menu-btn--reveal'))
+                hoverMenuButton.classList.add('hover-menu-btn--reveal');
+        }
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(target);
+}
+
 
 function fixScrollToTop() {
     const beginButton = document.querySelectorAll('.nav__link')[0];
@@ -57,6 +83,8 @@ function fixScrollToTop() {
     });
 
 }
+
+
 
 function handleNavMenuPositionOnViewportChange() {
     const handleOnViewportChange = (mediaQuery) => {
