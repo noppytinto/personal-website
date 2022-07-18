@@ -18,7 +18,7 @@ let secondRun = false;
 let alreadyRevealed = false;
 let mobileNavActivated = false;
 
-main();
+// main();
 
 
 /////////////////////////////////////////

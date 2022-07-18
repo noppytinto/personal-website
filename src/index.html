@@ -19,15 +19,11 @@
 <!--// HEADER-->
 <!--/////////////////////////////////////////-->
 <header class="header" >
-
-<!--    <span class="header__logo scanlines&#45;&#45;static"> Francesco Scutellaro </span>-->
+  <span class="header__logo"> Francesco Scutellaro </span>
 
   <!--///////////////////////////////////////// NAV-->
   <nav class="nav">
     <ul class="nav__list">
-<!--      <li class="nav__item">-->
-<!--        <a href="#begin" class="nav__link" >begin</a>-->
-<!--      </li>-->
       <li class="nav__item">
         <a href="#about" class="nav__link">about</a>
       </li>
@@ -46,81 +42,62 @@
 <!--/////////////////////////////////////////-->
 <!--// MAIN-->
 <!--/////////////////////////////////////////-->
-<main class="main parallax-container" >
+<main class="main" >
 
   <!-- /////////////////////////////// BEGIN -->
-  <section class="main__section begin parallax-layer parallax-layer--1 parallax-group" id="begin" >
-    <div class="terminal">
-      <span class="terminal__row" id="terminal__row--1">&nbsp;</span>
-      <span class="terminal__row" id="terminal__row--2">&nbsp;</span>
-      <span class="input-cursor"></span>
-      <br><br>
-      <span class="terminal__row" id="terminal__row--loading">&nbsp;</span>
-      <br>
-      <span class="terminal__row" id="terminal__row--3">&nbsp;</span>
-    </div>
-  </section>
+  <!--  TODO-->
 
+  <!-- /////////////////////////////// ABOUT -->
+  <section class="main__section about " id="about">
+    <h1 class="main__title about__title stat">about</h1>
 
-  <div class="parallax-layer parallax-layer--2 parallax-group">
+    <div class="about__content ">
+      <div class="about__text-content">
+        <!--          <h2 class="about__greetings">Hey folks!</h2>-->
 
-    <!-- /////////////////////////////// ABOUT -->
-    <section class="main__section about " id="about">
-      <h1 class="main__title about__title stat">about</h1>
-
-      <div class="about__content ">
-        <div class="about__text-content">
-<!--          <h2 class="about__greetings">Hey folks!</h2>-->
-
-          <div class="about__greetings glitch">
-            <div class="glitch__stack" style="--stacks: 3;">
-              <span class="glitch__span" style="--index: 0;">Hey folks!</span>
-              <span class="glitch__span" style="--index: 1;">Hey folks!</span>
-              <span class="glitch__span" style="--index: 2;">Hey folks!</span>
-            </div>
-          </div>
-
-          <p class="about__bio">
-            I'm <span  class="underline">Francesco Scutellaro</span><br/>
-            Web developer with a passion about frontend, and travelling enthusiast.<br/>
-            My strength is curiosity, I'm always eager to make new experiences,
-            learn new things and <span class="underline">bring ideas to life</span>.
-          </p>
-
-        </div>
-
-        <div class="about__media ">
-          <div class="about__background">
-            <div class="about__caption">Valle delle Ferriere, Amalfi, Italy</div>
+        <div class="about__greetings glitch">
+          <div class="glitch__stack" style="--stacks: 3;">
+            <span class="glitch__span" style="--index: 0;">Hey folks!</span>
+            <span class="glitch__span" style="--index: 1;">Hey folks!</span>
+            <span class="glitch__span" style="--index: 2;">Hey folks!</span>
           </div>
         </div>
+
+        <p class="about__bio">
+          I'm <span  class="underline">Francesco Scutellaro</span><br/>
+          Web developer with a passion about frontend, and travelling enthusiast.<br/>
+          My strength is curiosity, I'm always eager to make new experiences,
+          learn new things and <span class="underline">bring ideas to life</span>.
+        </p>
+
       </div>
 
-    </section>
+      <div class="about__media ">
+        <div class="about__background">
+          <div class="about__caption">Valle delle Ferriere, Amalfi, Italy</div>
+        </div>
+      </div>
+    </div>
 
+  </section>
 
-    <!-- /////////////////////////////// PROJECTS -->
-    <section class="main__section projects " id="projects">
-      <h1 class="main__title projects__title">projects</h1>
-    </section>
+  <!-- /////////////////////////////// PROJECTS -->
+  <section class="main__section projects " id="projects">
+    <h1 class="main__title projects__title">projects</h1>
+  </section>
 
-
-    <!-- /////////////////////////////// CONTACT -->
-    <section class="main__section contact" id="contact">
-      <h1 class="main__title contact__title">contact</h1>
-    </section>
-
-
-    <!--/////////////////////////////////////////-->
-    <!--// FOOTER -->
-    <!--/////////////////////////////////////////-->
-    <footer class="footer">
-      <p class="footer__rights-reserved ">All Rights Reserved. 2022</p>
-    </footer>
-
-  </div>
-
+  <!-- /////////////////////////////// CONTACT -->
+  <section class="main__section contact" id="contact">
+    <h1 class="main__title contact__title">contact</h1>
+  </section>
 </main>
+
+<!--/////////////////////////////////////////-->
+<!--// FOOTER -->
+<!--/////////////////////////////////////////-->
+<footer class="footer">
+  <p class="footer__rights-reserved ">All Rights Reserved. 2022</p>
+</footer>
 
 <!-- /////////////////////////////// WIP BADGE -->
 <div class="wip-badge translucent-badge">
