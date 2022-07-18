@@ -1,20 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-// BREAKPOINTS
+////////////////////// BREAKPOINTS
 :root {
+  --breakpoint--max-width: 900px;
   --breakpoint--550: 550px;
   --breakpoint--600: 600px;
 }
 
 
-// TYPOGRAPHY
+////////////////////// TYPOGRAPHY
 $font-family--base: 'Jost', sans-serif;
 
 
-
-
-// COLORS
+////////////////////// COLORS
 $color--base: #151515;
+
+$color--green: #98D27E; // 500
+$color--green-600: #00A22D;
+
+$color--orange: #FFA133;
+$color--red: #FF6262;
+$color--yellow: #FFCB2B;
+$color--blue: #0062D5;
+
+$color--divider: rgba(#717171, 1);
+$color--font-base: #fff;
+
+
+////////////////////// SIZES
+
+
+////////////////////// MISC
+$color--green--50: #e6f7e9;
+$color--green--100: #c3ebca;
+$color--green--200: #9bdea7;
+$color--green--300: #6ed183;
+$color--green--400: #46c768;
+$color--green--500: #00bc4b;
+$color--green--600: #00ac42;
+$color--green--700: #009a36;
+$color--green--800: #00892a;
+$color--green--900: #006912;
+$color--green--900--2: #074228;
 
 $color--blue-night: #1A2F3E;
 $color--blue-night--50: #F4F9FF;
@@ -28,27 +55,3 @@ $color--blue-night--600: #496a82;
 $color--blue-night--700: #3a566b;
 $color--blue-night--800: #2c4456;
 $color--blue-night--900: #1a2f3e;
-
-$color--green: #98D27E;
-$color--green-600: #00A22D;
-
-$color--green--50: #e6f7e9;
-$color--green--100: #c3ebca;
-$color--green--200: #9bdea7;
-$color--green--300: #6ed183;
-$color--green--400: #46c768;
-$color--green--500: #00bc4b; // default
-$color--green--600: #00ac42;
-$color--green--700: #009a36;
-$color--green--800: #00892a;
-$color--green--900: #006912;
-$color--green--900--2: #074228;
-
-$color--orange: #FF8A00;
-$color--red: #FF6262;
-$color--yellow: #FFCB2B;
-$color--blue: #0062D5;
-
-$color--divider: rgba(#717171, 1);
-
-// SIZES

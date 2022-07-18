@@ -3,7 +3,7 @@
 body {
   font-family: var.$font-family--base;
   background-color: var.$color--base;
-  color: #e3e3e3;
+  color: var.$color--font-base;
 }
 
 textarea { resize: none; }
@@ -13,5 +13,5 @@ a:link {
   text-decoration-line: none;
 }
 
-a:link:visited { color: #DDF1FF; }
+a:link:visited { color: var.$color--font-base; }
 

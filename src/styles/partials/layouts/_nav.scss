@@ -8,43 +8,45 @@
 
 .nav {
   
+
   @media screen and (max-width: 390px) {
-    font-size: .9rem;
+    //font-size: .9rem;
   }
   
   @media screen and (max-width: 360px) {
-    font-size: .8rem;
+    //font-size: .8rem;
   }
   
-  
-
   &--move-slightly-top {
     position: absolute;
   }
   
   
+  //////////////////////////////////////////
+  //////////////////////////////////////////
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2em;
+    gap: 3em;
     list-style: none;
     
   }
   
   &__link {
-    &:link::after {
-      content: "()";
-    }
+    font-size: 1.4rem;
+    color: var.$color--font-base;
+    transition: all .2s;
   
+    &:link {
+    }
+    
     &:visited {
-      color: inherit;
+      color: var.$color--font-base;
     }
   
     &:hover {
       cursor: pointer;
-      font-weight: bold;
-      color: var.$color--orange;
       text-decoration-line: underline;
     }
   }
