@@ -3,7 +3,7 @@
 
 
 .about {
-  height: min(100vh, 900px);
+  min-height: 100vh;
   
   &__content {
     height: 100%;

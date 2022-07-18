@@ -2,7 +2,7 @@
 @use "../abstracts/variables" as var;
 
 .skills {
-  height: revert;
+  min-height: 50vh;
   background-color: #000;
   padding: 3em 2em 2em 2em;
   
