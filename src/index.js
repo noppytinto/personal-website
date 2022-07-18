@@ -3,7 +3,8 @@
 /////////////////////////////////////////
 // import './assets';
 import './styles/style.scss';
-// import ImageIcelandOcean2 from './assets/images/iceland-ocean.jpg';
+import iconClose from './assets/images/icon-close.svg';
+import aboutImg from './assets/images/about-img.jpg';
 // import ImageIcelandOcean from './styles/partials/page-components/iceland-ocean.jpg';
 // console.log(ImageIcelandOcean);
 
@@ -26,6 +27,10 @@ main();
 /////////////////////////////////////////
 async function main() {
     revealHoverMenuOnScroll();
+    revealOnClickHoverMenuButton();
+    concealOnClickCloseHoverMenu();
+    concealOnClickHoverMenuLink();
+    concealOnClickHoverMenuOuterArea();
     //
     // fixScrollToTop()
 
@@ -37,6 +42,54 @@ async function main() {
     // startTypingAnimation();
 
 }// main()
+
+function revealOnClickHoverMenuButton() {
+    const hoverMenuButton = document.querySelector('.hover-menu-btn');
+    const hoverMenu = document.querySelector('.hover-menu');
+
+    hoverMenuButton.addEventListener('click', (ev) => {
+        if ( ! hoverMenu.classList.contains('hover-menu--reveal'))
+            hoverMenu.classList.add('hover-menu--reveal');
+    });
+}
+
+function concealOnClickCloseHoverMenu() {
+    const hoverMenuCloseButton = document.querySelector('.hover-menu__btn-close');
+    const hoverMenu = document.querySelector('.hover-menu');
+
+    hoverMenuCloseButton.addEventListener('click', (ev) => {
+        if (hoverMenu.classList.contains('hover-menu--reveal'))
+            hoverMenu.classList.remove('hover-menu--reveal');
+    });
+}
+
+function concealOnClickHoverMenuLink() {
+    const links = document.querySelectorAll('.hover-menu__link');
+    const hoverMenu = document.querySelector('.hover-menu');
+
+    for (const link of links) {
+        link.addEventListener('click', (ev) => {
+            if (hoverMenu.classList.contains('hover-menu--reveal'))
+                hoverMenu.classList.remove('hover-menu--reveal');
+        });
+    }
+}
+
+
+function concealOnClickHoverMenuOuterArea() {
+    const hoverMenuOuterArea= document.querySelector('.hover-menu');
+    const hoverMenuInnerArea= document.querySelector('.hover-menu__content');
+    const hoverMenu = document.querySelector('.hover-menu');
+
+    hoverMenuOuterArea.addEventListener('click', (ev) => {
+        if ( ! hoverMenuInnerArea.contains(ev.target)) {
+            if (hoverMenu.classList.contains('hover-menu--reveal'))
+                hoverMenu.classList.remove('hover-menu--reveal');
+        }
+    });
+}
+
+
 
 
 function revealHoverMenuOnScroll() {

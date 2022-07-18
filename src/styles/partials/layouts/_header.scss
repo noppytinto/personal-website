@@ -3,7 +3,6 @@
 
 
 .header {
-  z-index: 99; // for stay above crt begin() scanlines (z-index: 2)
   padding: 1.5em 2em;
   display: flex;
   justify-content: space-between;
