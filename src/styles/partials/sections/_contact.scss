@@ -4,6 +4,7 @@
 
 .contact {
   height: revert;
+  min-height: 50vh;
   
   &__content {
     max-width: var(--breakpoint--max-width);
