@@ -38,7 +38,6 @@ function showCopyEmailOnMouseEnterEmailButtonBoundary() {
     const copyEmailButton = document.querySelector('.contact__copy-email-btn');
 
     const onMouseMove = (e) =>{
-        console.log(emailButton.getBoundingClientRect());
         const targetStartingX = emailButton.getBoundingClientRect().x;
         const targetWidth = emailButton.getBoundingClientRect().width;
         const targetEndingX = targetStartingX+targetWidth;
@@ -90,7 +89,6 @@ function handleOnClickEmailButton() {
     const emailButton = document.querySelector('.contact__grid--1-1');
     emailButton.addEventListener('click', (ev) => {
        copyEmailToClipboard();
-       // showCopyEmailButton(false);
         changeCopyEmailButtonText('email copied! :)');
     });
 }
