@@ -44,8 +44,12 @@
   border-color: transparent;
   transform: rotateZ(270deg);
   box-shadow: 0px -5px 10px 0 rgba(#000, .3);
-  opacity: 0;
+  //opacity: 0;
   transition: all .2s;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+  animation-name: hover-menu-btn__slide-out;
+  animation-timing-function: ease-in;
   
   &:hover {
     cursor: pointer;
@@ -54,10 +58,10 @@
   }
   
   &--reveal {
-    opacity: 1;
+    //opacity: 1;
     animation-duration: .2s;
     animation-fill-mode: forwards;
-    animation-name: slide-over;
+    animation-name: hover-menu-btn__slide-in;
     animation-timing-function: ease-in;
   }
   
@@ -65,12 +69,21 @@
     opacity: 0;
   }
   
-  @keyframes slide-over {
+  @keyframes hover-menu-btn__slide-in {
     from {
       transform: rotateZ(270deg) translateY(100px);
     }
     to {
       transform: rotateZ(270deg) translateY(0px);
+    }
+  }
+  
+  @keyframes hover-menu-btn__slide-out {
+    from {
+      transform: rotateZ(270deg) translateY(0px);
+    }
+    to {
+      transform: rotateZ(270deg) translateY(100px);
     }
   }
   
