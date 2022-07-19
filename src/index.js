@@ -25,12 +25,12 @@ main();
 /////////////////////////////////////////
 // FUNCTIONS
 /////////////////////////////////////////
-async function main() {
+function main() {
     revealHoverMenuOnScroll();
-    revealOnClickHoverMenuButton();
-    concealOnClickCloseHoverMenu();
-    concealOnClickHoverMenuLink();
-    concealOnClickHoverMenuOuterArea();
+    handleOnClickHoverMenuButton();
+    handleOnClickHoverMenuCloseButton();
+    handleOnClickHoverMenuLink();
+    handleOnClickHoverMenuOuterArea();
     //
     // fixScrollToTop()
 
@@ -43,58 +43,65 @@ async function main() {
 
 }// main()
 
-function revealOnClickHoverMenuButton() {
+function handleOnClickHoverMenuButton() {
     const hoverMenuButton = document.querySelector('.hover-menu-btn');
-    const hoverMenu = document.querySelector('.hover-menu');
 
     hoverMenuButton.addEventListener('click', (ev) => {
-        if ( ! hoverMenu.classList.contains('hover-menu--reveal'))
-            hoverMenu.classList.add('hover-menu--reveal');
+        showHoverMenu(true);
     });
 }
 
-function concealOnClickCloseHoverMenu() {
+
+
+function handleOnClickHoverMenuCloseButton() {
     const hoverMenuCloseButton = document.querySelector('.hover-menu__btn-close');
-    const hoverMenu = document.querySelector('.hover-menu');
 
     hoverMenuCloseButton.addEventListener('click', (ev) => {
-        if (hoverMenu.classList.contains('hover-menu--reveal'))
-            hoverMenu.classList.remove('hover-menu--reveal');
+        showHoverMenu(false);
     });
 }
 
-function concealOnClickHoverMenuLink() {
+function handleOnClickHoverMenuLink() {
     const links = document.querySelectorAll('.hover-menu__link');
-    const hoverMenu = document.querySelector('.hover-menu');
 
     for (const link of links) {
         link.addEventListener('click', (ev) => {
-            if (hoverMenu.classList.contains('hover-menu--reveal'))
-                hoverMenu.classList.remove('hover-menu--reveal');
+            showHoverMenu(false);
         });
     }
 }
 
 
-function concealOnClickHoverMenuOuterArea() {
+function handleOnClickHoverMenuOuterArea() {
     const hoverMenuOuterArea= document.querySelector('.hover-menu');
     const hoverMenuInnerArea= document.querySelector('.hover-menu__content');
-    const hoverMenu = document.querySelector('.hover-menu');
 
     hoverMenuOuterArea.addEventListener('click', (ev) => {
-        if ( ! hoverMenuInnerArea.contains(ev.target)) {
-            if (hoverMenu.classList.contains('hover-menu--reveal'))
-                hoverMenu.classList.remove('hover-menu--reveal');
+        const clickingOutsideArea =  ! hoverMenuInnerArea.contains(ev.target);
+
+        if (clickingOutsideArea) {
+            showHoverMenu(false);
         }
     });
 }
 
+function showHoverMenu(show) {
+    const hoverMenu = document.querySelector('.hover-menu');
+
+    if (show) {
+        if ( ! hoverMenu.classList.contains('hover-menu--reveal'))
+            hoverMenu.classList.add('hover-menu--reveal');
+    }
+    else {
+        if ( hoverMenu.classList.contains('hover-menu--reveal'))
+            hoverMenu.classList.remove('hover-menu--reveal');
+    }
+}
 
 
 
 function revealHoverMenuOnScroll() {
     const target = document.querySelector('.header');
-    const hoverMenuButton = document.querySelector('.hover-menu-btn');
 
     const options = {
         root: null,
@@ -104,18 +111,27 @@ function revealHoverMenuOnScroll() {
     const callback = (entries) => {
         const [entry] = entries;
 
-        if (entry.isIntersecting) {
-            if (hoverMenuButton.classList.contains('hover-menu-btn--reveal'))
-                hoverMenuButton.classList.remove('hover-menu-btn--reveal');
-        }
-        else {
-            if ( ! hoverMenuButton.classList.contains('hover-menu-btn--reveal'))
-                hoverMenuButton.classList.add('hover-menu-btn--reveal');
-        }
+        if (entry.isIntersecting)
+            showHoverMenuButton(true);
+        else
+            showHoverMenuButton(false);
     };
 
     const observer = new IntersectionObserver(callback, options);
     observer.observe(target);
+}
+
+function showHoverMenuButton(show) {
+    const hoverMenuButton = document.querySelector('.hover-menu-btn');
+
+    if (show) {
+        if (hoverMenuButton.classList.contains('hover-menu-btn--reveal'))
+            hoverMenuButton.classList.remove('hover-menu-btn--reveal');
+    }
+    else {
+        if ( ! hoverMenuButton.classList.contains('hover-menu-btn--reveal'))
+            hoverMenuButton.classList.add('hover-menu-btn--reveal');
+    }
 }
 
 
