@@ -19,6 +19,7 @@ main();
 
 /////////////////////////////////////////
 // FUNCTIONS
+
 /////////////////////////////////////////
 function main() {
     revealHoverMenuOnScroll();
@@ -27,7 +28,87 @@ function main() {
     handleOnClickHoverMenuLink();
     handleOnClickHoverMenuOuterArea();
 
+    handleOnClickEmailButton();
+
+    showCopyEmailOnMouseEnterEmailButtonBoundary()
 }// main()
+
+function showCopyEmailOnMouseEnterEmailButtonBoundary() {
+    const emailButton = document.querySelector('.contact__grid--1-1');
+    const copyEmailButton = document.querySelector('.contact__copy-email-btn');
+
+    const onMouseMove = (e) =>{
+        console.log(emailButton.getBoundingClientRect());
+        const targetStartingX = emailButton.getBoundingClientRect().x;
+        const targetWidth = emailButton.getBoundingClientRect().width;
+        const targetEndingX = targetStartingX+targetWidth;
+
+        const targetStartingY = emailButton.getBoundingClientRect().y;
+        const targetHeight = emailButton.getBoundingClientRect().height;
+        const targetEndingY = targetStartingY+targetHeight;
+
+        const pointerX = e.clientX;
+        const pointerY = e.clientY;
+
+        if (pointerX >= targetStartingX && pointerX <= targetEndingX) {
+            copyEmailButton.style.left = e.pageX + 'px';
+        }
+
+        if (pointerY >= targetStartingY && pointerY <= targetEndingY) {
+            copyEmailButton.style.top = (e.pageY - 10) + 'px';
+        }
+    }
+
+    emailButton.addEventListener('mouseenter', (ev) => {
+        const hoveringEmailArea = ! copyEmailButton.contains(ev.target);
+        if (hoveringEmailArea) {
+            showCopyEmailButton(true);
+            emailButton.addEventListener('mousemove', onMouseMove);
+        }
+    });
+
+    emailButton.addEventListener('mouseleave', (ev) => {
+        showCopyEmailButton(false);
+        changeCopyEmailButtonText('click to copy');
+        emailButton.removeEventListener('mousemove', onMouseMove);
+    });
+}
+
+function showCopyEmailButton(show) {
+    const copyEmailButton = document.querySelector('.contact__copy-email-btn');
+
+    if (show) {
+        copyEmailButton.style.opacity = "1";
+    }
+    else {
+        copyEmailButton.style.opacity = "0";
+        copyEmailButton.style.transform= "translate(-50%,-50%)";
+    }
+}
+
+function handleOnClickEmailButton() {
+    const emailButton = document.querySelector('.contact__grid--1-1');
+    emailButton.addEventListener('click', (ev) => {
+       copyEmailToClipboard();
+       // showCopyEmailButton(false);
+        changeCopyEmailButtonText('email copied! :)');
+    });
+}
+
+function changeCopyEmailButtonText(text) {
+    const copyEmailButton = document.querySelector('.contact__copy-email-btn');
+    copyEmailButton.textContent = text;
+}
+
+function copyEmailToClipboard() {
+    const email = 'francesco.scutellaro@gmail.com';
+    navigator.clipboard.writeText(email)
+        .then(() => {
+
+        }).catch( err => {
+            alert('cannot copy email to clipboard :(');
+        });
+}
 
 function handleOnClickHoverMenuButton() {
     const hoverMenuButton = document.querySelector('.hover-menu-btn');

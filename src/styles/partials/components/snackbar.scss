@@ -1,0 +1,55 @@
+@use "../base/mixin" as mix;
+@use "../abstracts/variables" as var;
+
+
+@keyframes snackbar__slide-up {
+  from {
+    transform: translateY(-100px);
+  }
+  
+  to {
+    transform: translateY(1rem);
+  }
+}
+
+
+
+.snackbar {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  padding: 1em 1em 1em 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  color: #000;
+  border-radius: .3rem;
+  background-color: #fff;
+  box-shadow: 0 .5em 1em -.5em rgba(#000, .5);
+  transform: translateX(-50%);
+  transition: all .2s;
+  
+  &__reveal {
+    display: revert;
+    animation-name: snackbar__slide-up;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+  }
+  
+  &__text {
+    font-weight: 500;
+  }
+  
+  &__action-btn {
+    
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var.$color--orange--700;
+    
+    background-color: transparent;
+    border-color: transparent;
+  }
+  
+}// .snackbar

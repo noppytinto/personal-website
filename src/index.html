@@ -18,7 +18,7 @@
   <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item">
-        <a href="#about" class="nav__link">about</a>
+        <a href="#about__motto" class="nav__link">about</a>
       </li>
       <li class="nav__item">
         <a href="#projects" class="nav__link">projects</a>
@@ -50,7 +50,7 @@
 
       <figure class="about__media ">
         <img class="about__image" src="./assets/images/about-img.jpg" alt="">
-        <figcaption class="about__motto">
+        <figcaption class="about__motto" id="about__motto">
           Bringing <span class="about__ideas">ideas </span>to <span class="about__life">life</span>
         </figcaption>
       </figure>
@@ -120,6 +120,8 @@
         <div class="contact__grid-item contact__grid--1-1">
           <p class="contact__item contact__email">email</p>
           <p class="u-email contact__details contact__details--email">francesco.scutellaro@gmail.com</p>
+
+          <button class="contact__copy-email-btn">click to copy</button>
         </div>
         <a class="u-url contact__grid-item contact__grid--1-3"
            href="https://www.github.com/noppytinto"
@@ -174,10 +176,17 @@
   </div>
 </div>
 
+<!-- /////////////////////////////// SNACKBAR SYSTEM -->
+<!--<div class="snackbar">-->
+<!--  <p class="snackbar__text">text</p>-->
+<!--  <button class="snackbar__action-btn">button</button>-->
+<!--</div>-->
+
 <!-- /////////////////////////////// WIP BADGE -->
 <div class="wip-badge translucent-badge">
   <p class="translucent-badge__text">work in progress</p>
 </div>
+
 
 <!-- /////////////////////////////// go to top button -->
 <a href="#about" class="go-to-top-button">&#9757;</a>
