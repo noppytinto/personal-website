@@ -11,6 +11,10 @@
     margin-right: auto;
 
     position: relative;
+  
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
   }
   
   &__motto {

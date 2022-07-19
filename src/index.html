@@ -12,13 +12,9 @@
 </head>
 <body>
 
-<!--/////////////////////////////////////////-->
-<!--// HEADER-->
-<!--/////////////////////////////////////////-->
 <header class="header" >
   <h1 class="header__logo"> Francesco Scutellaro </h1>
 
-  <!--///////////////////////////////////////// NAV-->
   <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item">
@@ -32,13 +28,8 @@
       </li>
     </ul>
   </nav>
-
 </header>
 
-
-<!--/////////////////////////////////////////-->
-<!--// MAIN-->
-<!--/////////////////////////////////////////-->
 <main class="main" >
 
   <!-- /////////////////////////////// BEGIN -->
@@ -47,34 +38,26 @@
   <!-- /////////////////////////////// ABOUT -->
   <section class="main__section about " id="about">
     <div class="about__content ">
-      <p class="about__motto">
-        Bringing <span class="about__ideas">ideas </span>to <span class="about__life">life</span>
-      </p>
+      <section class="about__text-content">
+        <h2 class="main__title about__title">about</h2>
+        <p class="about__bio">
+          I'm <span  class="underline">Francesco Scutellaro</span><br/>
+          Web <span class="underline">developer</span> with a passion about frontend, and travelling enthusiast.<br/>
+          My strength is curiosity, I'm always eager to make new experiences,
+          learn new things and bring ideas to life.
+        </p>
+      </section>
 
-      <div class="about__flex">
-
-        <div class="about__text-content">
-          <div class="about__stick-to-bottom">
-            <h2 class="main__title about__title">about</h2>
-            <p class="about__bio">
-              I'm <span  class="underline">Francesco Scutellaro</span><br/>
-              Web <span class="underline">developer</span> with a passion about frontend, and travelling enthusiast.<br/>
-              My strength is curiosity, I'm always eager to make new experiences,
-              learn new things and bring ideas to life.
-            </p>
-          </div>
-        </div>
-
-        <div class="about__media ">
-          <img class="about__background"
-               src="./assets/images/about-img.jpg"
-               alt="profile image">
-        </div>
-
-      </div>
+      <figure class="about__media ">
+        <img class="about__background"
+             src="./assets/images/about-img.jpg"
+             alt="profile image">
+        <figcaption class="about__motto">
+          Bringing <span class="about__ideas">ideas </span>to <span class="about__life">life</span>
+        </figcaption>
+      </figure>
 
     </div>
-
   </section>
 
   <!-- /////////////////////////////// SKILLS -->
@@ -167,9 +150,6 @@
   </section>
 </main>
 
-<!--/////////////////////////////////////////-->
-<!--// FOOTER -->
-<!--/////////////////////////////////////////-->
 <footer class="footer">
   <p class="footer__rights-reserved ">All Rights Reserved. 2022</p>
 </footer>
