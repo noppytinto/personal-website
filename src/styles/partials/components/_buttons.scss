@@ -57,7 +57,7 @@
     opacity: 1;
     animation-duration: .2s;
     animation-fill-mode: forwards;
-    animation-name: slide-over--open;
+    animation-name: slide-over;
     animation-timing-function: ease-in;
   }
   
@@ -65,7 +65,7 @@
     opacity: 0;
   }
   
-  @keyframes slide-over--open {
+  @keyframes slide-over {
     from {
       transform: rotateZ(270deg) translateY(100px);
     }
