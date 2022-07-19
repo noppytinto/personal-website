@@ -5,11 +5,6 @@
 import './styles/style.scss';
 import iconClose from './assets/images/icon-close.svg';
 import aboutImg from './assets/images/about-img.jpg';
-// import ImageIcelandOcean from './styles/partials/page-components/iceland-ocean.jpg';
-// console.log(ImageIcelandOcean);
-
-
-
 
 
 /////////////////////////////////////////
