@@ -68,12 +68,9 @@
     border-color: #000;
     font-size: 1.1rem;
     box-shadow: 0 .3em 1em -.5em rgba(#000, .8);
+    transition: opacity .2s;
     
-    //&:active {
-    //  transform: scale(.9);
-    //}
-    //
-    
+
   }
   
   &__grid--1-3 {
