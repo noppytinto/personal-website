@@ -19,6 +19,7 @@ import milanImg from './assets/images/milan.jpg';
 import germanyImg from './assets/images/germany.jpg';
 import positanoImg from './assets/images/positano.jpg';
 import capriImg from './assets/images/capri.jpg';
+import naplesImg from './assets/images/naples.jpg';
 
 
 /////////////////////////////////////////
