@@ -71,7 +71,7 @@
   
   @keyframes hover-menu-btn__slide-in {
     from {
-      transform: rotateZ(270deg) translateY(100px);
+      transform: rotateZ(270deg) translateY(50px);
     }
     to {
       transform: rotateZ(270deg) translateY(0px);
@@ -83,7 +83,7 @@
       transform: rotateZ(270deg) translateY(0px);
     }
     to {
-      transform: rotateZ(270deg) translateY(100px);
+      transform: rotateZ(270deg) translateY(50px);
     }
   }
   
