@@ -5,6 +5,20 @@
 import './styles/style.scss';
 import iconClose from './assets/images/icon-close.svg';
 import aboutImg from './assets/images/about-img.jpg';
+// journeys photos
+import icelandImg from './assets/images/iceland.jpg';
+import florenceImg from './assets/images/florence.jpg';
+import norwayImg from './assets/images/norway.jpg';
+import spainImg from './assets/images/spain.jpg';
+import polandImg from './assets/images/poland.jpg';
+import copenhagenImg from './assets/images/copenhagen.jpg';
+import parisImg from './assets/images/paris.jpg';
+import thailandImg from './assets/images/thailand.jpg';
+import hungaryImg from './assets/images/hungary.jpg';
+import milanImg from './assets/images/milan.jpg';
+import germanyImg from './assets/images/germany.jpg';
+import positanoImg from './assets/images/positano.jpg';
+import capriImg from './assets/images/capri.jpg';
 
 
 /////////////////////////////////////////
@@ -13,6 +27,7 @@ import aboutImg from './assets/images/about-img.jpg';
 let secondRun = false;
 let alreadyRevealed = false;
 let mobileNavActivated = false;
+let row1Speed = 0;
 
 main();
 
@@ -30,8 +45,117 @@ function main() {
 
     handleOnClickEmailButton();
 
-    showCopyEmailOnMouseEnterEmailButtonBoundary()
+    showCopyEmailOnMouseEnterEmailButtonBoundary();
+
+    // startGalleryAnimation();
 }// main()
+
+
+async function startGalleryAnimation() {
+    const icelandImg = document.querySelectorAll('.journeys__item')[0];
+    const images = document.querySelectorAll('.journeys__row--1 .journeys__item');
+    const row1 = document.querySelector('.journeys__row--1');
+
+    const speeds = [];
+
+    images.forEach((img, i) => {
+        speeds.push(0);
+        moveToLeftContinuosly(img, speeds[i]);
+    });
+
+
+
+    // const target = icelandImg;
+    // const options = {
+    //     root: null,
+    //     // rootMargin: '0px 0px -100%',
+    //     threshold: [0]
+    // }
+    //
+    // const callback = (entries) => {
+    //     const [entry] = entries;
+    //
+    //     if (entry.isIntersecting) {
+    //         console.log('is visible');
+    //     }
+    //     else {
+    //         console.log('is not visible');
+    //         row1.append(icelandImg);
+    //         row1Speed = 0;
+    //     }
+    // };
+    //
+    // const observer = new IntersectionObserver(callback, options);
+    // observer.observe(target);
+
+
+
+    //
+
+    // moveRow1ToLeftContinuosly()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    images.forEach((img, i) => {
+        const target = img;
+
+        const options = {
+            root: null,
+            threshold: [0, 1]
+        }
+
+        const callback = (entries) => {
+            const [entry] = entries;
+
+            if (entry.isIntersecting) {
+                console.log('is visible');
+                img.style.zIndex = "0";
+            }
+            else {
+                console.log('is not visible');
+                img.style.zIndex = "2";
+                img.style.transform = "translateX(1000px)"
+                speeds[i] = 0;
+            }
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(target);
+    })
+
+
+}
+
+
+
+
+async function moveToLeftContinuosly(elem, speed) {
+    while(true) {
+        elem.style.transform = `translateX(-${speed}px)`;
+        await waitForMs(50);
+        speed++
+    }
+}
+
+
+
 
 function showCopyEmailOnMouseEnterEmailButtonBoundary() {
     const emailButton = document.querySelector('.contact__grid--1-1');
@@ -451,9 +575,9 @@ function showHoverMenuButton(show) {
 //         into.removeChild(target);
 // }
 //
-// function waitForMs(ms) {
-//     return new Promise(resolve => setTimeout(resolve, ms))
-// }
+function waitForMs(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
 //
 //
 // /////////////////////////////////////////
