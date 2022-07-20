@@ -10,6 +10,10 @@
   font-size: .8rem;
   //color: var.$color--base;
   
+  &__content {
+    max-width: var(--breakpoint--max-width);
+  }
+  
   &__rights-reserved {
     font-size: .7rem;
     
