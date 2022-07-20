@@ -34,6 +34,10 @@
     padding: 4em 2em 0 2em;
     max-width: 80vw;
     min-height: 100vh;
+    flex-grow: 1;
+    flex-basis: 1px;
+    height: 100%;
+    position: relative;
   }
   
   &__header {
@@ -72,43 +76,40 @@
     border-radius: 2em;
     transition: all .2s;
     width: max-content;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #000;
-    
-    
+    //border-style: solid;
+    //border-width: 2px;
+    //border-color: #000;
+    margin-bottom: 1em;
+  
     &:link {
       color: #000;
-      
     }
     
     &:hover {
       transform-origin: center center;
       transform: scale(1.1);
-      box-shadow: 0 .2em 1em -.5em rgba(#fff, .5);
+      box-shadow: 0 .2em 1em -.5em rgba(#000, .7);
     }
   }
   
   
   &__list {
-    list-style: none;
     display: flex;
     gap: 4em;
     overflow: hidden;
     margin-bottom: 4em;
+    list-style: none;
   }
   
   &__list-item {
-    //flex-basis: 100px;
     flex-grow: 1;
     flex-shrink: 0;
-    max-width: 300px;
-    //max-height: 600px;
+    overflow: hidden;
+    max-width: 250px;
     border-radius: .5em;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(#fff, .2);
-    overflow: hidden;
   }
   
   &__screen {
@@ -121,17 +122,14 @@
     display: flex;
     gap: 4em;
     font-size: 1.2rem;
-    
   }
   
   &__description {
     flex-grow: 4;
     flex-basis: 1px;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
   }
   
   &__stack {
@@ -156,33 +154,36 @@
     margin-bottom: 2em;
   }
   
-  &__source-code {
-    //display: block;
+  &__source-code-btn {
     max-width: 170px;
     padding: .5em 1em;
-    background-color: #fff;
-    color: #000;
-    font-weight: 500;
-    border-radius: .3em;
-    font-size: 1rem;
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1em;
+    font-size: .9rem;
+    color: #000;
+    font-family: var.$font-family--mono;
+    //font-weight: 500;
+    background-color: #fff;
+    border-radius: .3em;
+
+    
+    &:link,
+    &:visited,
+    &:focus {
+      color: #000;
+    }
   }
 
   
-
 }// .projects
+
 
 .cinemates {
   
   &__content {
-    flex-grow: 1;
-    flex-basis: 1px;
-    height: 100%;
-    position: relative;
+
   }
   
   &__header {
@@ -191,7 +192,6 @@
   
   &__website-btn {
     background-color: var.$color--blue;
-    margin-bottom: 1em;
   }
   
 }// .cinemates
@@ -199,10 +199,7 @@
 .travelmates {
   
   &__content {
-    flex-grow: 1;
-    flex-basis: 1px;
-    height: 100%;
-    position: relative;
+
   }
   
   &__header {
