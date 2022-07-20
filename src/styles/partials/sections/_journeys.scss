@@ -77,7 +77,9 @@
   &__text {
     font-weight: 500;
     color: #fff;
-    font-size: 1.5rem;
+    //font-size: clamp(.5rem, 1.5rem - 1vw, 1.5rem);
+    font-size: clamp(.5rem, 0.7rem + 1.3vw, 1.5rem);
+    text-align: center;
   }
   
   &__img {
