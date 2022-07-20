@@ -39,6 +39,7 @@ main();
 
 /////////////////////////////////////////
 function main() {
+
     revealHoverMenuOnScroll();
     handleOnClickHoverMenuButton();
     handleOnClickHoverMenuCloseButton();
@@ -275,14 +276,19 @@ function handleOnClickHoverMenuOuterArea() {
 
 function showHoverMenu(show) {
     const hoverMenu = document.querySelector('.hover-menu');
+    const hoverMenuContent = document.querySelector('.hover-menu__content');
 
     if (show) {
-        if ( ! hoverMenu.classList.contains('hover-menu--reveal'))
+        if ( ! hoverMenu.classList.contains('hover-menu--reveal')) {
             hoverMenu.classList.add('hover-menu--reveal');
+            hoverMenuContent.classList.add('hover-menu__content--reveal');
+        }
     }
     else {
-        if ( hoverMenu.classList.contains('hover-menu--reveal'))
+        if ( hoverMenu.classList.contains('hover-menu--reveal')) {
             hoverMenu.classList.remove('hover-menu--reveal');
+            hoverMenuContent.classList.remove('hover-menu__content--reveal');
+        }
     }
 }
 
