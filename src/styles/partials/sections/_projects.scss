@@ -2,18 +2,125 @@
 @use "../abstracts/variables" as var;
 
 .projects {
-  padding: 2em;
-  min-height: 100vh;
+  min-height: 200vh;
+  position: relative;
   
   &__content {
-    max-width: var(--breakpoint--max-width);
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
+  
   }
   
   &__title {
-    width: 100%;
+    width: auto;
+    position: sticky;
+    top: 0;
+    right: 0;
     text-align: right;
+    margin-right: 1em;
+    background-color: transparent;
+  }
+  
+
+  
+  &__item {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  
+  &__header {
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    height: 100vh;
+    max-width: 200px;
+    background-color: #fff;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+  }
+  
+  
+  &__name {
+    //height: 100%;
+    width: max-content;
+    transform-origin: top right;
+    transform: translateX(-90%) rotateZ(-90deg);
+    
+    font-size: 5rem;
+    font-weight: 500;
+    color: var.$color--base;
+    //text-align: end;
+    padding-right: 1em;
+    padding-bottom: .5em;
+  }
+  
+  &__website {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    //transform: translateX(50%);
+    padding: .5em 1.5em;
+    background-color: #fff;
+    color: #000;
+    border-radius: 2em;
+    transition: all .2s;
+    
+    &:link {
+      color: #000;
+    
+    }
+    
+    &:hover {
+      transform-origin: center center;
+      transform: scale(1.1);
+      box-shadow: 0 .2em 1em -.5em rgba(#fff, .5);
+    }
   }
   
 }// .projects
+
+.cinemates {
+  
+  &__content {
+    flex-grow: 1;
+    flex-basis: 1px;
+    height: 100%;
+    position: relative;
+  }
+  
+  &__header {
+    background-color: var.$color--blue;
+  }
+  
+  &__website {
+    background-color: var.$color--blue;
+    margin-bottom: 1em;
+  }
+  
+}// .cinemates
+
+.travelmates {
+  
+  &__content {
+    flex-grow: 1;
+    flex-basis: 1px;
+    height: 100%;
+    position: relative;
+  }
+  
+  &__header {
+    background-color: #fff;
+  }
+  
+  &__website {
+    background-color: #fff;
+    
+  }
+  
+}// .travelmates

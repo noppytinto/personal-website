@@ -3,12 +3,14 @@
 
 
 .contact {
-  height: revert;
+  height: 100vh;
+  @include mix.center-vertically-horizontally;
+  margin-bottom: 0;
   
   &__content {
-    max-width: var(--breakpoint--max-width);
-    margin-left: auto;
-    margin-right: auto;
+    flex-basis: var(--breakpoint--max-width);
+    //margin-left: auto;
+    //margin-right: auto;
   }
   
   &__grid {
