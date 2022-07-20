@@ -64,6 +64,32 @@
     padding-bottom: .5em;
   }
   
+  &__website-btn {
+    padding: .5em 1.5em;
+    color: #000;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 2em;
+    transition: all .2s;
+    width: max-content;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+    
+    
+    &:link {
+      color: #000;
+      
+    }
+    
+    &:hover {
+      transform-origin: center center;
+      transform: scale(1.1);
+      box-shadow: 0 .2em 1em -.5em rgba(#fff, .5);
+    }
+  }
+  
+  
   &__list {
     list-style: none;
     display: flex;
@@ -101,6 +127,10 @@
   &__description {
     flex-grow: 4;
     flex-basis: 1px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   
   }
   
@@ -143,30 +173,7 @@
   }
 
   
-  &__website-btn {
-    position: absolute;
-    bottom: 0;
-    left: 45%;
-    padding: .5em 1.5em;
-    color: #000;
-    font-weight: 500;
-    background-color: #fff;
-    border-radius: 2em;
-    transition: all .2s;
-  
-    
-    &:link {
-      color: #000;
-    
-    }
-    
-    &:hover {
-      transform-origin: center center;
-      transform: scale(1.1);
-      box-shadow: 0 .2em 1em -.5em rgba(#fff, .5);
-    }
-  }
-  
+
 }// .projects
 
 .cinemates {
