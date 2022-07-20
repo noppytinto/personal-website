@@ -42,8 +42,9 @@
       <section class="about__text-content">
         <h2 class="main__title about__title">about</h2>
         <p class="about__bio">
-          I'm <span  class="underline">Francesco Scutellaro</span><br/>
-          Web <span class="underline">developer</span> with a passion about frontend, and travelling enthusiast.<br/>
+          I'm Francesco Scutellaro<br/>
+          Web <span class="underline">developer</span>
+          with a passion about frontend, and <span  class="underline">travelling enthusiast</span>.<br/>
           My strength is curiosity, I'm always eager to make new experiences,
           learn new things and bring ideas to life.
         </p>
@@ -193,8 +194,9 @@
   <!-- /////////////////////////////// PROJECTS -->
   <section class="main__section projects " id="projects">
     <h2 class="main__title projects__title">projects</h2>
-    <div class="projects__content">
+    <div class="projects__container">
 
+      <!-- cinemates -->
       <section class="projects__item cinemates">
         <header class="projects__header cinemates__header">
           <h3 class="projects__name cinemates__name">
@@ -202,17 +204,69 @@
           </h3>
         </header>
 
-      <div class="cinemates__content" id="cinemates-content">
-        <a class="projects__website cinemates__website" href="https://cinemates.netlify.com" target="_blank">
-          visit website
-        </a>
-      </div>
+        <div class="projects__content cinemates__content" id="cinemates-content">
 
+          <div class="projects__gallery cinemates__gallery">
+            <ul class="projects__list cinemates__list">
+              <li class="projects__list-item cinemates__list-item">
+                <img class="projects__screen cinemates__screen"
+                     src="./assets/images/cinemates-screen-1.png" alt="" loading="lazy">
+              </li>
+
+              <li class="projects__list-item cinemates__list-item">
+                <img class="projects__screen cinemates__screen"
+                     src="./assets/images/cinemates-screen-2.png" alt="" loading="lazy">
+              </li>
+
+              <li class="projects__list-item cinemates__list-item">
+                <img class="projects__screen cinemates__screen"
+                     src="./assets/images/cinemates-screen-3.png" alt="" loading="lazy">
+              </li>
+
+              <li class="projects__list-item cinemates__list-item">
+                <img class="projects__screen cinemates__screen"
+                     src="./assets/images/cinemates-screen-4.png" alt="" loading="lazy">
+              </li>
+            </ul>
+          </div>
+
+          <div class="projects__text-content">
+            <div class="projects__description">
+              Cinemates is a mobile Web App,
+              that allow users to find/explore movies and save them into lists,
+              using the largest movie database (The Movie Database).
+            </div>
+
+            <div class="projects__stack">
+              <p class="projects__built-with">
+                Built with:
+              </p>
+              <ul class="projects__stack-list">
+                <li class="projects__stack-item">React</li>
+                <li class="projects__stack-item">Firebase</li>
+                <li class="projects__stack-item">TMDB api</li>
+              </ul>
+              <a class="projects__source-code"
+                 href="https://github.com/noppytinto/portfolio-react-cinemates"
+                 target="_blank">
+                <img src="./assets/images/github-icon.svg" alt="">
+                Source Code</a>
+            </div>
+
+
+            
+          </div>
+
+          <a class="projects__website-btn cinemates__website-btn"
+             href="https://cinemates.netlify.com"
+             target="_blank">
+            visit website
+          </a>
+        </div>
       </section>
 
 
-
-
+      <!-- travelmates -->
       <section class="projects__item travelmates">
         <header class="projects__header travelmates__header">
           <h3 class="projects__name travelmates__name">
@@ -221,14 +275,12 @@
         </header>
 
         <div class="travelmates__content">
-          <a class="projects__website travelmates__website" href="https://travelmates.netlify.com" target="_blank">
+          <a class="projects__website-btn travelmates__website-btn" href="https://travelmates.netlify.com" target="_blank">
             visit website
           </a>
         </div>
 
       </section>
-
-
 
     </div>
   </section>

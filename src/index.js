@@ -20,6 +20,17 @@ import germanyImg from './assets/images/germany.jpg';
 import positanoImg from './assets/images/positano.jpg';
 import capriImg from './assets/images/capri.jpg';
 import naplesImg from './assets/images/naples.jpg';
+// cinemates
+import cinematesScreen1 from './assets/images/cinemates-screen-1.png';
+import cinematesScreen2 from './assets/images/cinemates-screen-2.png';
+import cinematesScreen3 from './assets/images/cinemates-screen-3.png';
+import cinematesScreen4 from './assets/images/cinemates-screen-4.png';
+import cinematesScreen5 from './assets/images/cinemates-screen-5.png';
+import cinematesScreen6 from './assets/images/cinemates-screen-6.png';
+import cinematesScreen7 from './assets/images/cinemates-screen-7.png';
+import cinematesScreen8 from './assets/images/cinemates-screen-8.png';
+//
+import githubIcon from './assets/images/github-icon.svg';
 
 
 /////////////////////////////////////////

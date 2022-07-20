@@ -5,7 +5,7 @@
   min-height: 200vh;
   position: relative;
   
-  &__content {
+  &__container {
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -19,16 +19,19 @@
     right: 0;
     text-align: right;
     margin-right: 1em;
-    background-color: transparent;
+    //background-image: linear-gradient(#000, rgba(#000, .5));
   }
-  
-
   
   &__item {
     height: 100vh;
     display: flex;
     justify-content: space-between;
   
+  }
+  
+  &__content {
+    padding: 4em 2em 0 2em;
+    max-width: 80vw;
   }
   
   &__header {
@@ -45,7 +48,6 @@
     //justify-content: center;
   }
   
-  
   &__name {
     //height: 100%;
     width: max-content;
@@ -60,16 +62,96 @@
     padding-bottom: .5em;
   }
   
-  &__website {
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 4em;
+    overflow: hidden;
+    margin-bottom: 4em;
+  }
+  
+  &__list-item {
+    //flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 300px;
+    //max-height: 600px;
+    border-radius: .5em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(#fff, .2);
+    overflow: hidden;
+  }
+  
+  &__screen {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  &__text-content {
+    display: flex;
+    gap: 4em;
+    font-size: 1.2rem;
+    
+  }
+  
+  &__description {
+    flex-grow: 4;
+    flex-basis: 1px;
+  
+  }
+  
+  &__stack {
+    flex-grow: 2;
+    flex-basis: 1px;
+    //max-width: 500px;
+    //padding: 0 2em 0 2em;
+    padding-left: .7em;
+    padding-bottom: 1em;
+    border-left-width: 1px;
+    border-left-color: var.$color--divider;
+    border-left-style: solid;
+    
+  }
+  
+  &__built-with {
+    font-weight: 500;
+  }
+  
+  &__stack-list {
+    padding-left: 1.5em;
+    margin-bottom: 2em;
+  }
+  
+  &__source-code {
+    //display: block;
+    max-width: 170px;
+    padding: .5em 1em;
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    border-radius: .3em;
+    font-size: 1rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+  }
+
+  
+  &__website-btn {
     position: absolute;
     bottom: 0;
     left: 45%;
-    //transform: translateX(50%);
     padding: .5em 1.5em;
-    background-color: #fff;
     color: #000;
+    font-weight: 500;
+    background-color: #fff;
     border-radius: 2em;
     transition: all .2s;
+  
     
     &:link {
       color: #000;
@@ -98,7 +180,7 @@
     background-color: var.$color--blue;
   }
   
-  &__website {
+  &__website-btn {
     background-color: var.$color--blue;
     margin-bottom: 1em;
   }
@@ -118,7 +200,7 @@
     background-color: #fff;
   }
   
-  &__website {
+  &__website-btn {
     background-color: #fff;
     
   }
