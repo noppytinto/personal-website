@@ -17,7 +17,6 @@
     gap: 3em;
   }
   
-
   &__ideas {
     display: inline-block;
     //padding: 0 .3em;
@@ -65,6 +64,24 @@
     line-height: 1.7;
     font-size: 1.2rem;
     font-weight: 300;
+    margin-bottom: 1em;
+  }
+  
+  &__resume-btn {
+    align-self: center;
+    padding: .5em 1em;
+    background-color: #fff;
+    color: #000;
+    border-radius: .3em;
+    font-family: inherit;
+    font-size: 1rem;
+    border-color: transparent;
+    transition: all .2s;
+    
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
   }
   
   &__media {
@@ -93,6 +110,5 @@
     text-shadow: 1px 1px 5px rgba(#000, .5);
     transform: translateY(-60%);
   }
-  
   
 }// .about
