@@ -17,16 +17,21 @@
     gap: 3em;
   }
   
-  &__motto {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    font-size: clamp(10px, 10.7vw, 91.1px);
-    text-shadow: 1px 1px 5px rgba(#000, .5);
-    transform: translateY(-60%);
+
+  &__ideas {
+    display: inline-block;
+    //padding: 0 .3em;
+    
+    //text-shadow: none;
+    color: var.$color--orange;
+    
+    //background-color: transparent;
+    //border-radius: .1em;
+    //border-style: solid;
+    //border-width: 2px;
+    //border-color: var.$color--orange;
   }
-  &__ideas {color: var.$color--orange;}
+  
   &__life {font-style: italic;}
   
   &__flex {
@@ -77,6 +82,16 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  
+  &__caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    font-size: clamp(10px, 10.7vw, 91.1px);
+    text-shadow: 1px 1px 5px rgba(#000, .5);
+    transform: translateY(-60%);
   }
   
   

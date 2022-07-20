@@ -7,9 +7,13 @@
 // - 680
 
 .nav {
+  color: var.$color--base;
+  background-color: rgba(#fff, .9);
+  padding: .7em 2em;
+  border-radius: .4em;
   
   a {
-    $line-color: #fff;
+    $line-color: var.$color--base;
     color: $line-color;
     text-decoration: none;
     background-image: linear-gradient($line-color, $line-color);
@@ -23,19 +27,6 @@
   a:focus,
   a:active {
     background-size: 100% 0.1em;
-  }
-  
-
-  @media screen and (max-width: 390px) {
-    //font-size: .9rem;
-  }
-  
-  @media screen and (max-width: 360px) {
-    //font-size: .8rem;
-  }
-  
-  &--move-slightly-top {
-    position: absolute;
   }
   
   
@@ -52,13 +43,13 @@
   
   &__link {
     font-size: 1.4rem;
-    color: var.$color--font-base;
+    //color: var.$color--font-base;
     transition: all .2s;
   
 
     
     &:visited {
-      color: var.$color--font-base;
+      //color: var.$color--font-base;
     }
   
     &:hover {
