@@ -5,6 +5,11 @@
   padding: 4em 1em 3em 1em;
   background-color: #000;
   
+  @media screen and (max-width: 600px){
+    padding: 1em 1em 3em 1em;
+
+  }
+  
   
   //&__container {
   //  margin-left: auto;
@@ -43,7 +48,21 @@
         "text1    text2        text3"
         "text1    text2        text3";
     column-gap: 2em;
-    
+  
+    @media screen and (max-width: 600px){
+      grid-template-columns: repeat(1, 1fr);
+      //grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 100px auto 100px auto 100px auto;
+      grid-template-areas:
+        "title"
+        "text1"
+        "subtitle1"
+        "text2"
+        "subtitle2"
+        "text3";
+      column-gap: 0;
+      //row-gap: 1em;
+    }
   }
   
   &__grid-item {
