@@ -38,6 +38,11 @@
     flex-basis: 1px;
     height: 100%;
     position: relative;
+  
+    @media screen and (max-width: 650px){
+      padding: 2em .7em 0 .7em;
+    
+    }
   }
   
   &__header {
@@ -52,6 +57,16 @@
     display: flex;
     flex-direction: column;
     //justify-content: center;
+  
+    @media screen and (max-width: 700px){
+      max-width: 100px;
+    
+    }
+  
+    @media screen and (max-width: 650px){
+      max-width: 70px;
+    
+    }
   }
   
   &__name {
@@ -66,6 +81,16 @@
     //text-align: end;
     padding-right: 1em;
     padding-bottom: .5em;
+  
+    @media screen and (max-width: 700px){
+      font-size: 3rem;
+    
+    }
+  
+    @media screen and (max-width: 650px){
+      font-size: 2rem;
+    
+    }
   }
   
   &__website-btn {
@@ -99,6 +124,11 @@
     overflow: hidden;
     margin-bottom: 4em;
     list-style: none;
+  
+    @media screen and (max-width: 700px){
+      gap: 2em;
+    
+    }
   }
   
   &__list-item {
@@ -110,6 +140,18 @@
     border-style: solid;
     border-width: 1px;
     border-color: rgba(#fff, .2);
+  
+    @media screen and (max-width: 700px){
+      max-width: 200px;
+    
+    }
+  
+  
+    @media screen and (max-width: 500px){
+      max-width: 150px;
+    
+    }
+
   }
   
   &__screen {
@@ -120,8 +162,13 @@
   
   &__text-content {
     display: flex;
-    gap: 4em;
+    gap: 2em;
     font-size: 1.2rem;
+  
+    @media screen and (max-width: 500px){
+      font-size: 1rem;
+      flex-direction: column;
+    }
   }
   
   &__description {
@@ -130,6 +177,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  
+    @media screen and (max-width: 500px){
+      flex-grow: 3;
+    }
   }
   
   &__stack {
@@ -142,6 +193,16 @@
     border-left-width: 1px;
     border-left-color: var.$color--divider;
     border-left-style: solid;
+  
+    @media screen and (max-width: 500px){
+      border-left-color: transparent;
+      border-top-width: 1px;
+      border-top-color: var.$color--divider;
+      border-top-style: solid;
+      padding-top: 2em;
+  
+  
+    }
     
   }
   
@@ -167,7 +228,29 @@
     //font-weight: 500;
     background-color: #fff;
     border-radius: .3em;
+  
+  
+    @media screen and (max-width: 900px){
+      font-size: .8rem;
+      font-weight: 500;
+    }
+  
+    @media screen and (max-width: 850px){
+      font-size: .7rem;
+      font-weight: 500;
+    }
+  
+    @media screen and (max-width: 800px){
+      font-size: .6rem;
+      font-weight: 600;
+      gap: .5em;
+    }
+  
+    @media screen and (max-width: 500px){
+      gap: .5em;
+      max-width: 120px;
 
+    }
     
     &:link,
     &:visited,
