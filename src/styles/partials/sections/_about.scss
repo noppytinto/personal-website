@@ -15,6 +15,17 @@
     display: flex;
     justify-content: space-between;
     gap: 3em;
+    
+    @media screen and (max-width: 700px){
+      gap: 1em;
+  
+    }
+  
+    @media screen and (max-width: 600px){
+      flex-direction: column-reverse;
+      gap: 3em;
+      
+    }
   }
   
   &__ideas {
@@ -53,10 +64,16 @@
   }
   
   &__title {
+    width: 100%;
     font-size: 2.5rem;
     margin-bottom: .5em;
     padding-left: .25em;
     color: var.$color--divider;
+  
+    @media screen and (max-width: 600px){
+      text-align: center;
+      margin-bottom: 0;
+    }
   }
   
   &__bio {
@@ -65,6 +82,12 @@
     font-size: 1.2rem;
     font-weight: 300;
     margin-bottom: 1em;
+  
+    @media screen and (max-width: 600px){
+      text-align: center;
+      padding: 1em 2em;
+    }
+  
   }
   
   &__resume-btn {
@@ -87,18 +110,34 @@
   &__media {
     flex-basis: 10px;
     flex-grow: 3;
+  
+    @media screen and (max-width: 700px){
+      flex-grow: 2;
+    }
+  
+    @media screen and (max-width: 600px){
+      @include mix.center-vertically-horizontally
+      
+    }
+  
+
   }
   
   &__image {
     height: 100%;
     width: 100%;
     border-radius: .5em;
+    object-fit: cover;
+  
+    @media screen and (max-width: 600px){
+      width: 70%;
+    }
     
     // path must be relative to _main.scss
     //background-image: url('../assets/images/about-img.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    //background-position: center center;
+    //background-size: cover;
+    //background-repeat: no-repeat;
   }
   
   &__caption {
