@@ -67,19 +67,26 @@
     position: absolute;
     right: 0;
     width: 16em;
-    background-color: #fff;
     height: 95%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 3em;
-  
+    background-color: #fff;
     border-radius: .7em;
     margin-right: 1em;
-  
     animation-duration: .2s;
     animation-fill-mode: forwards;
-    //animation-name: slide-over--close;
+  
+    @media screen and (max-width: 500px) {
+      left: 0;
+      right: 0;
+      width: revert;
+      height: 50%;
+
+    
+    }
+    
   
     &--reveal {
       animation-name: slide-over--open;
@@ -98,10 +105,15 @@
   }
   
   &__nav {
+    width: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 2em;
+  
+    @media screen and (max-width: 500px) {
+      align-items: center;
+    }
   }
   
   &__item {
@@ -113,6 +125,11 @@
     color: var.$color--base;
     font-size: 2.5rem;
     text-align: right;
+    
+    @media screen and (max-width: 500px) {
+      font-size: 2.2rem;
+      text-align: center;
+    }
   
     &:link {
       color: var.$color--base;

@@ -12,6 +12,11 @@
   padding: .7em 2em;
   border-radius: .4em;
   
+  @media screen and (max-width: 450px) {
+    padding: .5em 1em;
+  }
+  
+  
   a {
     $line-color: var.$color--base;
     color: $line-color;
@@ -38,6 +43,10 @@
     align-items: center;
     gap: 3em;
     list-style: none;
+  
+    @media screen and (max-width: 450px) {
+      gap: 1.5em;
+    }
     
   }
   
