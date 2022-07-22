@@ -4,7 +4,6 @@
 
 .contact {
   @include mix.center-vertically-horizontally;
-  margin-bottom: 2em;
   
   
   &__content {
@@ -43,6 +42,11 @@
     @media screen and (max-width: 530px){
       font-size: 2rem;
 
+    }
+  
+    @media screen and (max-width: 400px){
+      font-size: 1.8rem;
+    
     }
   }
   

@@ -1,6 +1,6 @@
 @use "../base/mixin" as mix;
 @use "../abstracts/variables" as var;
 
-.about, .projects, .contact {
-
+.about, .skills, .journeys .projects, .contact {
+  margin-bottom: 2em;
 }
