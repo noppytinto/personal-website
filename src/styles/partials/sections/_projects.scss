@@ -199,8 +199,6 @@
   &__stack {
     flex-grow: 2;
     flex-basis: 1px;
-    //max-width: 500px;
-    //padding: 0 2em 0 2em;
     padding-left: .7em;
     padding-bottom: .5em;
     border-left-width: 1px;
@@ -208,15 +206,13 @@
     border-left-style: solid;
   
     @media screen and (max-width: 500px){
+      padding-left: 0;
+      padding-top: 2em;
       border-left-color: transparent;
       border-top-width: 1px;
       border-top-color: var.$color--divider;
       border-top-style: solid;
-      padding-top: 2em;
-  
-  
     }
-    
   }
   
   &__built-with {
