@@ -6,9 +6,7 @@
   width: 100%;
   padding: 1em;
   @include mix.center-vertically-horizontally;
-  //background-color: #fff;
   font-size: .8rem;
-  //color: var.$color--base;
   
   &__content {
     max-width: var(--breakpoint--max-width);

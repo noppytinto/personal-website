@@ -3,9 +3,9 @@
 
 
 .contact {
-  height: 100vh;
   @include mix.center-vertically-horizontally;
-  margin-bottom: 0;
+  margin-bottom: 2em;
+  
   
   &__content {
     flex-basis: var(--breakpoint--max-width);
@@ -172,5 +172,4 @@
   
   }
   
-  
-}//
+}// .contact
