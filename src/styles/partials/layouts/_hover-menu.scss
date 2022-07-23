@@ -5,23 +5,6 @@
 /////////////////////////////////////////
 // index.html
 /////////////////////////////////////////
-@keyframes slide-over--open {
-  from {
-    transform: translateX(100px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes slide-over--close {
-  from {
-    transform: translateX(100px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
 
 .hover-menu {
   display: none;
@@ -53,13 +36,15 @@
     background-size: 100% 0.1em;
   }
   
-  
   &--reveal {
     display: flex;
     align-items: center;
     opacity: 1;
   }
   
+  
+  /////////////////////////////////////
+  /////////////////////////////////////
   &__content {
     padding: 2em 2em;
     position: absolute;
@@ -77,19 +62,17 @@
     animation-fill-mode: forwards;
   
     @media screen and (max-width: 500px) {
-      left: 0;
+      left: 1em;
       right: 0;
       width: revert;
-      height: 70%;
+      height: 65%;
       gap: 1em;
     }
   
     @media screen and (max-width: 400px) {
       gap: .5em;
     }
-  
-  
-  
+    
     &--reveal {
       animation-name: slide-over--open;
     }
@@ -164,6 +147,24 @@
   }
   
 }// .hover-menu
+
+@keyframes slide-over--open {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide-over--close {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
 
 /////////////////////////////////////////
 // MISC
