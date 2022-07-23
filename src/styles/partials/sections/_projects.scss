@@ -115,7 +115,14 @@
   
     @media screen and (max-width: 700px){
       gap: 2em;
-    
+    }
+  
+    @media screen and (max-width: 500px){
+      gap: 1em;
+    }
+  
+    @media screen and (max-width: 400px){
+      gap: .5em;
     }
   }
   
@@ -130,14 +137,18 @@
     border-color: rgba(#fff, .2);
   
     @media screen and (max-width: 700px){
-      max-width: 200px;
+      max-width: 180px;
     
     }
   
   
     @media screen and (max-width: 500px){
-      max-width: 150px;
+      max-width: 140px;
     
+    }
+  
+    @media screen and (max-width: 400px){
+      max-width: 120px;
     }
 
   }
