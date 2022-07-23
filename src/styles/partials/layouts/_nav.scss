@@ -13,9 +13,8 @@
   border-radius: .4em;
   
   @media screen and (max-width: 450px) {
-    padding: .5em 1em;
+    padding: .5em 1.5em;
   }
-  
   
   a {
     $line-color: var.$color--base;
