@@ -4,7 +4,7 @@
 
 .contact {
   @include mix.center-vertically-horizontally;
-  
+  min-height: 100vh;
   
   &__content {
     flex-basis: var(--breakpoint--max-width);

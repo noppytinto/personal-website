@@ -1,6 +1,7 @@
 @use "../base/mixin" as mix;
 @use "../abstracts/variables" as var;
 
+
 .projects {
   position: relative;
   
@@ -14,12 +15,21 @@
   }
   
   &__title {
-    width: auto;
-    //position: sticky;
-    //top: 0;
-    //right: 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
     text-align: right;
-    margin-right: 1em;
+    padding: .5em 1em;
+    z-index: 2;
+    text-shadow: 1px 1px 5px rgba(#000, .5);
+    
+    background-image: linear-gradient(to bottom, rgba(var.$color--base, 1) 10%, rgba(var.$color--base, 0));
+    
+    @media screen and (max-width: 400px) {
+      text-align: center;
+      
+    }
+    
   }
   
   &__item {
@@ -155,7 +165,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 1em;
   
     @media screen and (max-width: 500px){
       flex-grow: 3;
