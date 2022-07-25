@@ -22,14 +22,15 @@
     padding: .5em 1em;
     z-index: 2;
     text-shadow: 1px 1px 5px rgba(#000, .5);
-    
-    background-image: linear-gradient(to bottom, rgba(var.$color--base, 1) 10%, rgba(var.$color--base, 0));
+    background-image: linear-gradient(to bottom,
+            rgba(var.$color--base, 1) 10%,
+            rgba(var.$color--base, 0)
+    );
     
     @media screen and (max-width: 400px) {
       text-align: center;
-      
+      font-size: 1.4rem;
     }
-    
   }
   
   &__item {
@@ -90,32 +91,26 @@
   }
   
   &__name {
-    //height: 100%;
+    padding-right: 1em;
+    padding-bottom: .5em;
     width: max-content;
-    transform-origin: top right;
-    transform: translateX(-90%) rotateZ(-90deg);
-
-    
     font-size: 5rem;
     font-weight: 500;
     color: var.$color--base;
-    //text-align: end;
-    padding-right: 1em;
-    padding-bottom: .5em;
-  
+    transform-origin: top right;
+    transform: translateX(-90%) rotateZ(-90deg);
+    
+    
     @media screen and (max-width: 700px){
       font-size: 3rem;
-    
     }
   
     @media screen and (max-width: 650px){
       font-size: 2rem;
-    
     }
   
     @media screen and (max-width: 500px){
       font-size: 1.5rem;
-    
     }
   }
   
@@ -301,7 +296,6 @@
   
 }// .projects
 
-
 .cinemates {
   
   &__content {
@@ -320,17 +314,12 @@
 
 .webplayground {
   
-  &__content {
-
-  }
-  
   &__header {
     background-color: #fff;
   }
   
   &__name {
     transform: translateX(-95%) rotateZ(-90deg);
-  
   }
   
   &__list-item {
@@ -340,24 +329,14 @@
   
   &__website-btn {
     background-color: #fff;
-    
   }
   
 }// .webplayground
 
 .mapty {
   
-  &__content {
-  
-  }
-  
   &__header {
     background-color: var.$color--green;
-  }
-  
-  &__name {
-  
-  
   }
   
   &__list-item {
@@ -367,7 +346,6 @@
   
   &__website-btn {
     background-color: var.$color--green;
-  
   }
   
 }// .mapty

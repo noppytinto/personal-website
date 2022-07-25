@@ -5,6 +5,7 @@
 .about {
   margin-bottom: 5em;
   min-height: 100vh;
+  @include mix.center-vertically-horizontally;
   
   
   ///////////////////////////////
@@ -30,17 +31,13 @@
       "greetings"
       "bio"
       "media";
-      
       justify-content: center;
-      
-      
     }
-    
   }
   
   &__media {
     grid-area: media;
-    transform: translateY(1em);
+    transform: translateY(1.5em);
   
   
     @media screen and (max-width: 800px){
