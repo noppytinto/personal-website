@@ -28,6 +28,10 @@ import cinematesScreen5 from './assets/images/cinemates-screen-5.png';
 import cinematesScreen6 from './assets/images/cinemates-screen-6.png';
 import cinematesScreen7 from './assets/images/cinemates-screen-7.png';
 import cinematesScreen8 from './assets/images/cinemates-screen-8.png';
+// web playground
+import webplaygroundScreen1 from './assets/images/webplayground-screen-1.png';
+// mapty
+import maptyScreen1 from './assets/images/mapty-screen-1.png';
 //
 import githubIcon from './assets/images/github-icon.svg';
 
