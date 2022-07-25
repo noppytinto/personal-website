@@ -4,6 +4,7 @@
 
 .about {
   margin-bottom: 5em;
+  min-height: 100vh;
   
   
   ///////////////////////////////
@@ -14,108 +15,39 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    gap: 3em;
     
+    display: grid;
+    grid-template-areas:
+      "...   greetings"
+      "media bio";
+    column-gap: 1.5em;
+    row-gap: .5em;
+    grid-template-columns: 30% 70%;
     
-    @media screen and (max-width: 700px){
-      gap: 1em;
-  
-    }
-  
-    @media screen and (max-width: 600px){
-      flex-direction: column-reverse;
-      gap: 3em;
+    @media screen and (max-width: 800px){
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "greetings"
+      "bio"
+      "media";
+      
+      justify-content: center;
+      
       
     }
     
-  }
-  
-  &__ideas {
-    display: inline-block;
-    color: var.$color--orange;
-  }
-  
-  &__life {font-style: italic;}
-  
-  &__flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 3em;
-  }
-  
-  &__text-content {
-    flex-grow: 2;
-    flex-basis: 10px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  
-  &__stick-to-bottom {
-  
-  }
-  
-  &__title {
-    width: 100%;
-    font-size: 2.5rem;
-    margin-bottom: .5em;
-    padding-left: .25em;
-    color: var.$color--divider;
-  
-    @media screen and (max-width: 600px){
-      text-align: center;
-      margin-bottom: 0;
-    }
-  }
-  
-  &__bio {
-    padding-left: .5em;
-    line-height: 1.7;
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 1em;
-  
-    @media screen and (max-width: 600px){
-      text-align: center;
-      padding: 1em 2em;
-    }
-  
-  }
-  
-  &__resume-btn {
-    align-self: center;
-    padding: .5em 1em;
-    background-color: #fff;
-    color: #000;
-    border-radius: .3em;
-    font-family: inherit;
-    font-size: 1rem;
-    border-color: transparent;
-    transition: all .2s;
-    
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-    }
   }
   
   &__media {
-    flex-basis: 10px;
-    flex-grow: 3;
+    grid-area: media;
+    transform: translateY(1em);
   
-    @media screen and (max-width: 700px){
-      flex-grow: 2;
+  
+    @media screen and (max-width: 800px){
+      width: 45%;
+      margin-left: auto;
+      margin-right: auto;
     }
-  
-    @media screen and (max-width: 600px){
-      @include mix.center-vertically-horizontally
-      
-    }
-  
-
   }
   
   &__image {
@@ -123,26 +55,61 @@
     width: 100%;
     border-radius: .5em;
     object-fit: cover;
+    
+  }
+  
+  &__greetings {
+    grid-area: greetings;
+    color: var.$color--orange--salmon;
+    font-size: 1.3rem;
+    font-weight: 600;
+  
+    @media screen and (max-width: 800px){
+      text-align: center;
+    }
+  }
+  
+  &__text-content {
+    grid-area: bio;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  
+    @media screen and (max-width: 800px){
+      align-items: center;
+    }
+  }
+  
+  &__name {
+    font-size: 3.5rem;
+    font-weight: 500;
   
     @media screen and (max-width: 600px){
-      width: 70%;
+      font-size: 3rem;
     }
-    
-    // path must be relative to _main.scss
-    //background-image: url('../assets/images/about-img.jpg');
-    //background-position: center center;
-    //background-size: cover;
-    //background-repeat: no-repeat;
+  
+    @media screen and (max-width: 450px){
+      font-size: 2rem;
+    }
   }
   
-  &__caption {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    font-size: clamp(10px, 10.7vw, 91.1px);
-    text-shadow: 1px 1px 5px rgba(#000, .5);
-    transform: translateY(-60%);
+  &__bio {
+    width: 80%;
+    line-height: 1.7;
+    font-size: 1.2rem;
+    font-weight: 300;
+    //margin-bottom: 1em;
+  
+    @media screen and (max-width: 800px){
+      text-align: center;
+      width: 60%;
+    }
+    
+    @media screen and (max-width: 600px){
+      width: 90%;
+
+    }
   }
+  
   
 }// .about
