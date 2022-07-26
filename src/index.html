@@ -9,6 +9,9 @@
 
   <!-- my assets -->
 <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>-->
+<!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />-->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 
 </head>
 <body>
@@ -22,7 +25,7 @@
         <a href="#about" class="nav__link">about</a>
       </li>
       <li class="nav__item">
-        <a href="#cinemates-content" class="nav__link">projects</a>
+        <a href="#projects" class="nav__link">projects</a>
       </li>
       <li class="nav__item">
         <a href="#contact" class="nav__link">contact</a>
@@ -39,12 +42,8 @@
       <h2 class="about__greetings">Hi! my name is</h2>
       <figure class="about__media ">
         <img class="about__image" src="./assets/images/about-img.jpg" alt="">
-        <!--        <figcaption class="about__caption" id="about__caption">-->
-        <!--          Bringing <span class="about__ideas">ideas</span> to <span class="about__life">life</span>-->
-        <!--        </figcaption>-->
       </figure>
       <section class="about__text-content">
-<!--        <h2 class="main__title about__title">about</h2>-->
         <p class="about__name">Francesco Scutellaro</p>
         <p class="about__bio">
           Web <span class="underline">developer</span>
@@ -52,7 +51,6 @@
           My strength is curiosity, I'm always eager to make new experiences,
           learn new things and bring ideas to life.
         </p>
-<!--        <button class="about__resume-btn">download resume</button>-->
       </section>
 
 
@@ -186,176 +184,202 @@
 
       <!-- cinemates -->
       <section class="projects__item cinemates">
-        <header class="projects__header cinemates__header">
-          <h3 class="projects__name cinemates__name">
-            Cinemates
-          </h3>
-        </header>
 
-        <div class="projects__content cinemates__content" id="cinemates-content">
-
-          <div class="projects__gallery cinemates__gallery">
-            <ul class="projects__list cinemates__list">
-              <li class="projects__list-item cinemates__list-item">
-                <img class="projects__screen cinemates__screen"
-                     src="./assets/images/cinemates-screen-1.png"
-                     alt="" loading="lazy" data-index="0">
-              </li>
-
-              <li class="projects__list-item cinemates__list-item">
-                <img class="projects__screen cinemates__screen"
-                     src="./assets/images/cinemates-screen-2.png"
-                     alt="" loading="lazy" data-index="1">
-              </li>
+        <div class="projects__info">
+          <div class="projects__info-body">
+            <p  class="projects__description">
+              Cinemates is a mobile Web App,
+              that allow users to find/explore movies and save them into lists,
+              using the largest movie database (The Movie Database).
+            </p>
+            <ul class="projects__stack">
+              <li class="projects__stack-item">React</li>
+              <li class="projects__stack-item">Firebase</li>
+              <li class="projects__stack-item">TMDB api</li>
             </ul>
-          </div>
-
-          <div class="projects__text-content">
-            <div class="projects__description">
-              <p>
-                Cinemates is a mobile Web App,
-                that allow users to find/explore movies and save them into lists,
-                using the largest movie database (The Movie Database).
-              </p>
-              <a class="projects__website-btn cinemates__website-btn"
-                 href="https://cinemates.netlify.com"
-                 target="_blank">
-                visit website
-              </a>
-            </div>
-            <div class="projects__stack">
-              <p class="projects__built-with">
-                Built with:
-              </p>
-              <ul class="projects__stack-list">
-                <li class="projects__stack-item">React</li>
-                <li class="projects__stack-item">Firebase</li>
-                <li class="projects__stack-item">TMDB api</li>
+            <header class="projects__header cinemates__header">
+              <h3 class="projects__app-name cinemates__app-name">Cinemates</h3>
+              <ul class="projects__links">
+                <li class="projects__link">
+                  <a class="projects__source-code-btn"
+                     href="https://github.com/noppytinto/portfolio-react-cinemates"
+                     target="_blank">
+                    <img src="./assets/images/github-icon.svg" alt="">
+                  </a>
+                </li>
+                <li class="projects__link">
+                  <a class="projects__website-btn cinemates__website-btn"
+                     href="https://cinemates.netlify.com"
+                     target="_blank">
+                    <span class="material-symbols-outlined projects__icon">north_east</span>
+                  </a>
+                </li>
               </ul>
-              <a class="projects__source-code-btn"
-                 href="https://github.com/noppytinto/portfolio-react-cinemates"
-                 target="_blank">
-                <img src="./assets/images/github-icon.svg" alt="">
-                source code</a>
-            </div>
+            </header>
           </div>
-
         </div>
+
+        <ul class="projects__gallery cinemates__gallery">
+          <li class="projects__gallery-item cinemates__gallery-item cinemates__screen--1">
+            <img class="projects__screen cinemates__screen "
+                 src="./assets/images/cinemates-screen-1.png"
+                 alt="" loading="lazy" data-index="0">
+          </li>
+
+          <li class="projects__gallery-item cinemates__gallery-item cinemates__screen--2">
+            <img class="projects__screen cinemates__screen"
+                 src="./assets/images/cinemates-screen-2.png"
+                 alt="" loading="lazy" data-index="0">
+          </li>
+
+          <li class="projects__gallery-item cinemates__gallery-item cinemates__screen--3">
+            <img class="projects__screen cinemates__screen "
+                 src="./assets/images/cinemates-screen-3.png"
+                 alt="" loading="lazy" data-index="0">
+          </li>
+
+          <li class="projects__gallery-item cinemates__gallery-item cinemates__screen--4">
+            <img class="projects__screen cinemates__screen"
+                 src="./assets/images/cinemates-screen-5.png"
+                 alt="" loading="lazy" data-index="0">
+          </li>
+
+<!--          <li class="projects__gallery-item cinemates__gallery-item cinemates__screen&#45;&#45;5">-->
+<!--            <img class="projects__screen cinemates__screen"-->
+<!--                 src="./assets/images/cinemates-screen-5.png"-->
+<!--                 alt="" loading="lazy" data-index="0">-->
+<!--          </li>-->
+
+<!--          <li class="projects__gallery-item cinemates__gallery-item cinemates__screen&#45;&#45;6">-->
+<!--            <img class="projects__screen cinemates__screen"-->
+<!--                 src="./assets/images/cinemates-screen-6.png"-->
+<!--                 alt="" loading="lazy" data-index="0">-->
+<!--          </li>-->
+
+<!--          <li class="projects__gallery-item cinemates__gallery-item cinemates__screen&#45;&#45;7">-->
+<!--            <img class="projects__screen cinemates__screen"-->
+<!--                 src="./assets/images/cinemates-screen-7.png"-->
+<!--                 alt="" loading="lazy" data-index="0">-->
+<!--          </li>-->
+
+<!--          <li class="projects__gallery-item cinemates__gallery-item cinemates__screen&#45;&#45;8">-->
+<!--            <img class="projects__screen cinemates__screen"-->
+<!--                 src="./assets/images/cinemates-screen-8.png"-->
+<!--                 alt="" loading="lazy" data-index="0">-->
+<!--          </li>-->
+        </ul>
+
       </section>
 
+<!--      &lt;!&ndash; web playground &ndash;&gt;-->
+<!--      <section class="projects__item webplayground">-->
+<!--        <header class="projects__header webplayground__header">-->
+<!--          <h3 class="projects__name webplayground__name">-->
+<!--            Web Playground-->
+<!--          </h3>-->
+<!--        </header>-->
 
-      <!-- web playground -->
-      <section class="projects__item webplayground">
-        <header class="projects__header webplayground__header">
-          <h3 class="projects__name webplayground__name">
-            Web Playground
-          </h3>
-        </header>
+<!--        <div class="projects__content webplayground__content" >-->
 
-        <div class="projects__content webplayground__content" >
+<!--          <div class="projects__gallery webplayground__gallery">-->
+<!--            <ul class="projects__list webplayground__list">-->
+<!--              <li class="projects__list-item webplayground__list-item">-->
+<!--                <img class="projects__screen webplayground__screen"-->
+<!--                     src="./assets/images/webplayground-screen-1.png"-->
+<!--                     alt="" loading="lazy" data-index="0">-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
 
-          <div class="projects__gallery webplayground__gallery">
-            <ul class="projects__list webplayground__list">
-              <li class="projects__list-item webplayground__list-item">
-                <img class="projects__screen webplayground__screen"
-                     src="./assets/images/webplayground-screen-1.png"
-                     alt="" loading="lazy" data-index="0">
-              </li>
-            </ul>
-          </div>
+<!--          <div class="projects__text-content">-->
+<!--            <div class="projects__description">-->
+<!--              <p>-->
+<!--                Codepen like website. Users can write some HTML/CSS/JS,-->
+<!--                which is sent to the backend, then it responds back with the-->
+<!--                rendered page, each user has its own session on server-side,-->
+<!--                which store the current user snippet in a Postgres instance.-->
+<!--              </p>-->
+<!--              <a class="projects__website-btn webplayground__website-btn"-->
+<!--                 href="https://noppytinto-web-playground.netlify.app/"-->
+<!--                 target="_blank">-->
+<!--                visit website-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="projects__stack">-->
+<!--              <p class="projects__built-with">-->
+<!--                Built with:-->
+<!--              </p>-->
+<!--              <ul class="projects__stack-list">-->
+<!--                <li class="projects__stack-item">HTML/CSS</li>-->
+<!--                <li class="projects__stack-item">Javascript (ES6)</li>-->
+<!--                <li class="projects__stack-item">Webpack</li>-->
+<!--                <li class="projects__stack-item">Node (backend)</li>-->
+<!--                <li class="projects__stack-item">Postgres</li>-->
+<!--              </ul>-->
+<!--              <a class="projects__source-code-btn"-->
+<!--                 href="https://github.com/noppytinto/portfolio-js-web-playground"-->
+<!--                 target="_blank">-->
+<!--                <img src="./assets/images/github-icon.svg" alt="">-->
+<!--                source code-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <div class="projects__text-content">
-            <div class="projects__description">
-              <p>
-                Codepen like website. Users can write some HTML/CSS/JS,
-                which is sent to the backend, then it responds back with the
-                rendered page, each user has its own session on server-side,
-                which store the current user snippet in a Postgres instance.
-              </p>
-              <a class="projects__website-btn webplayground__website-btn"
-                 href="https://noppytinto-web-playground.netlify.app/"
-                 target="_blank">
-                visit website
-              </a>
-            </div>
-            <div class="projects__stack">
-              <p class="projects__built-with">
-                Built with:
-              </p>
-              <ul class="projects__stack-list">
-                <li class="projects__stack-item">HTML/CSS</li>
-                <li class="projects__stack-item">Javascript (ES6)</li>
-                <li class="projects__stack-item">Webpack</li>
-                <li class="projects__stack-item">Node (backend)</li>
-                <li class="projects__stack-item">Postgres</li>
-              </ul>
-              <a class="projects__source-code-btn"
-                 href="https://github.com/noppytinto/portfolio-js-web-playground"
-                 target="_blank">
-                <img src="./assets/images/github-icon.svg" alt="">
-                source code
-              </a>
-            </div>
-          </div>
+<!--        </div>-->
+<!--      </section>-->
 
-        </div>
-      </section>
+<!--      &lt;!&ndash; mapty &ndash;&gt;-->
+<!--      <section class="projects__item mapty">-->
+<!--        <header class="projects__header mapty__header">-->
+<!--          <h3 class="projects__name mapty__name">-->
+<!--            Mapty-->
+<!--          </h3>-->
+<!--        </header>-->
 
+<!--        <div class="projects__content mapty__content" >-->
 
-      <!-- mapty -->
-      <section class="projects__item mapty">
-        <header class="projects__header mapty__header">
-          <h3 class="projects__name mapty__name">
-            Mapty
-          </h3>
-        </header>
+<!--          <div class="projects__gallery mapty__gallery">-->
+<!--            <ul class="projects__list mapty__list">-->
+<!--              <li class="projects__list-item mapty__list-item">-->
+<!--                <img class="projects__screen mapty__screen"-->
+<!--                     src="./assets/images/mapty-screen-1.png"-->
+<!--                     alt="" loading="lazy" data-index="0">-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
 
-        <div class="projects__content mapty__content" >
+<!--          <div class="projects__text-content">-->
+<!--            <div class="projects__description">-->
+<!--              <p>-->
+<!--                Mapty is a Web App, that allow users to track their running/cycling-->
+<!--                activities on an interactive map.-->
+<!--              </p>-->
+<!--              <a class="projects__website-btn mapty__website-btn"-->
+<!--                 href="https://noppytinto.github.io/practice-web-mapty/"-->
+<!--                 target="_blank">-->
+<!--                visit website-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="projects__stack">-->
+<!--              <p class="projects__built-with">-->
+<!--                Built with:-->
+<!--              </p>-->
+<!--              <ul class="projects__stack-list">-->
+<!--                <li class="projects__stack-item">HTML/CSS</li>-->
+<!--                <li class="projects__stack-item">Javascript (ES6)</li>-->
+<!--                <li class="projects__stack-item">Webpack</li>-->
+<!--              </ul>-->
+<!--              <a class="projects__source-code-btn"-->
+<!--                 href="https://github.com/noppytinto/practice-web-mapty"-->
+<!--                 target="_blank">-->
+<!--                <img src="./assets/images/github-icon.svg" alt="">-->
+<!--                source code-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <div class="projects__gallery mapty__gallery">
-            <ul class="projects__list mapty__list">
-              <li class="projects__list-item mapty__list-item">
-                <img class="projects__screen mapty__screen"
-                     src="./assets/images/mapty-screen-1.png"
-                     alt="" loading="lazy" data-index="0">
-              </li>
-            </ul>
-          </div>
-
-          <div class="projects__text-content">
-            <div class="projects__description">
-              <p>
-                Mapty is a Web App, that allow users to track their running/cycling
-                activities on an interactive map.
-              </p>
-              <a class="projects__website-btn mapty__website-btn"
-                 href="https://noppytinto.github.io/practice-web-mapty/"
-                 target="_blank">
-                visit website
-              </a>
-            </div>
-            <div class="projects__stack">
-              <p class="projects__built-with">
-                Built with:
-              </p>
-              <ul class="projects__stack-list">
-                <li class="projects__stack-item">HTML/CSS</li>
-                <li class="projects__stack-item">Javascript (ES6)</li>
-                <li class="projects__stack-item">Webpack</li>
-              </ul>
-              <a class="projects__source-code-btn"
-                 href="https://github.com/noppytinto/practice-web-mapty"
-                 target="_blank">
-                <img src="./assets/images/github-icon.svg" alt="">
-                source code
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-
+<!--        </div>-->
+<!--      </section>-->
 
     </div>
   </section>
@@ -413,10 +437,10 @@
     </button>
     <ul class="hover-menu__nav">
       <li class="hover-menu__item">
-        <a href="#about__caption" class="hover-menu__link">about</a>
+        <a href="#about" class="hover-menu__link">about</a>
       </li>
       <li class="hover-menu__item">
-        <a href="#cinemates-content" class="hover-menu__link">projects</a>
+        <a href="#projects" class="hover-menu__link">projects</a>
       </li>
       <li class="hover-menu__item">
         <a href="#contact" class="hover-menu__link">contact</a>

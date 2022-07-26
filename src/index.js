@@ -34,6 +34,7 @@ import webplaygroundScreen1 from './assets/images/webplayground-screen-1.png';
 import maptyScreen1 from './assets/images/mapty-screen-1.png';
 //
 import githubIcon from './assets/images/github-icon.svg';
+import externalLinkIcon from './assets/images/icon--external-link.svg';
 
 
 /////////////////////////////////////////

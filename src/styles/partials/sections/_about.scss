@@ -52,7 +52,9 @@
     width: 100%;
     border-radius: .5em;
     object-fit: cover;
-    
+    border-width: 1px;
+    border-color: rgba(#fff, .2);
+    border-style: solid;
   }
   
   &__greetings {
@@ -91,11 +93,10 @@
   }
   
   &__bio {
-    width: 80%;
+    max-width: 70%;
     line-height: 1.7;
     font-size: 1.2rem;
     font-weight: 300;
-    //margin-bottom: 1em;
   
     @media screen and (max-width: 800px){
       text-align: center;
@@ -107,6 +108,5 @@
 
     }
   }
-  
   
 }// .about
