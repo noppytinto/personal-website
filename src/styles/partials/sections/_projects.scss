@@ -76,17 +76,17 @@
   
   &__links {
     display: flex;
-    align-items: stretch;
     gap: 1.5em;
   }
   
   &__link {
-  
   }
   
   &__icon {
     color: #fff;
     font-size: 2rem;
+    //height: 100%;
+    @include mix.center-vertically-horizontally
   }
   
   &__gallery {
