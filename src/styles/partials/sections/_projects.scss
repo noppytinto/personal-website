@@ -21,6 +21,7 @@
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    
   }
   
   &__item {
@@ -28,6 +29,11 @@
     gap: 2em;
     margin-bottom: 10em;
     padding: 1em;
+  
+    @media screen and (max-width: 600px){
+      flex-direction: column;
+      align-items: center;
+    }
   }
   
   &__info {
@@ -45,10 +51,18 @@
     flex-direction: column;
     justify-content: center;
     gap: 1em;
+  
+    @media screen and (max-width: 600px){
+      height: revert;
+    }
   }
   
   &__description {
     font-size: 1.1rem;
+  
+    @media screen and (max-width: 700px){
+      font-size: 1rem;
+    }
   }
   
   &__stack {
@@ -61,6 +75,10 @@
   &__stack-item {
     font-family: var.$font-family--mono;
     color: rgba(#fff, .5);
+  
+    @media screen and (max-width: 700px){
+      font-size: .9rem;
+    }
   }
   
   &__header {
@@ -72,6 +90,10 @@
   &__app-name {
     font-size: 2rem;
     font-weight: 500;
+  
+    @media screen and (max-width: 700px){
+      font-size: 1.7rem;
+    }
   }
   
   &__links {
@@ -80,22 +102,29 @@
   }
   
   &__link {
+    color: #fff;
+    
+    &:link, &:visited, &:focus {
+      color: #fff;
+    }
   }
   
   &__icon {
     color: #fff;
     font-size: 2rem;
-    //height: 100%;
-    @include mix.center-vertically-horizontally
+    @include mix.center-vertically-horizontally;
+  
+    &:hover {
+      color: var.$color--orange;
+    }
   }
   
   &__gallery {
     flex-basis: 100px;
     flex-grow: 4;
-    
     display: grid;
-    grid-gap: 1em;
-    grid-template-columns: repeat(6, minmax(25px, 1fr));
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(6, minmax(35px, 1fr));
   }
   
   &__gallery-item {
@@ -117,25 +146,23 @@
     }
   }
   
-  
 }// .pr0jects
 
 .cinemates {
   &__gallery {
     grid-template-areas:
       "screen1 screen1 screen1 ...     ...     ..."
-      "screen1 screen1 screen1 ...     ...     ..."
+      "screen1 screen1 screen1 screen2 screen2 screen2"
       "screen1 screen1 screen1 screen2 screen2 screen2"
       "screen1 screen1 screen1 screen2 screen2 screen2"
       "... ... ...             screen2 screen2 screen2"
-      "... ... ...             screen2 screen2 screen2"
-      "screen3 screen3 screen3 ... ... ..."
-      "screen3 screen3 screen3 ... ... ..."
+      "screen3 screen3 screen3 ... ... ... "
+      "screen3 screen3 screen3 screen4 screen4 screen4"
       "screen3 screen3 screen3 screen4 screen4 screen4"
       "screen3 screen3 screen3 screen4 screen4 screen4"
       "... ... ...             screen4 screen4 screen4"
-      "...     ...     ...     screen4 screen4 screen4"
   ;
+  
   }
   
   &__screen--1 {
@@ -155,7 +182,6 @@
   }
   
 }// .cinemates
-
 
 .webplayground {
   &__gallery {
@@ -202,11 +228,24 @@
       "screen1 screen1 screen1 screen1 screen1 screen1"
       //"... ... screen2 screen2 ... ..."
       //"... ... screen2 screen2 ... ..."
-      "screen3 screen3 screen3 screen3 screen3 screen3"
-      "screen3 screen3 screen3 screen3 screen3 screen3"
-      "screen3 screen3 screen3 screen3 screen3 screen3"
-      "screen3 screen3 screen3 screen3 screen3 screen3"
+      "screen3 screen3 screen3 screen3 ... ..."
+      "screen3 screen3 screen3 screen3 ... ..."
+      "screen3 screen3 screen3 screen3 ... ..."
+      "screen3 screen3 screen3 screen3 ... ..."
   ;
+  
+    @media screen and (max-width: 600px){
+      grid-template-areas:
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen3 screen3 screen3 ... ... ..."
+      "screen3 screen3 screen3 ... ... ..."
+      "screen3 screen3 screen3 ... ... ..."
+      "screen3 screen3 screen3 ... ... ..."
+    ;
+    }
   }
   
   &__screen--1 {
