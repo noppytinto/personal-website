@@ -17,6 +17,7 @@
   &__item {
     display: flex;
     gap: 2em;
+    margin-bottom: 2em;
   }
   
   &__info {
@@ -42,6 +43,7 @@
   
   &__stack {
     display: flex;
+    flex-wrap: wrap;
     gap: 1em;
     margin-bottom: 5em;
   }
@@ -145,6 +147,84 @@
   }
   
 }// .cinemates
+
+
+.webplayground {
+  &__gallery {
+    grid-template-areas:
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen3 screen3 screen3             ... ... ..."
+      "screen3 screen3 screen3             screen2 screen2 screen2"
+      "screen3 screen3 screen3             screen2 screen2 screen2"
+      "screen3 screen3 screen3            ... ... ..."
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+  ;
+  }
+  
+  
+  &__screen--1 {
+    grid-area: screen1;
+  }
+  
+  &__screen--2 {
+    grid-area: screen2;
+    
+  }
+  
+  &__screen--3 {
+    grid-area: screen3;
+  }
+  
+  &__screen--4 {
+    grid-area: screen4;
+  }
+  
+}// .webplayground
+
+
+.mapty {
+  &__gallery {
+    grid-template-areas:
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "screen3 screen3 screen3             ... ... ..."
+      "screen3 screen3 screen3             screen2 screen2 screen2"
+      "screen3 screen3 screen3             screen2 screen2 screen2"
+      "screen3 screen3 screen3            ... ... ..."
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+  ;
+  }
+  
+  
+  &__screen--1 {
+    grid-area: screen1;
+  }
+  
+  &__screen--2 {
+    grid-area: screen2;
+    
+  }
+  
+  &__screen--3 {
+    grid-area: screen3;
+  }
+  
+  &__screen--4 {
+    grid-area: screen4;
+  }
+  
+}// .mapty
 
 //.cinemates {
 //

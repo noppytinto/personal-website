@@ -30,6 +30,10 @@ import cinematesScreen7 from './assets/images/cinemates-screen-7.png';
 import cinematesScreen8 from './assets/images/cinemates-screen-8.png';
 // web playground
 import webplaygroundScreen1 from './assets/images/webplayground-screen-1.png';
+import webplaygroundScreen2 from './assets/images/webplayground-screen-2.png';
+import webplaygroundScreen3 from './assets/images/webplayground-screen-3.png';
+import webplaygroundScreen4 from './assets/images/webplayground-screen-4.png';
+import webplaygroundScreen5 from './assets/images/webplayground-screen-5.png';
 // mapty
 import maptyScreen1 from './assets/images/mapty-screen-1.png';
 //
