@@ -8,6 +8,15 @@
   
   //////////////////////////////////
   //////////////////////////////////
+  &__title {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  &__pro {
+    color: var.$color--red;
+  }
+  
   &__container {
     max-width: 1000px;
     margin-left: auto;
