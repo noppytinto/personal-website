@@ -10,7 +10,7 @@
 
 .about {
   margin-bottom: 5em;
-  min-height: 200vh;
+  min-height: 100vh;
   position: relative;
   //@include mix.center-vertically-horizontally;
   text-align: center;
@@ -18,7 +18,7 @@
   ///////////////////////////////
   ///////////////////////////////
   &__content {
-    height: 200vh;
+    height: 100vh;
   
     display: flex;
     flex-direction: column;
@@ -44,10 +44,12 @@
   }
   
   &__media {
+    //height: 100vh;
     position: sticky;
-    top: 10%;
-    //top: 50%;
-    //transform: translateY(-50%);
+    top: 0;
+    //top: 10%;
+    top: 50%;
+    transform: translateY(-50%);
     min-width: 200px;
     max-width: 400px;
     width: 50%;
