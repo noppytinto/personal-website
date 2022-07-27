@@ -81,7 +81,7 @@
   
   &__greetings {
     @include about-title;
-    font-size: clamp(1rem, calc(-1rem + 10vw), 2rem);
+    font-size: clamp(1rem, calc(-1.5rem + 10vw), 2rem);
   
     //grid-area: greetings;
     //color: var.$color--orange--salmon;
@@ -158,14 +158,14 @@
     text-transform: lowercase;
     //font-size: 2rem;
     margin-bottom: -.35em;
-    font-size: clamp(1rem, calc(-1rem + 10vw), 2rem);
+    font-size: clamp(1rem, calc(-1.5rem + 10vw), 2rem);
   
   }
   
   &__bio--row-3 {
     //font-size: 2rem;
     //margin-bottom: 50em;
-    font-size: clamp(1rem, calc(-1rem + 10vw), 2rem);
+    font-size: clamp(1rem, calc(-1.5rem + 10vw), 2rem);
   
   }
   
