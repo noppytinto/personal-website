@@ -10,37 +10,17 @@
 
 .about {
   margin-bottom: 5em;
-  min-height: 200vh;
-  //@include mix.center-vertically-horizontally;
+  min-height: 250vh;
   text-align: center;
   
   ///////////////////////////////
   ///////////////////////////////
   &__content {
-    height: 200vh;
+    height: 250vh;
     position: relative;
-  
     display: flex;
     flex-direction: column;
-    //justify-content: center;
     align-items: center;
-  
-    //display: grid;
-    //grid-template-areas:
-    //  "...   greetings"
-    //  "media bio";
-    //column-gap: 1.5em;
-    //row-gap: .5em;
-    //grid-template-columns: 30% 70%;
-    //
-    //@media screen and (max-width: 800px){
-    //  grid-template-columns: 1fr;
-    //  grid-template-areas:
-    //  "greetings"
-    //  "bio"
-    //  "media";
-    //  justify-content: center;
-    //}
   }
   
   &__sticky {
