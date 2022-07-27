@@ -140,7 +140,7 @@
     display: grid;
     grid-gap: 1.5em;
     grid-template-columns: repeat(6, minmax(35px, 1fr));
-    grid-auto-rows: auto;
+    grid-auto-rows: minmax(40px, auto);
   }
   
   &__gallery-item {
