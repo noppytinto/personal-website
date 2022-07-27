@@ -117,6 +117,8 @@
   &__item {
     display: flex;
     justify-content: flex-end;
+  
+
   }
   
   &__link {
@@ -133,7 +135,21 @@
       font-size: 2rem;
       text-align: center;
     }
+
+    // iphone se (horiz)
+    @media screen and (max-height: 600px) {
+      font-size: 1.8rem;
+    }
   
+    // galaxy fold (horiz)
+    @media screen and (max-height: 300px) {
+      font-size: 1rem;
+    }
+  
+    //@media screen and (max-height: 500px) {
+    //  font-size: 1.3rem;
+    //}
+    //
     &:link {
       color: var.$color--base;
   
@@ -159,6 +175,12 @@
     @media screen and (max-width: 500px) {
       margin-top: revert;
 
+    }
+  
+    @media screen and (max-height: 700px) {
+      visibility: hidden;
+      
+    
     }
   
   }
