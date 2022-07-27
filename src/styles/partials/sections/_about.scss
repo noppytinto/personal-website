@@ -10,19 +10,19 @@
 
 .about {
   margin-bottom: 5em;
-  min-height: 100vh;
-  position: relative;
+  min-height: 200vh;
   //@include mix.center-vertically-horizontally;
   text-align: center;
   
   ///////////////////////////////
   ///////////////////////////////
   &__content {
-    height: 100vh;
+    height: 200vh;
+    position: relative;
   
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    //justify-content: center;
     align-items: center;
   
     //display: grid;
@@ -43,30 +43,20 @@
     //}
   }
   
-  &__media {
-    //height: 100vh;
+  &__sticky {
     position: sticky;
-    top: 0;
-    //top: 10%;
     top: 50%;
     transform: translateY(-50%);
     min-width: 200px;
     max-width: 400px;
     width: 50%;
-    mix-blend-mode: exclusion;
-    margin-left: auto;
-    margin-right: auto;
     padding: 1em;
+    mix-blend-mode: exclusion;
+    z-index: 2;
+  }
   
-    //grid-area: media;
-    //transform: translateY(1.5em);
-    //
-    //
-    //@media screen and (max-width: 800px){
-    //  width: 45%;
-    //  margin-left: auto;
-    //  margin-right: auto;
-    //}
+  &__media {
+
   }
   
   &__image {
@@ -80,12 +70,13 @@
   }
   
   &__text-content {
+    position: absolute;
+    height: 100%;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    //margin-bottom: 40vh;
-    
   }
   
   &__greetings {
