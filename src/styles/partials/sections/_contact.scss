@@ -37,7 +37,7 @@
   
   &__item {
     font-size: 2.4rem;
-    transition: all .2s;
+    //transition: all 1s;
   
     @media screen and (max-width: 530px){
       font-size: 2rem;
@@ -46,7 +46,6 @@
   
     @media screen and (max-width: 400px){
       font-size: 1.8rem;
-    
     }
   }
   
@@ -155,25 +154,8 @@
     }
   }
   
-  &__title {
-  }
-  
   &__details {
     font-size: 1.1rem;
-    //text-shadow: 1px 1px 5px rgba(#000, .2);
-    
-  }
-  
-  &__details--email {
-  
-  }
-  
-  &__details--github {
-  
-  }
-  
-  &__details--linkedin {
-  
   }
   
 }// .contact

@@ -67,6 +67,7 @@
       width: revert;
       height: 65%;
       gap: 1em;
+      justify-content: space-between;
     }
   
     @media screen and (max-width: 400px) {
@@ -89,6 +90,15 @@
       transform: rotateZ(180deg);
     }
     
+  }
+  
+  &__icon-close {
+    display: block;
+    font-size: 2.5rem;
+  
+    @media screen and (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
   
   &__nav {
@@ -142,31 +152,33 @@
     margin-top: auto;
     align-self: center;
     color: var.$color--base;
-    
     opacity: .5;
+  
+  
+    @media screen and (max-width: 500px) {
+      margin-top: revert;
+
+    }
+  
+  }
+  
+  @keyframes slide-over--open {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes slide-over--close {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(0px);
+    }
   }
   
 }// .hover-menu
-
-@keyframes slide-over--open {
-  from {
-    transform: translateX(100px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes slide-over--close {
-  from {
-    transform: translateX(100px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
-/////////////////////////////////////////
-// MISC
-/////////////////////////////////////////
 
