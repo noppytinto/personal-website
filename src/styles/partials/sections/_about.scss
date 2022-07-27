@@ -52,7 +52,6 @@
   &__text-content {
     position: absolute;
     height: 100%;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,91 +61,41 @@
   &__greetings {
     @include about-title;
     font-size: clamp(1rem, calc(-1.5rem + 10vw), 2rem);
-  
-    //grid-area: greetings;
-    //color: var.$color--orange--salmon;
-    //font-size: 1.3rem;
-    //font-weight: 600;
-    //
-    //@media screen and (max-width: 800px){
-    //  text-align: center;
-    //}
   }
   
   
   &__name {
     font-family: var.$font-family--serif;
     text-transform: uppercase;
-    //font-size: 10rem;
     letter-spacing: -.05em;
     font-weight: 400;
-    line-height: .8;
+    line-height: .85;
     margin-bottom: .3em;
     z-index: 2;
     text-shadow: 2px 2px 10px rgba(#000, .5);
     font-size: clamp(1rem, calc(1rem + 10vw), 10rem);
-  
-    //font-size: 3.5rem;
-    //font-weight: 500;
-    //
-    //@media screen and (max-width: 600px){
-    //  font-size: 3rem;
-    //}
-    //
-    //@media screen and (max-width: 450px){
-    //  font-size: 2.5rem;
-    //}
-    //
-    //@media screen and (max-width: 400px){
-    //  font-size: 2.2rem;
-    //}
-    //
-    //@media screen and (max-width: 350px){
-    //  font-size: 2rem;
-    //}
+    
   }
   
   &__bio {
     @include about-title;
-  
-    //max-width: 70%;
-    //line-height: 1.7;
-    //font-size: 1.2rem;
-    //font-weight: 300;
-    //
-    //@media screen and (max-width: 800px){
-    //  text-align: center;
-    //  max-width: 65%;
-    //}
-    //
-    //@media screen and (max-width: 600px){
-    //  max-width: 80%;
-    //}
   }
   
   &__bio--row-1 {
     line-height: .8;
     font-weight: 550;
     margin-bottom: -.05em;
-    //font-size: 7rem;
-  
     font-size: clamp(1rem, calc(1rem + 10vw), 7rem);
-  
   }
   
   &__bio--row-2 {
     text-transform: lowercase;
-    //font-size: 2rem;
     margin-bottom: -.35em;
     font-size: clamp(1rem, calc(-1.5rem + 10vw), 2rem);
-  
   }
   
   &__bio--row-3 {
-    //font-size: 2rem;
-    //margin-bottom: 50em;
     font-size: clamp(1rem, calc(-1.5rem + 10vw), 2rem);
-  
   }
   
 }// .about

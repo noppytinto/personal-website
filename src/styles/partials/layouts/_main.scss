@@ -19,6 +19,8 @@
   
   &__title {
     font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -.05em;
     font-weight: 500;
     
     @media screen and (max-width: 500px) {
