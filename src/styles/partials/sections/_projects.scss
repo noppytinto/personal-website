@@ -21,7 +21,6 @@
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    
   }
   
   &__item {
@@ -36,6 +35,7 @@
     @media screen and (max-width: 600px){
       flex-direction: column;
       align-items: center;
+      gap: 5em;
     }
   }
   
@@ -52,54 +52,11 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-  
-    @media screen and (max-width: 600px){
-      flex-direction: column-reverse;
-      gap: 3em;
-    }
-  }
-  
-  &__description {
-    //display: flex;
-    //flex-direction: column;
-    //gap: 1em;
-    //
-
-  }
-  
-  &__description-text {
-    font-size: 1.1rem;
-    margin-bottom: 1em;
-  
-    @media screen and (max-width: 700px){
-      font-size: 1rem;
-    }
-  }
-  
-  &__stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    margin-bottom: 5em;
-  
-    @media screen and (max-width: 600px){
-      margin-bottom: 2em;
-    }
-  }
-  
-  &__stack-item {
-    font-family: var.$font-family--mono;
-    color: rgba(#fff, .5);
-  
-    @media screen and (max-width: 700px){
-      font-size: .9rem;
-    }
+    
   }
   
   &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
   }
   
   &__app-name {
@@ -111,27 +68,84 @@
     }
   }
   
+  &__description {
+
+  }
+  
+  &__description-text {
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+    
+    @media screen and (max-width: 700px){
+      font-size: 1rem;
+    }
+  }
+  
+  &__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 4em;
+    
+    @media screen and (max-width: 600px){
+      margin-bottom: 3em;
+    }
+  }
+  
+  &__stack-item {
+    font-family: var.$font-family--mono;
+    color: rgba(#fff, .5);
+    
+    @media screen and (max-width: 700px){
+      font-size: .9rem;
+    }
+  }
+  
   &__links {
     display: flex;
     gap: 1.5em;
   }
   
   &__link {
-    color: #fff;
+    color: #000;
+    transition: all .2s;
+    @include mix.center-vertically-horizontally;
     
     &:link, &:visited, &:focus {
-      color: #fff;
+      color: #000;
+    }
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  &__website-btn {
+    background-color: #fff;
+    padding: .3em 1em;
+    border-radius: 10em;
+    font-weight: 500;
+    
+    &:link, &:visited, &:focus {
+      color: #000;
+    }
+  }
+  
+  &__source-code-btn {
+    background-color: var.$color--orange--1000;
+    padding: .1em .7em;
+    border-radius: 10em;
+    font-weight: 500;
+    
+    &:link, &:visited, &:focus {
+      color: var.$color--orange--700;
     }
   }
   
   &__icon {
-    color: #fff;
+    color: var.$color--orange--700;
     font-size: 2rem;
     @include mix.center-vertically-horizontally;
-  
-    &:hover {
-      color: var.$color--orange;
-    }
   }
   
   &__gallery {
@@ -162,7 +176,7 @@
     }
   }
   
-}// .pr0jects
+}// .projects
 
 .cinemates {
   &__gallery {
@@ -195,6 +209,14 @@
   
   &__screen--4 {
     grid-area: screen4;
+  }
+  
+  &__website-btn {
+    background-color: var.$color--blue;
+    
+    &:link, &:visited, &:focus {
+      color: #000;
+    }
   }
   
 }// .cinemates
@@ -231,6 +253,14 @@
   
   &__screen--4 {
     grid-area: screen4;
+  }
+  
+  &__website-btn {
+    background-color: #fff;
+    
+    &:link, &:visited, &:focus {
+      color: #000;
+    }
   }
   
 }// .webplayground
@@ -274,6 +304,14 @@
   
   &__screen--3 {
     grid-area: screen3;
+  }
+  
+  &__website-btn {
+    background-color: var.$color--green;
+    
+    &:link, &:visited, &:focus {
+      color: #000;
+    }
   }
   
 }// .mapty
