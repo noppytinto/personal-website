@@ -27,8 +27,11 @@
   &__item {
     display: flex;
     gap: 2em;
-    margin-bottom: 10em;
-    padding: 1em;
+    margin-bottom: 7em;
+    padding: 1em 1em 7em 1em;
+    border-bottom-color: rgba(#fff, .15);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
   
     @media screen and (max-width: 600px){
       flex-direction: column;
@@ -40,20 +43,18 @@
     flex-grow: 2;
     max-width: 400px;
     display: flex;
-    //align-items: center;
+    align-items: flex-start;
   }
   
   &__info-body {
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 1em;
   
     @media screen and (max-width: 600px){
-      height: revert;
+      //height: revert;
     }
   }
   
