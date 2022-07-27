@@ -95,7 +95,8 @@
   &__icon-close {
     display: block;
     font-size: 2.5rem;
-  
+    color: #000;
+    
     @media screen and (max-width: 400px) {
       font-size: 2rem;
     }
