@@ -58,3 +58,10 @@
                     );
 }
 
+@mixin rounded-image {
+  border-radius: .5em;
+  object-fit: cover;
+  border-width: 1px;
+  border-color: rgba(#fff, .2);
+  border-style: solid;
+}
