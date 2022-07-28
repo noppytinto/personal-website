@@ -5,14 +5,12 @@
 .header {
   padding: 2em;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: #fff;
   margin-bottom: 2em;
-  //background-image: linear-gradient(to bottom, rgba(var.$color--base, 1) 100% rgba(var.$color--base, 100%) );
   background-image: linear-gradient(180deg, rgba(var.$color--base,1) 42%, rgba(var.$color--base,0) 100%);
-  //opacity: .99;
-  //z-index: 99;
+  
   
   //////////////////////////////////////////
   //////////////////////////////////////////
@@ -26,21 +24,8 @@
     border-style: solid;
     border-width: 1px;
     border-color: #fff;
-    
-  }
   
-  
-  ////////////////////////////////////////////
-  // @media
-  ////////////////////////////////////////////
-  @media screen and (max-width: 800px) {
-    flex-direction: column;
-    gap: 1em;
-  }
-  
-  @media screen and (max-width: 450px) {
-  
-    &__logo {
+    @media screen and (max-width: 450px) {
       font-size: 1.2rem;
     }
   }
