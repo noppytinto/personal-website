@@ -154,7 +154,7 @@
     display: grid;
     grid-gap: 1.5em;
     grid-template-columns: repeat(6, minmax(35px, 1fr));
-    grid-auto-rows: minmax(40px, auto);
+    grid-auto-rows: minmax(20px, auto);
     
     @media screen and (max-width: 600px) {
       grid-gap: 1em;
@@ -201,8 +201,8 @@
       grid-template-areas:
       "screen1 screen1 screen1 screen2 screen2 screen2"
       "screen1 screen1 screen1 screen2 screen2 screen2"
-      "screen1 screen1 screen1 screen2 screen2 screen2"
-      "screen1 screen1 screen1 screen2 screen2 screen2"
+      "... ... ...  ... ... ..."
+      "... ... ...  ... ... ..."
     ;
     }
   
@@ -263,8 +263,8 @@
       grid-template-areas:
       "screen4 screen4 screen4 screen4 screen4 screen4"
       "screen4 screen4 screen4 screen4 screen4 screen4"
-      "screen4 screen4 screen4 screen4 screen4 screen4"
-      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "... ... ...  ... ... ..."
+      "... ... ...  ... ... ..."
     ;
     }
   }
@@ -326,8 +326,8 @@
       grid-template-areas:
       "screen1 screen1 screen1 screen1 screen1 screen1"
       "screen1 screen1 screen1 screen1 screen1 screen1"
-      "screen1 screen1 screen1 screen1 screen1 screen1"
-      "screen1 screen1 screen1 screen1 screen1 screen1"
+      "... ... ...  ... ... ..."
+      "... ... ...  ... ... ..."
     ;
     }
   }
