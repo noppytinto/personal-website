@@ -1,0 +1,44 @@
+@use "src/styles/partials/abstracts/variables" as var;
+@use "../base/mixin" as mix;
+
+.scroll-down-cta {
+  display: block;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  padding: .1em;
+  @include mix.center-vertically-horizontally;
+  
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 1px 1px 10px rgba(#000, .5);
+  backdrop-filter: blur(5px);
+  background-color: transparent;
+  border-color: transparent;
+  animation-name: move-hand;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  
+  @keyframes move-hand {
+    0% {
+      transform: translateY(-10%);
+      opacity: .2;
+    }
+
+    50% {
+      transform: translateY(10%);
+      opacity: .7;
+    }
+  
+    100% {
+      transform: translateY(-10%);
+      opacity: .2;
+    }
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+    bottom: .5em;
+    right: .5em;
+  }
+}// .scroll-down-cta

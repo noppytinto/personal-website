@@ -47,6 +47,8 @@ import externalLinkIcon from './assets/images/icon--external-link.svg';
 // MAIN
 
 
+
+
 /////////////////////////////////////////
 function main() {
 
@@ -59,6 +61,8 @@ function main() {
 
     showCopyEmailOnMouseEnter();
 
+    handleScrollDownCtaVisibilityOnScroll();
+
 
 }// main()
 
@@ -69,6 +73,46 @@ main();
 /////////////////////////////////////////
 // FUNCTIONS
 /////////////////////////////////////////
+
+function handleScrollDownCtaVisibilityOnScroll() {
+    const scrollCta = document.querySelector('.scroll-down-cta');
+
+    // conceal when out of about section
+    const target = document.querySelector('.skills');
+
+    const options = {
+        root: null,
+        threshold: 1
+    }
+    const callback = (entries) => {
+        const [entry] = entries;
+
+        if (entry.isIntersecting)
+            scrollCta.style.display = "none";
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(target);
+
+
+
+    // reveal back at about section
+    const target2 = document.querySelector('.about');
+
+    const options2 = {
+        root: null,
+        threshold: 0.1
+    }
+    const callback2 = (entries) => {
+        const [entry] = entries;
+
+        if (entry.isIntersecting)
+            scrollCta.style.display = "block";
+    };
+
+    const observer2 = new IntersectionObserver(callback2, options2);
+    observer2.observe(target2);
+}
 
 function showCopyEmailOnMouseEnter() {
     const emailButton = document.querySelector('.contact__grid--1-1');
