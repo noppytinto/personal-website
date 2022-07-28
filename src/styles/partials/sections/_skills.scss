@@ -2,68 +2,42 @@
 @use "../abstracts/variables" as var;
 
 .skills {
-  padding: 4em 1em 3em 1em;
-  background-color: #000;
+  padding: 1em;
   margin-bottom: 10em;
   
-  @media screen and (max-width: 600px){
-    padding: 1em 1em 3em 1em;
-
-  }
-  
-  
-  //&__container {
-  //  margin-left: auto;
-  //  margin-right: auto;
-  //  height: 100%;
-  //  max-width: calc(var(--breakpoint--max-width) + 150px);
-  //  border-radius: 1em;
-  //  border-color: transparent;
-  //  border-style: solid;
-  //  border-width: 1px;
-  //  transition: border .5s;
-  //
-  //  &:hover {
-  //    border-color: #fff;
-  //  }
-  //}
-
-  
   &__content {
-    padding: 1em;
-    max-width: var(--breakpoint--max-width);
+    background-color: #000;
+    padding: 4em 6em;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    //margin-top: 4em;
-    //margin-bottom: 3em;
+    border-radius: 1em;
+  
+    @media screen and (max-width: 800px){
+      padding: 3em 3em;
+    }
+    
   }
   
   &__grid {
     height: 100%;
-  
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 100px 100px;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
-        "title  subtitle1  subtitle2"
-        "text1    text2        text3"
-        "text1    text2        text3";
-    column-gap: 2em;
+        "title  section-1"
+        "title  section-2"
+    ;
+    grid-row-gap: 4em;
   
-    @media screen and (max-width: 600px){
-      grid-template-columns: repeat(1, 1fr);
-      //grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: 100px auto 100px auto 100px auto;
+    @media screen and (max-width: 700px){
+      grid-template-columns: 1fr;
       grid-template-areas:
         "title"
-        "text1"
-        "subtitle1"
-        "text2"
-        "subtitle2"
-        "text3";
-      column-gap: 0;
-      //row-gap: 1em;
+        "section-1"
+        "section-2"
+    ;
     }
+
   }
   
   &__grid-item {
@@ -72,56 +46,51 @@
   
   &__grid-item--1-1 {
     grid-area: title;
-    align-self: flex-end;
-    
-
+    align-self: center;
+  
+    @media screen and (max-width: 700px){
+      justify-self: center;
+    }
+  
+    @media screen and (max-width: 500px){
+      font-size: 1rem;
+    }
   }
   
   &__grid-item--1-2 {
-    grid-area: subtitle1;
-    align-self: flex-end;
-    margin-bottom: .5em;
-  }
+    grid-area: section-1;
   
-  &__grid-item--1-3 {
-    align-self: flex-end;
-    margin-bottom: .5em;
-  }
-  
-  &__grid-item--2-1 {
-    grid-area: text1;
-  
-    border-top-width: 1px;
-    border-top-color: var.$color--divider;
-    border-top-style: solid;
+    @media screen and (max-width: 500px){
+      font-size: .8rem;
+    }
   }
   
   &__grid-item--2-2 {
-    grid-area: text2;
-    border-top-width: 1px;
-    border-top-color: var.$color--divider;
-    border-top-style: solid;
-  }
+    grid-area: section-2;
   
-  &__grid-item--2-3 {
-    grid-area: text3;
-    border-top-width: 1px;
-    border-top-color: var.$color--divider;
-    border-top-style: solid;
+    @media screen and (max-width: 500px){
+      font-size: .8rem;
+    }
+
   }
-  
   
   &__title {
-    justify-self: flex-end;
+
   }
   
   &__subtitle {
-    justify-self: flex-end;
     font-weight: normal;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(#fff, .2);
+    border-bottom-style: solid;
+    
+    padding-bottom: .5em;
+    margin-bottom: 1em;
   }
   
   &__text{
-    padding-top: 2em;
+    font-family: var.$font-family--mono;
+    color: rgba(#fff, .5);
     font-weight: 300;
     font-size: 1.1rem;
   }
