@@ -26,7 +26,6 @@
   &__sticky {
     position: sticky;
     top: 20%;
-    //transform: translateY(-25%);
     min-width: 250px;
     max-width: 400px;
     width: 50%;
@@ -70,7 +69,8 @@
     font-weight: 400;
     line-height: .85;
     margin-bottom: .3em;
-    z-index: 3;
+    z-index: 2;
+    transform: translate3d(0,0,0);
     text-shadow: 2px 2px 10px rgba(#000, .5);
     font-size: clamp(1rem, calc(1rem + 10vw), 10rem);
   }
