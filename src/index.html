@@ -17,12 +17,10 @@
 <body>
 
 <header class="header" >
-<!--  <h1 class="header__logo"> Fs </h1>-->
-
   <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item">
-        <a href="#about" class="nav__link">about</a>
+        <a href="#about__image" class="nav__link">about</a>
       </li>
       <li class="nav__item">
         <a href="#projects" class="nav__link">projects</a>
@@ -43,12 +41,12 @@
 
       <div class="about__sticky">
         <figure class="about__media" >
-          <img class="about__image" src="./assets/images/about-img.jpg" alt="that's me">
+          <img class="about__image" id="about__image" src="./assets/images/about-img.jpg" alt="that's me">
         </figure>
       </div>
 
-      <div class="about__text-content">
-        <h2 class="about__greetings">Hi! my name is</h2>
+      <div class="about__text-content" id="about__text-content">
+        <h2 class="about__greetings" id="about__greetings">Hi! my name is</h2>
         <p class="about__name">Francesco<br/>Scutellaro</p>
         <p class="about__bio about__bio--row-1">FRONTEND<br/>DEVELOPER</p>
         <p class="about__bio about__bio--row-2">and</p>
@@ -434,7 +432,7 @@
     </button>
     <ul class="hover-menu__nav">
       <li class="hover-menu__item">
-        <a href="#about" class="hover-menu__link">about</a>
+        <a href="#about__greetings" class="hover-menu__link">about</a>
       </li>
       <li class="hover-menu__item">
         <a href="#projects" class="hover-menu__link">projects</a>
