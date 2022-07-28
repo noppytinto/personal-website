@@ -63,7 +63,6 @@
     font-size: clamp(1rem, calc(-1.5rem + 10vw), 2rem);
   }
   
-  
   &__name {
     font-family: var.$font-family--serif;
     text-transform: uppercase;
@@ -74,7 +73,6 @@
     z-index: 2;
     text-shadow: 2px 2px 10px rgba(#000, .5);
     font-size: clamp(1rem, calc(1rem + 10vw), 10rem);
-    
   }
   
   &__bio {
@@ -85,7 +83,7 @@
     line-height: .8;
     font-weight: 550;
     margin-bottom: -.05em;
-    font-size: clamp(1rem, calc(1rem + 10vw), 7rem);
+    font-size: clamp(1rem, calc(1rem + 10vw), 10rem);
   }
   
   &__bio--row-2 {
