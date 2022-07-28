@@ -155,6 +155,10 @@
     grid-gap: 1.5em;
     grid-template-columns: repeat(6, minmax(35px, 1fr));
     grid-auto-rows: minmax(40px, auto);
+    
+    @media screen and (max-width: 600px) {
+      grid-gap: 1em;
+    }
   }
   
   &__gallery-item {
@@ -193,6 +197,15 @@
       "... ... ...             screen4 screen4 screen4"
   ;
   
+    @media screen and (max-width: 600px) {
+      grid-template-areas:
+      "screen1 screen1 screen1 screen2 screen2 screen2"
+      "screen1 screen1 screen1 screen2 screen2 screen2"
+      "screen1 screen1 screen1 screen2 screen2 screen2"
+      "screen1 screen1 screen1 screen2 screen2 screen2"
+    ;
+    }
+  
   }
   
   &__screen--1 {
@@ -205,10 +218,18 @@
   
   &__screen--3 {
     grid-area: screen3;
+  
+    @media screen and (max-width: 600px) {
+     display: none;
+    }
   }
   
   &__screen--4 {
     grid-area: screen4;
+  
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   
   &__website-btn {
@@ -237,18 +258,39 @@
       "screen4 screen4 screen4 screen4 screen4 screen4"
       "screen4 screen4 screen4 screen4 screen4 screen4"
   ;
+  
+    @media screen and (max-width: 600px) {
+      grid-template-areas:
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+      "screen4 screen4 screen4 screen4 screen4 screen4"
+    ;
+    }
   }
   
   &__screen--1 {
     grid-area: screen1;
+  
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   
   &__screen--2 {
     grid-area: screen2;
+  
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   
   &__screen--3 {
     grid-area: screen3;
+  
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   
   &__screen--4 {
@@ -286,10 +328,6 @@
       "screen1 screen1 screen1 screen1 screen1 screen1"
       "screen1 screen1 screen1 screen1 screen1 screen1"
       "screen1 screen1 screen1 screen1 screen1 screen1"
-      "screen3 screen3 screen3 ... ... ..."
-      "screen3 screen3 screen3 ... ... ..."
-      "screen3 screen3 screen3 ... ... ..."
-      "screen3 screen3 screen3 ... ... ..."
     ;
     }
   }
@@ -300,10 +338,18 @@
   
   &__screen--2 {
     grid-area: screen2;
+  
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   
   &__screen--3 {
     grid-area: screen3;
+  
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   
   &__website-btn {
@@ -315,57 +361,3 @@
   }
   
 }// .mapty
-
-//.cinemates {
-//
-//  &__content {
-//
-//  }
-//
-//  &__header {
-//    background-color: var.$color--blue;
-//  }
-//
-//  &__website-btn {
-//    background-color: var.$color--blue;
-//  }
-//
-//}// .cinemates
-//
-//.webplayground {
-//
-//  &__header {
-//    background-color: #fff;
-//  }
-//
-//  &__name {
-//    transform: translateX(-95%) rotateZ(-90deg);
-//  }
-//
-//  &__list-item {
-//    max-width: 900px;
-//    flex-shrink: 1;
-//  }
-//
-//  &__website-btn {
-//    background-color: #fff;
-//  }
-//
-//}// .webplayground
-//
-//.mapty {
-//
-//  &__header {
-//    background-color: var.$color--green;
-//  }
-//
-//  &__list-item {
-//    max-width: 900px;
-//    flex-shrink: 1;
-//  }
-//
-//  &__website-btn {
-//    background-color: var.$color--green;
-//  }
-//
-//}// .mapty
