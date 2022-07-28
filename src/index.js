@@ -186,16 +186,19 @@ function handleOnClickHoverMenuOutsideArea() {
 
 function showHoverMenu(show) {
     const hoverMenu = document.querySelector('.hover-menu');
+    const body = document.querySelector('body');
     const hoverMenuContent = document.querySelector('.hover-menu__content');
 
     if (show) {
         if ( ! hoverMenu.classList.contains('hover-menu--reveal')) {
+            body.style.overflow = "hidden";
             hoverMenu.classList.add('hover-menu--reveal');
             hoverMenuContent.classList.add('hover-menu__content--reveal');
         }
     }
     else {
         if ( hoverMenu.classList.contains('hover-menu--reveal')) {
+            body.style.overflow = "revert";
             hoverMenu.classList.remove('hover-menu--reveal');
             hoverMenuContent.classList.remove('hover-menu__content--reveal');
         }
