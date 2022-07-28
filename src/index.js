@@ -82,7 +82,7 @@ function handleScrollDownCtaVisibilityOnScroll() {
 
     const options = {
         root: null,
-        threshold: 1
+        threshold: .5
     }
     const callback = (entries) => {
         const [entry] = entries;
