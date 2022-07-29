@@ -98,10 +98,9 @@
   }
   
   &__text {
-    font-weight: 500;
-    font-style: italic;
+    font-weight: 400;
     color: #fff;
-    font-size: clamp(1rem, .1rem + 2vw, 1.3rem);
+    font-size: clamp(.9rem, .6em + 1vw, 1.3rem);
     text-align: center;
   }
   

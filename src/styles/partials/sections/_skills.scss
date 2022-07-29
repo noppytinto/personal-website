@@ -5,6 +5,9 @@
   padding: 1em;
   margin-bottom: 10em;
   
+  
+  ////////////////////////////////////
+  ////////////////////////////////////
   &__content {
     background-color: #000;
     padding: 4em 6em;
@@ -14,9 +17,8 @@
     border-radius: 1em;
   
     @media screen and (max-width: 800px){
-      padding: 3em 3em;
+      padding: 4em 3em 5em;
     }
-    
   }
   
   &__grid {
@@ -38,10 +40,6 @@
     ;
     }
 
-  }
-  
-  &__grid-item {
-  
   }
   
   &__grid-item--1-1 {
@@ -74,10 +72,6 @@
 
   }
   
-  &__title {
-
-  }
-  
   &__subtitle {
     font-weight: normal;
     border-bottom-width: 1px;
@@ -96,6 +90,5 @@
     font-weight: 300;
     font-size: 1.1rem;
   }
-  
   
 }// .skills
