@@ -44,33 +44,15 @@ import externalLinkIcon from './assets/images/icon--external-link.svg';
 // gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 
-// let tl = gsap.timeline();
-
-const targets = [".about__image", ".about__text-content"];
-const trigger = ".about__image";
-gsap.from(targets, {
-    scrollTrigger: trigger, // start the animation when ".box" enters the viewport (once)
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: "power1",
-});
-
-// gsap.from(targets, {
-//     scrollTrigger: targets, // start the animation when ".box" enters the viewport (once)
-//     y: 50,
-//     duration: 1,
-//     ease: "power1",
-// });
 
 /////////////////////////////////////////
 // MAIN
 /////////////////////////////////////////
 function main() {
+    startGsapAnimations(gsap);
 
     revealHoverMenuOnScroll();
     handleOnClickHoverMenuButton();
@@ -93,6 +75,18 @@ main();
 /////////////////////////////////////////
 // FUNCTIONS
 /////////////////////////////////////////
+function startGsapAnimations(gsap) {
+    const targets = [".about"];
+    const trigger = ".about";
+    gsap.from(targets, {
+        scrollTrigger: trigger, // start the animation when ".box" enters the viewport (once)
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power1",
+    });
+}
+
 
 function handleScrollDownCtaVisibilityOnScroll() {
     const scrollCta = document.querySelector('.scroll-down-cta');

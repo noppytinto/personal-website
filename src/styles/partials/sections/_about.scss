@@ -8,6 +8,8 @@
   font-weight: 500;
 }
 
+$defaultHeight: 241vh;
+
 .about {
   min-height: 200vh;
   text-align: center;
@@ -21,12 +23,12 @@
   }
   
   &__sticky-container {
+    z-index: 1;
     position: sticky;
     top: 0;
-    mix-blend-mode: exclusion;
-    z-index: 1;
     height: 100vh;
     @include mix.center-vertically-horizontally--with-flex;
+    mix-blend-mode: exclusion;
   }
   
   &__media {
@@ -52,8 +54,6 @@
     left: 0;
     right: 0;
     height: 100%;
-    //@include mix.center-horizontally--with-margins;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,16 +66,16 @@
   }
   
   &__name {
+    z-index: 1;
+    margin-bottom: .3em;
+  
     font-family: var.$font-family--serif;
-    text-transform: uppercase;
+    font-size: clamp(1rem, 1rem + 10vw, 10rem);
     letter-spacing: -.05em;
     font-weight: 400;
     line-height: .85;
-    margin-bottom: .3em;
-    z-index: 2;
-    transform: translate3d(0,0,0);
     text-shadow: 2px 2px 10px rgba(#000, .5);
-    font-size: clamp(1rem, calc(1rem + 10vw), 10rem);
+    transform: translate3d(0,0,0);
   }
   
   &__bio {
