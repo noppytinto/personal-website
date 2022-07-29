@@ -111,7 +111,7 @@ function handleScrollDownCtaVisibilityOnScroll() {
 
 
     // reveal back at about section
-    const target2 = document.querySelector('.about');
+    const target2 = document.querySelector('.about__name');
 
     const options2 = {
         root: null,
