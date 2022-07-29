@@ -46,6 +46,22 @@ $defaultHeight: 241vh;
     border-width: 1px;
     border-color: rgba(#fff, .1);
     border-style: solid;
+    
+    animation-name: projects__image--reveal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  
+    @keyframes projects__image--reveal {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
   
   &__text-content {

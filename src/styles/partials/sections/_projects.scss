@@ -168,7 +168,29 @@
     border-width: 1px;
     border-color: rgba(#fff, .2);
     border-style: solid;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: about__gallery-item--reveal;
+    animation-play-state: paused;
+  
+    &--reveal {
+      animation-play-state: running;
+    
+      @keyframes about__gallery-item--reveal {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
   }
+  
+
   
   &__screen {
     width: 100%;

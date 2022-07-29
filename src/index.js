@@ -77,16 +77,6 @@ main();
 /////////////////////////////////////////
 function startGsapAnimations(gsap) {
 
-    gsap.from(".about__image", {
-        scrollTrigger: {
-            trigger: ".about__image",
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power1",
-    });
-
     gsap.from(".about__text-content", {
         scrollTrigger: {
             trigger: ".about__image",
@@ -98,7 +88,7 @@ function startGsapAnimations(gsap) {
         ease: "power1",
     });
 
-    const screensImages = document.querySelectorAll('.projects__screen ');
+    const screensImages = document.querySelectorAll('.projects__gallery-item');
 
     //
     // gsap.from(screensImages[0], {
@@ -140,6 +130,29 @@ function startGsapAnimations(gsap) {
     //         ease: "power1",
     //     });
     // })
+
+    screensImages.forEach(screen => {
+        // conceal when out of about section
+        const target = screen;
+
+        const options = {
+            root: null,
+            threshold: .2
+        }
+        const callback = (entries, observer) => {
+            const [entry] = entries;
+
+            if (entry.isIntersecting) {
+                screen.classList.add('projects__gallery-item--reveal');
+                observer.unobserve(screen);
+            }
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(target);
+
+    })
+
 
 }
 
