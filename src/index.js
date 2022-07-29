@@ -79,9 +79,22 @@ function startGsapAnimations(gsap) {
     const targets = [".about"];
     const myTrigger = ".about";
 
-    gsap.from(targets, {
+    gsap.from(".about__image", {
         scrollTrigger: {
-            trigger: myTrigger,
+            trigger: ".about__image",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power1",
+    });
+
+    gsap.from(".about__text-content", {
+        scrollTrigger: {
+            trigger: ".about__image",
+            start: "top 20%",
+            markers: true
+
         },
         opacity: 0,
         y: 50,
