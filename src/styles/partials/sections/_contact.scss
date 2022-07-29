@@ -18,8 +18,8 @@
     gap: 2em;
     place-content: center;
     grid-template-areas:
-      "email   email    github"
-      "italy   title    github"
+      "email    email    github"
+      "italy    title    github"
       "italy  linkedin  linkedin";
     
     @media screen and (max-width: 530px){

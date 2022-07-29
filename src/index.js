@@ -46,12 +46,22 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+
+// let tl = gsap.timeline();
+
+
+gsap.from(".about__image", {
+    scrollTrigger: ".about__image", // start the animation when ".box" enters the viewport (once)
+    opacity: 0,
+    duration: 1,
+});
+
 gsap.from(".about__image", {
     scrollTrigger: ".about__image", // start the animation when ".box" enters the viewport (once)
     y: 50,
-    opacity: 0,
     duration: 1,
-    // smoothOrigin: true,
+    ease: "bounce.out",
 });
 
 /////////////////////////////////////////
