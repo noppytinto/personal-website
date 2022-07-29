@@ -37,21 +37,9 @@
             "naples iceland iceland"
             "naples hungary capri";
   
-    //@media screen and (max-width: 600px){
-    //  grid-template-columns: repeat(2, minmax(150px, 250px));
-    //  grid-auto-rows: 150px;
-    //  grid-template-areas:
-    //        "quote norway "
-    //        "iceland iceland "
-    //        "florence hungary "
-    //        "florence  naples"
-    //        "germany milan "
-    //        "capri capri";
-    //}
-  
     @media screen and (max-width: 600px){
       grid-template-columns: repeat(2, minmax(100px, 200px));
-      grid-auto-rows: 100px;
+      grid-auto-rows: 120px;
       grid-gap: 1em;
   
       grid-template-areas:
