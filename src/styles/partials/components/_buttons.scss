@@ -9,7 +9,7 @@
   right: 2em;
   //right: 50%;
   padding: .5em;
-  @include mix.center-vertically-horizontally;
+  @include mix.center-vertically-horizontally--with-flex;
   font-size: 1.2rem;
   box-shadow: 0 .1em .5em 0 rgba(#000, .2);
   

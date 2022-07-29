@@ -30,7 +30,6 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },
-
   "browserslist": {
     "production": [
       ">0.2%",
@@ -43,5 +42,8 @@
       "last 1 safari version",
       "last 1 ie version"
     ]
+  },
+  "dependencies": {
+    "gsap": "^3.10.4"
   }
 }

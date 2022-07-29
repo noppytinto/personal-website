@@ -6,7 +6,7 @@
   position: fixed;
   bottom: 1em;
   right: 1em;
-  @include mix.center-vertically-horizontally;
+  @include mix.center-vertically-horizontally--with-flex;
   
   font-size: 1.1rem;
   font-weight: 500;

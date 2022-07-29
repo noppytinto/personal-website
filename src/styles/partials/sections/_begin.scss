@@ -2,5 +2,5 @@
 @use "../abstracts/variables" as var;
 
 .begin {
-  @include mix.center-vertically-horizontally;
+  @include mix.center-vertically-horizontally--with-flex;
 }//

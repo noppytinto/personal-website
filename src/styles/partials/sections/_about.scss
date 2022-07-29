@@ -9,33 +9,31 @@
 }
 
 .about {
-  margin-bottom: 5em;
-  min-height: 250vh;
+  min-height: 200vh;
   text-align: center;
+  
   
   ///////////////////////////////
   ///////////////////////////////
   &__content {
     height: 250vh;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   
-  &__sticky {
+  &__sticky-container {
     position: sticky;
-    top: 20%;
-    min-width: 250px;
-    max-width: 400px;
-    width: 50%;
-    padding: 1em;
+    top: 0;
     mix-blend-mode: exclusion;
     z-index: 1;
+    height: 100vh;
+    @include mix.center-vertically-horizontally--with-flex;
   }
   
   &__media {
-
+    padding: 1em;
+    min-width: 250px;
+    max-width: 400px;
+    width: 50%;
   }
   
   &__image {
@@ -50,7 +48,12 @@
   
   &__text-content {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 100%;
+    //@include mix.center-horizontally--with-margins;
+    
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -109,7 +109,7 @@
   &__link {
     color: #000;
     transition: all .2s;
-    @include mix.center-vertically-horizontally;
+    @include mix.center-vertically-horizontally--with-flex;
     
     &:link, &:visited, &:focus {
       color: #000;
@@ -146,7 +146,7 @@
   &__icon {
     color: var.$color--orange--700;
     font-size: 2rem;
-    @include mix.center-vertically-horizontally;
+    @include mix.center-vertically-horizontally--with-flex;
   }
   
   &__gallery {

@@ -41,14 +41,21 @@ import maptyScreen3 from './assets/images/mapty-screen-3.png';
 //
 import githubIcon from './assets/images/github-icon.svg';
 import externalLinkIcon from './assets/images/icon--external-link.svg';
+// gsap
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+gsap.from(".about__image", {
+    scrollTrigger: ".about__image", // start the animation when ".box" enters the viewport (once)
+    y: 500,
+    opacity: 0,
+    duration: 1,
+    // smoothOrigin: true,
+});
 
 /////////////////////////////////////////
 // MAIN
-
-
-
-
 /////////////////////////////////////////
 function main() {
 

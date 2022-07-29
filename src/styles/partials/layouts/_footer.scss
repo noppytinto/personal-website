@@ -5,7 +5,7 @@
 .footer {
   width: 100%;
   padding: 1em;
-  @include mix.center-vertically-horizontally;
+  @include mix.center-vertically-horizontally--with-flex;
   font-size: .8rem;
   
   &__content {

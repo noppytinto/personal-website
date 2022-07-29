@@ -3,7 +3,7 @@
 
 
 .translucent-badge {
-  @include mix.center-vertically-horizontally;
+  @include mix.center-vertically-horizontally--with-flex;
   position: fixed;
   width: 100%;
   pointer-events: none;
