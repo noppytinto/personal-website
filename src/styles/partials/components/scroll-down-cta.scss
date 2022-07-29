@@ -2,18 +2,19 @@
 @use "../base/mixin" as mix;
 
 .scroll-down-cta {
-  display: block;
   position: fixed;
   bottom: 1em;
   right: 1em;
+  display: block;
+  padding: .5em 1em;
   @include mix.center-vertically-horizontally--with-flex;
-  
   font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: -1px;
-  color: #fff;
-  text-shadow: 1px 1px 10px rgba(#000, .5);
-  background-color: transparent;
+  color: #ffeadd;
+  text-shadow: 1px 1px 5px rgba(#000, .7);
+  border-radius: .5em;
+  mix-blend-mode: exclusion;
   animation-name: move-up-down;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -35,7 +36,7 @@
     
     50% {
       transform: translateY(15%);
-      opacity: .5;
+      opacity: .7;
     }
     
     100% {
@@ -43,4 +44,5 @@
       opacity: .1;
     }
   }
+  
 }// .scroll-down-cta

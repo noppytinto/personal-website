@@ -6,7 +6,13 @@
   justify-content: center;
 }
 
-
+@mixin blur-background(
+  $bg-color: #fff,
+  $blur-value: .5px
+) {
+  background-color: $bg-color;
+  backdrop-filter: blur($blur-value);
+}
 
 @mixin center-vertically {
   display: flex;
