@@ -76,8 +76,6 @@ main();
 // FUNCTIONS
 /////////////////////////////////////////
 function startGsapAnimations(gsap) {
-    const targets = [".about"];
-    const myTrigger = ".about";
 
     gsap.from(".about__image", {
         scrollTrigger: {
@@ -93,15 +91,56 @@ function startGsapAnimations(gsap) {
         scrollTrigger: {
             trigger: ".about__image",
             start: "top 20%",
-            markers: true
-
         },
         opacity: 0,
         y: 50,
         duration: 1,
         ease: "power1",
-        // invalidateOnRefresh: true, // clears start values on refresh
     });
+
+    const screensImages = document.querySelectorAll('.projects__screen ');
+
+    //
+    // gsap.from(screensImages[0], {
+    //     scrollTrigger: {
+    //         trigger: screensImages[0],
+    //         start: "top 50%",
+    //     },
+    //     opacity: 0,
+    //     y: 50,
+    //     duration: 1,
+    //     ease: "power1",
+    //     // invalidateOnRefresh: true, // clears start values on refresh
+    // });
+    //
+    // gsap.from(screensImages[2], {
+    //     scrollTrigger: {
+    //         trigger: screensImages[2],
+    //         start: "top 50%",
+    //     },
+    //     opacity: 0,
+    //     y: 50,
+    //     duration: 1,
+    //     ease: "power1",
+    //     // invalidateOnRefresh: true, // clears start values on refresh
+    // });
+    // gsap.utils.toArray(".projects__gallery-item").forEach(screen => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: screen,
+    //             start: "top 50%",
+    //         },
+    //
+    //     })
+    //
+    //     tl.from(screen, {
+    //         opacity: 0,
+    //         y: 50,
+    //         duration: 1,
+    //         ease: "power1",
+    //     });
+    // })
+
 }
 
 
