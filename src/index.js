@@ -76,20 +76,18 @@ main();
 // FUNCTIONS
 /////////////////////////////////////////
 function startGsapAnimations(gsap) {
-    const targets = [".about__text-content"];
-    const myTrigger = ".about__bio--row-1";
+    const targets = [".about"];
+    const myTrigger = ".about";
 
     gsap.from(targets, {
         scrollTrigger: {
             trigger: myTrigger,
-            start: "top bottom"
         },
         opacity: 0,
         y: 50,
         duration: 1,
         ease: "power1",
         // invalidateOnRefresh: true, // clears start values on refresh
-
     });
 }
 
