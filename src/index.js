@@ -50,19 +50,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 // let tl = gsap.timeline();
 
-
-gsap.from(".about__image", {
-    scrollTrigger: ".about__image", // start the animation when ".box" enters the viewport (once)
+const targets = [".about__image", ".about__text-content"];
+const trigger = ".about__image";
+gsap.from(targets, {
+    scrollTrigger: trigger, // start the animation when ".box" enters the viewport (once)
     opacity: 0,
-    duration: 1,
-});
-
-gsap.from(".about__image", {
-    scrollTrigger: ".about__image", // start the animation when ".box" enters the viewport (once)
     y: 50,
     duration: 1,
-    ease: "bounce.out",
+    ease: "power1",
 });
+
+// gsap.from(targets, {
+//     scrollTrigger: targets, // start the animation when ".box" enters the viewport (once)
+//     y: 50,
+//     duration: 1,
+//     ease: "power1",
+// });
 
 /////////////////////////////////////////
 // MAIN
