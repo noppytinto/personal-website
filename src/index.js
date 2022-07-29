@@ -90,47 +90,6 @@ function startGsapAnimations(gsap) {
 
     const screensImages = document.querySelectorAll('.projects__gallery-item');
 
-    //
-    // gsap.from(screensImages[0], {
-    //     scrollTrigger: {
-    //         trigger: screensImages[0],
-    //         start: "top 50%",
-    //     },
-    //     opacity: 0,
-    //     y: 50,
-    //     duration: 1,
-    //     ease: "power1",
-    //     // invalidateOnRefresh: true, // clears start values on refresh
-    // });
-    //
-    // gsap.from(screensImages[2], {
-    //     scrollTrigger: {
-    //         trigger: screensImages[2],
-    //         start: "top 50%",
-    //     },
-    //     opacity: 0,
-    //     y: 50,
-    //     duration: 1,
-    //     ease: "power1",
-    //     // invalidateOnRefresh: true, // clears start values on refresh
-    // });
-    // gsap.utils.toArray(".projects__gallery-item").forEach(screen => {
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: screen,
-    //             start: "top 50%",
-    //         },
-    //
-    //     })
-    //
-    //     tl.from(screen, {
-    //         opacity: 0,
-    //         y: 50,
-    //         duration: 1,
-    //         ease: "power1",
-    //     });
-    // })
-
     screensImages.forEach(screen => {
         // conceal when out of about section
         const target = screen;
@@ -143,8 +102,8 @@ function startGsapAnimations(gsap) {
             const [entry] = entries;
 
             if (entry.isIntersecting) {
-                screen.classList.add('projects__gallery-item--reveal');
-                observer.unobserve(screen);
+                target.classList.add('projects__gallery-item--reveal');
+                observer.unobserve(target);
             }
         };
 
@@ -153,6 +112,30 @@ function startGsapAnimations(gsap) {
 
     })
 
+
+    //
+    const journeysImages = document.querySelectorAll('.journeys__img');
+    journeysImages.forEach(image => {
+        // conceal when out of about section
+        const target = image;
+
+        const options = {
+            root: null,
+            threshold: .2
+        }
+        const callback = (entries, observer) => {
+            const [entry] = entries;
+
+            if (entry.isIntersecting) {
+                target.classList.add('journeys__img--reveal');
+                observer.unobserve(target);
+            }
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(target);
+
+    })
 
 }
 
