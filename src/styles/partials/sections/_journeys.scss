@@ -86,10 +86,15 @@
   }
   
   &__text {
-    font-weight: 400;
+    font-weight: 500;
     color: #fff;
-    font-size: clamp(.9rem, .6em + 1vw, 1.3rem);
+    font-size: clamp(.9rem, .6rem + 1vw, 1.3rem);
     text-align: center;
+    
+    // galaxy fold like screens
+    @media screen and (max-width: 600px) {
+      font-size: clamp(.95rem, .6rem + 1vw, 1.3rem);
+    }
   }
   
   &__img {
