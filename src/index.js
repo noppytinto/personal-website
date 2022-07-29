@@ -76,14 +76,20 @@ main();
 // FUNCTIONS
 /////////////////////////////////////////
 function startGsapAnimations(gsap) {
-    const targets = [".about"];
-    const trigger = ".about";
+    const targets = [".about__text-content"];
+    const myTrigger = ".about__bio--row-1";
+
     gsap.from(targets, {
-        scrollTrigger: trigger, // start the animation when ".box" enters the viewport (once)
+        scrollTrigger: {
+            trigger: myTrigger,
+            start: "top bottom"
+        },
         opacity: 0,
         y: 50,
         duration: 1,
         ease: "power1",
+        // invalidateOnRefresh: true, // clears start values on refresh
+
     });
 }
 
