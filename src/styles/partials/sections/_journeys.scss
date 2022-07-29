@@ -91,7 +91,7 @@
     font-size: clamp(.9rem, .6rem + 1vw, 1.3rem);
     text-align: center;
     
-    // galaxy fold like screens
+    // for galaxy fold like screens
     @media screen and (max-width: 600px) {
       font-size: clamp(.95rem, .6rem + 1vw, 1.3rem);
     }
