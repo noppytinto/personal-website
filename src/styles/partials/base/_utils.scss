@@ -51,11 +51,12 @@
   
     &--front {
       //background: red;
+      transform: rotateX(0deg) // fixes firefox mobile bug
     }
   
     &--back {
       //background: blue;
-      transform: rotateY( 180deg );
+      transform: rotateY( 180deg ) rotateX(0deg);
     }
   }
   
