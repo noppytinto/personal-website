@@ -6,6 +6,9 @@
   @include mix.center-vertically-horizontally--with-flex;
   min-height: 100vh;
   
+  
+  ///////////////////////////////
+  ///////////////////////////////
   &__content {
     flex-basis: var(--breakpoint--max-width);
     padding: 1em;
@@ -69,7 +72,6 @@
     color: var.$color--yellow;
     
     &:hover {
-      background-color: var.$color--yellow;
       color: var.$color--base;
       font-weight: 500;
     }
@@ -101,7 +103,6 @@
     &:visited {color: inherit;}
   
     &:hover {
-      background-color: #fff;
       color: var.$color--base;
       font-weight: 500;
     }
@@ -112,7 +113,6 @@
     position: relative;
     border-color: rgba(var.$color--divider, .3);
     padding: 0;
-  
   }
   
   &__flipping-card {
@@ -176,7 +176,6 @@
       transform: scale(1.1);
     }
   }
-
   
   &__waving-hand {
     position: absolute;
@@ -206,7 +205,6 @@
     &:visited {color: var.$color--blue;}
   
     &:hover {
-      background-color: var.$color--blue;
       color: var.$color--base;
       font-weight: 500;
     }

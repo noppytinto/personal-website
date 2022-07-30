@@ -87,13 +87,12 @@ $defaultHeight: 241vh;
   &__name {
     z-index: 1;
     margin-bottom: .3em;
-  
     font-family: var.$font-family--serif;
     font-size: clamp(1rem, 1rem + 10vw, 7rem);
     letter-spacing: -.05em;
     font-weight: 400;
     line-height: .85;
-    text-shadow: 2px 2px 10px rgba(#000, .5);
+    //text-shadow: 2px 2px 10px rgba(#000, .5);
     transform: translate3d(0,0,0);
   }
   

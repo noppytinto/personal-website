@@ -50,7 +50,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 /////////////////////////////////////////
 // MAIN
-
 /////////////////////////////////////////
 function main() {
     startGsapAnimations(gsap);
@@ -85,6 +84,7 @@ function handleOnClickContactItalyCard() {
 }
 
 function startGsapAnimations(gsap) {
+    //
     gsap.from(".about__text-content", {
         scrollTrigger: {
             trigger: ".about__image",
@@ -94,6 +94,50 @@ function startGsapAnimations(gsap) {
         y: 50,
         duration: 1,
         ease: "power1",
+    });
+
+    //
+    const githubCard = document.querySelector('.contact__grid--1-3');
+    githubCard.addEventListener('mouseenter',(ev) => {
+        gsap.to(githubCard, {
+            duration: .2,
+            backgroundColor: "#fff",
+        });
+    });
+    githubCard.addEventListener('mouseleave',(ev) => {
+        gsap.to(githubCard, {
+            duration: .2,
+            backgroundColor: "#151515",
+        });
+    });
+
+    //
+    const emailCard = document.querySelector('.contact__grid--1-1');
+    emailCard.addEventListener('mouseenter',(ev) => {
+        gsap.to(emailCard, {
+            duration: .2,
+            backgroundColor: "#FFCB2B",
+        });
+    });
+    emailCard.addEventListener('mouseleave',(ev) => {
+        gsap.to(emailCard, {
+            duration: .2,
+            backgroundColor: "#151515",
+        });
+    });
+
+    const linkedinCard = document.querySelector('.contact__grid--3-2');
+    linkedinCard.addEventListener('mouseenter',(ev) => {
+        gsap.to(linkedinCard, {
+            duration: .2,
+            backgroundColor: "#0096EA",
+        });
+    });
+    linkedinCard.addEventListener('mouseleave',(ev) => {
+        gsap.to(linkedinCard, {
+            duration: .2,
+            backgroundColor: "#151515",
+        });
     });
 
 }
@@ -147,8 +191,6 @@ function revealJournePicturesOnScroll() {
 
     })
 }
-
-
 
 function handleScrollDownCtaVisibilityOnScroll() {
     const scrollCta = document.querySelector('.scroll-down-cta');
@@ -366,21 +408,3 @@ function showHoverMenuButton(show) {
 function waitForMs(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
-
-// function handleOnClickNextScreenButton() {
-//     // get all screen elements
-//     const screens = document.querySelectorAll('.projects__screen')
-//     const screensContainer = document.querySelectorAll('.projects__list')
-//
-//     const leftBoundary = screens[0].dataset.index;
-//     const rightBoundary = screens[screens.length-1].dataset.index;
-//     const currentIndex = 0;
-//
-//     // detect which element is visible which is partially visible
-//
-//     // get width of a single screen
-//
-//     const
-//
-// }
-
