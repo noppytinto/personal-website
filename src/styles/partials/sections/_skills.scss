@@ -59,6 +59,20 @@
     position: relative;
     width: max-content;
     font-family: var.$font-family--mono;
+    
+    &:after {
+      content: "_";
+      animation-name: skills__cursor-blink;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      
+      @keyframes skills__cursor-blink {
+        0% {opacity: 1;}
+        40% {opacity: 1;}
+        60% {opacity: 0;}
+        100% {opacity: 0;}
+      }
+    }
   }
   
   &__grid-item--1-2 {
