@@ -55,6 +55,12 @@
     }
   }
   
+  &__title {
+    position: relative;
+    width: max-content;
+    font-family: var.$font-family--mono;
+  }
+  
   &__grid-item--1-2 {
     grid-area: section-1;
   

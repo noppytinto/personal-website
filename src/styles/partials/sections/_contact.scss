@@ -109,10 +109,20 @@
   }
   
   &__grid--2-1 {
-    position: relative;
+    display: flex;
+    justify-content: center;
     grid-area: italy;
+    position: relative;
+    border-color: rgba(var.$color--divider, .3);
+  
+    &:hover {
+      cursor: revert;
+    }
+  }
+  
+  &__flipping-card {
     flex-direction: column;
-    border-color: rgba(var.$color--divider, .2);
+    text-align: center;
   
     .contact__italy:nth-child(1) {
       color: var.$color--green--600;
@@ -122,10 +132,9 @@
       color: var.$color--red;
     }
   
-    &:hover {
-      cursor: revert;
-    }
+
   }
+
   
   &__waving-hand {
     position: absolute;
