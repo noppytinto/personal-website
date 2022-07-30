@@ -109,6 +109,7 @@
   }
   
   &__grid--2-1 {
+    position: relative;
     grid-area: italy;
     flex-direction: column;
     border-color: rgba(var.$color--divider, .2);
@@ -124,6 +125,12 @@
     &:hover {
       cursor: revert;
     }
+  }
+  
+  &__waving-hand {
+    position: absolute;
+    bottom: -1em;
+    right: 0;
   }
   
   &__grid--2-2 {
