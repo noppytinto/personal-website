@@ -54,18 +54,18 @@ gsap.registerPlugin(ScrollTrigger);
 function main() {
     startGsapAnimations(gsap);
 
+    revealScreensOnScroll();
+    revealJournePicturesOnScroll();
     revealHoverMenuOnScroll();
+
     handleOnClickHoverMenuButton();
     handleOnClickHoverMenuCloseButton();
     handleOnClickHoverMenuLink();
     handleOnClickHoverMenuOutsideArea();
     handleOnClickEmailButton();
-
-    showCopyEmailOnMouseEnter();
-
     handleScrollDownCtaVisibilityOnScroll();
 
-
+    showCopyEmailOnMouseEnter();
 }// main()
 
 main();
@@ -76,7 +76,6 @@ main();
 // FUNCTIONS
 /////////////////////////////////////////
 function startGsapAnimations(gsap) {
-
     gsap.from(".about__text-content", {
         scrollTrigger: {
             trigger: ".about__image",
@@ -88,8 +87,10 @@ function startGsapAnimations(gsap) {
         ease: "power1",
     });
 
-    const screensImages = document.querySelectorAll('.projects__gallery-item');
+}
 
+function revealScreensOnScroll() {
+    const screensImages = document.querySelectorAll('.projects__gallery-item');
     screensImages.forEach(screen => {
         // conceal when out of about section
         const target = screen;
@@ -111,13 +112,13 @@ function startGsapAnimations(gsap) {
         observer.observe(target);
 
     })
+}
 
-
-    //
-    const journeysImages = document.querySelectorAll('.journeys__img');
-    journeysImages.forEach(image => {
+function revealJournePicturesOnScroll() {
+    const pictures = document.querySelectorAll('.journeys__img');
+    pictures.forEach(picture => {
         // conceal when out of about section
-        const target = image;
+        const target = picture;
 
         const options = {
             root: null,
@@ -136,8 +137,8 @@ function startGsapAnimations(gsap) {
         observer.observe(target);
 
     })
-
 }
+
 
 
 function handleScrollDownCtaVisibilityOnScroll() {
