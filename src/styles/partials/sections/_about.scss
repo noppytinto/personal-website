@@ -18,8 +18,11 @@ $defaultHeight: 241vh;
   ///////////////////////////////
   ///////////////////////////////
   &__content {
-    height: 200vh;
+    height: 230vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
   }
   
   &__sticky-container {
@@ -34,7 +37,7 @@ $defaultHeight: 241vh;
   &__media {
     padding: 1em;
     min-width: 250px;
-    max-width: 400px;
+    max-width: 300px;
     width: 50%;
   }
   
@@ -72,8 +75,8 @@ $defaultHeight: 241vh;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
   
   &__greetings {
@@ -86,7 +89,7 @@ $defaultHeight: 241vh;
     margin-bottom: .3em;
   
     font-family: var.$font-family--serif;
-    font-size: clamp(1rem, 1rem + 10vw, 10rem);
+    font-size: clamp(1rem, 1rem + 10vw, 7rem);
     letter-spacing: -.05em;
     font-weight: 400;
     line-height: .85;
@@ -102,7 +105,7 @@ $defaultHeight: 241vh;
     line-height: .8;
     font-weight: 550;
     margin-bottom: -.05em;
-    font-size: clamp(1rem, calc(1rem + 10vw), 10rem);
+    font-size: clamp(1rem, calc(1rem + 10vw), 7rem);
   }
   
   &__bio--row-2 {
