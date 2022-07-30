@@ -28,6 +28,52 @@
 
 
 ////////////////////////////////////
+// card flip
+////////////////////////////////////
+.scene-3d {
+  perspective: 600px;
+}
+
+.flipping-card  {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s, background-color 1s;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  border-radius: .2em;
+  
+  &__face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  
+    &--front {
+      //background: red;
+    }
+  
+    &--back {
+      //background: blue;
+      transform: rotateY( 180deg );
+    }
+  }
+  
+  &.is-flipped {
+    background-color: rgba(#000, .15);
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  
+  //&:hover {
+  //  transform: translateX(-100%) rotateY(-180deg);
+  //}
+}// .flipping-card
+
+
+
+
+
+////////////////////////////////////
 // glitch
 ////////////////////////////////////
 .glitch {

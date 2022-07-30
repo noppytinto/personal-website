@@ -50,6 +50,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 /////////////////////////////////////////
 // MAIN
+
 /////////////////////////////////////////
 function main() {
     startGsapAnimations(gsap);
@@ -64,6 +65,7 @@ function main() {
     handleOnClickHoverMenuOutsideArea();
     handleOnClickEmailButton();
     handleScrollDownCtaVisibilityOnScroll();
+    handleOnClickContactItalyCard();
 
     showCopyEmailOnMouseEnter();
 }// main()
@@ -75,6 +77,13 @@ main();
 /////////////////////////////////////////
 // FUNCTIONS
 /////////////////////////////////////////
+function handleOnClickContactItalyCard() {
+    let card = document.querySelector('.contact__flipping-card');
+    card.addEventListener( 'click', function() {
+        card.classList.toggle('is-flipped');
+    });
+}
+
 function startGsapAnimations(gsap) {
     gsap.from(".about__text-content", {
         scrollTrigger: {

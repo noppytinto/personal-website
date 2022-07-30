@@ -387,40 +387,71 @@
   <section class="main__section contact" id="contact">
     <div class="contact__content">
       <div class="h-card contact__grid">
+
         <div class="contact__grid-item contact__grid--1-1">
           <p class="contact__item contact__email">email</p>
           <p class="u-email contact__details contact__details--email">francesco.scutellaro@gmail.com</p>
 
           <button class="contact__copy-email-btn">click to copy</button>
         </div>
+
         <a class="u-url contact__grid-item contact__grid--1-3"
            href="https://www.github.com/noppytinto"
            target="_blank">
           <p class="contact__item contact__github">github</p>
           <p class="contact__details contact__details--github">@noppytinto</p>
         </a>
-        <div class="contact__grid-item contact__grid--2-1">
-          <div class="contact__flipping-card">
-            <p class="contact__item contact__italy">made</p>
-            <p class="contact__item contact__italy">in</p>
-            <p class="contact__item contact__italy">italy</p>
+
+        <div class="contact__grid-item contact__grid--2-1 scene-3d">
+          <div class="flipping-card contact__flipping-card">
+
+            <div class="flipping-card__face flipping-card__face--front contact__face--front">
+              <p class=" contact__item contact__italy">made</p>
+              <p class="contact__item contact__italy">in</p>
+              <p class="contact__item contact__italy">italy</p>
+
+              <div class="contact__waving-hand">
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_yeyxce62.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player>
+              </div>
+            </div>
+
+            <div class="flipping-card__face flipping-card__face--back">
+              <div class="contact__built-with">
+
+                <p class="contact__built-with-title">built with</p>
+
+                <ul class="contact__stack">
+                  <li class="contact__stack-item">HTML</li>
+                  <li class="contact__stack-item">CSS</li>
+                  <li class="contact__stack-item">JavaScript</li>
+                  <li class="contact__stack-item">Webpack</li>
+                </ul>
+
+                <a class="contact__source-code-btn"
+                   href="https://github.com/noppytinto/personal-website"
+                   title="source code"
+                   target="_blank">github</a>
+
+              </div>
+            </div>
 
           </div>
-          <div class="contact__waving-hand">
-            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_yeyxce62.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player>
-          </div>
         </div>
+
         <div class="contact__grid-item contact__grid--2-2">
           <h2 class="main__title contact__title">
             Cont<span class="contact__act">act</span>
           </h2>
         </div>
+
         <a class="u-url contact__grid-item contact__grid--3-2"
            href="https://www.linkedin.com/in/francesco-scutellaro"
            target="_blank">
           <p class="contact__item contact__linkedin">linkedIn</p>
           <p class="contact__details contact__details--linkedin">/francesco-scutellaro</p>
         </a>
+
+
       </div>
     </div>
   </section>
@@ -431,7 +462,7 @@
   <div class="footer__content">
 
   </div>
-  <p class="footer__text">built with HTML/CSS/JS | Francesco Scutellaro &copy; 2022 All Rights Reserved | pictures from Unsplash</p>
+  <p class="footer__text">Francesco Scutellaro &copy; 2022 All Rights Reserved<br/>pictures from Unsplash</p>
 </footer>
 
 <!-- /////////////////////////////// hover menu -->
