@@ -352,18 +352,45 @@ function showHoverMenu(show) {
     const hoverMenuContent = document.querySelector('.hover-menu__content');
 
     if (show) {
-        if ( ! hoverMenu.classList.contains('hover-menu--reveal')) {
-            body.style.overflow = "hidden";
-            hoverMenu.classList.add('hover-menu--reveal');
-            hoverMenuContent.classList.add('hover-menu__content--reveal');
-        }
+        body.style.overflow = "hidden";
+
+        const timeline = gsap.timeline();
+        timeline.set(hoverMenu, {
+            display: "flex",
+            alignItems: "center",
+        });
+        timeline
+          .from(hoverMenuContent, {
+              x: 100,
+              duration: .2,
+              opacity: 0,
+          })
+          .to(hoverMenuContent, {
+              x: 0,
+              duration: .2,
+              opacity: 1,
+          });
     }
     else {
-        if ( hoverMenu.classList.contains('hover-menu--reveal')) {
-            body.style.overflow = "revert";
-            hoverMenu.classList.remove('hover-menu--reveal');
-            hoverMenuContent.classList.remove('hover-menu__content--reveal');
-        }
+        body.style.overflow = "revert";
+
+        const timeline = gsap.timeline();
+        timeline
+          .from(hoverMenuContent, {
+              x: 0,
+              duration: .1,
+              opacity: 1,
+          })
+          .to(hoverMenuContent, {
+              x: 100,
+              duration: .1,
+              opacity: 0,
+          });
+        timeline
+          .set(hoverMenu, {
+            display: "none",
+            alignItems: "revert",
+          });
     }
 }
 
