@@ -8,15 +8,9 @@ import aboutImg from './assets/images/about-img.jpg';
 import icelandImg from './assets/images/iceland.jpg';
 import florenceImg from './assets/images/florence.jpg';
 import norwayImg from './assets/images/norway.jpg';
-import spainImg from './assets/images/spain.jpg';
-import polandImg from './assets/images/poland.jpg';
-import copenhagenImg from './assets/images/copenhagen.jpg';
-import parisImg from './assets/images/paris.jpg';
-import thailandImg from './assets/images/thailand.jpg';
 import hungaryImg from './assets/images/hungary.jpg';
 import milanImg from './assets/images/milan.jpg';
 import germanyImg from './assets/images/germany.jpg';
-import positanoImg from './assets/images/positano.jpg';
 import capriImg from './assets/images/capri.jpg';
 import naplesImg from './assets/images/naples.jpg';
 // cinemates
