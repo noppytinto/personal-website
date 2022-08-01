@@ -47,8 +47,9 @@ $defaultHeight: 241vh;
     border-radius: .3em;
     object-fit: cover;
     border-width: 1px;
-    border-color: rgba(#fff, .2);
+    border-color: #fff;
     border-style: solid;
+    // box-shadow: 0 0 1em 0 rgba(#fff, 1);
     
     animation-name: projects__image--reveal;
     animation-duration: 1s;
