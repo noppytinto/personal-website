@@ -31,7 +31,7 @@ $defaultHeight: 241vh;
     top: 0;
     height: 100vh;
     @include mix.center-vertically-horizontally--with-flex;
-    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
   }
   
   &__media {
